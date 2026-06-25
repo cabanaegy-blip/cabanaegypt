@@ -3,25 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CABANA EGYPT — دهب مش مجرد رحلة</title>
+<title>Cabana Egypt — رحلات دهب وسيناء | دهب مش مجرد رحلة</title>
+<meta name="description" content="رحلات منظمة لدهب وسيناء من كل محافظات مصر — إقامة وانتقالات وتور ليدر، رحلات داخلية (سفاري · يخت · غواصة)، وباقات هوني مون. الأسعار تبدأ من 2,650 جنيه.">
+
+<!-- ===== Link preview (WhatsApp / Facebook / Instagram / Twitter) ===== -->
+<!-- لتغيير صورة المعاينة: ارفع صورة باسم og-image.jpg (مقاس 1200×630) في نفس مجلد الموقع
+     وغيّر روابط og:image و twitter:image تحت لـ https://cabanaegypt.com/og-image.jpg -->
+<link rel="canonical" href="https://cabanaegypt.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cabana Egypt">
+<meta property="og:locale" content="ar_EG">
+<meta property="og:url" content="https://cabanaegypt.com/">
+<meta property="og:title" content="Cabana Egypt — دهب مش مجرد رحلة">
+<meta property="og:description" content="رحلات لدهب وسيناء من كل محافظات مصر — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها. الأسعار تبدأ من 2,650 جنيه.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
+<meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="رحلات دهب وسيناء مع Cabana Egypt">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cabana Egypt — دهب مش مجرد رحلة">
+<meta name="twitter:description" content="رحلات لدهب وسيناء من كل محافظات مصر — كل حاجة شاملة وتجربة مش هتنساها.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
+<meta name="theme-color" content="#080808">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <!--
-╔══════════════════════════════════════════════════════════════╗
-║              ✏️ EDIT GUIDE — دليل التعديل                  ║
-╠══════════════════════════════════════════════════════════════╣
-║  رقم الواتساب: ابحث عن 201005744083                        ║
-║  الأسعار: ابحث عن class="pn"                               ║
-║  Desert Hotel أسعار: ابحث عن DESERT_HOTEL_PRICE            ║
-║  النصوص: ابحث عن التعليقات  EDIT TEXT                      ║
-║                                                              ║
-║  🚀 نشر الموقع على Netlify (مجاناً):                       ║
-║  1. اذهب إلى netlify.com واعمل حساب مجاني                  ║
-║  2. اسحب هذا الملف وارميه على الصفحة                        ║
-║  3. الموقع اشتغل فوراً على رابط مؤقت ✅                     ║
-╚══════════════════════════════════════════════════════════════╝
+  Cabana Egypt — index.html
+  • رقم الواتساب: 201005744083  • الأسعار: class="pn"
+  • روابط صور الفنادق (جوجل درايف): ابحث عن HOTEL_PHOTOS في آخر الصفحة
 
-APPS_SCRIPT_CODE:
+  Google Apps Script (backend الفورم):
 
 function doPost(e) {
   var sheet = SpreadsheetApp.openById("1Y2HGQzqMdY_rmn-kwX7Wd3EI54cVpqQpdNhsI8r_txs").getSheets()[0];
@@ -114,9 +127,22 @@ h1 em{font-style:italic;font-family:"Space Grotesk",sans-serif;color:var(--cu);f
 .tgg{display:flex;background:var(--bg2);border:1px solid var(--bo);border-radius:50px;padding:4px;gap:3px}
 .tgb{padding:8px 22px;border-radius:50px;border:none;background:transparent;color:var(--mu);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:"Cairo",sans-serif}
 .tgb.a{background:var(--cu);color:#080808;font-weight:700}
-.ttabs{display:flex;gap:8px;flex-wrap:wrap}
-.tt{padding:8px 20px;border-radius:50px;border:1px solid var(--bo);background:transparent;color:var(--mu);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:"Space Grotesk",sans-serif;letter-spacing:.5px}
-.tt.a{border-color:var(--cu);color:var(--cu);background:var(--glow)}
+.tierbar{margin-bottom:.25rem}
+.tierbar-lbl{display:block;font-size:13.5px;color:var(--mu2);margin-bottom:.85rem;font-weight:600}
+.ttabs{display:flex;gap:10px;flex-wrap:wrap}
+.tt{padding:11px 22px;border-radius:14px;border:1.5px solid var(--bo);background:var(--bg2);color:var(--mu2);font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;font-family:"Cairo",sans-serif}
+.tt:hover{border-color:var(--bo2);color:var(--wh);transform:translateY(-2px)}
+.tt.a{transform:translateY(-3px)}
+.tt[data-tier="budget"].a{border-color:#50C878;color:#50C878;background:rgba(50,200,100,.1);box-shadow:0 8px 24px rgba(50,200,100,.16)}
+.tt[data-tier="standard"].a{border-color:#6496FF;color:#6496FF;background:rgba(100,150,255,.1);box-shadow:0 8px 24px rgba(100,150,255,.16)}
+.tt[data-tier="premium"].a{border-color:var(--cu);color:var(--cu);background:var(--glow);box-shadow:0 8px 24px rgba(200,149,108,.2)}
+.tt[data-tier="lagoon"].a{border-color:#64C8FF;color:#64C8FF;background:rgba(100,200,255,.1);box-shadow:0 8px 24px rgba(100,200,255,.16)}
+.tierinfo{margin:1.3rem 0 2.2rem;padding:1.05rem 1.3rem;border-radius:16px;background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid var(--bo2);display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
+.tierinfo .ti-ic{font-size:1.8rem;flex-shrink:0}
+.tierinfo .ti-txt{flex:1;min-width:220px}
+.tierinfo .ti-txt h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
+.tierinfo .ti-txt p{font-size:12.5px;color:var(--mu2);line-height:1.6}
+.tierinfo .ti-price{font-family:"Space Grotesk",sans-serif;font-size:13px;color:var(--cu);font-weight:600;white-space:nowrap;background:var(--glow);border:1px solid var(--bo2);padding:7px 14px;border-radius:50px}
 .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem}
 .pc{background:var(--bg2);border:1px solid var(--bo);border-radius:20px;overflow:hidden;transition:all .35s;display:none}
 .pc.sh2{display:block}
@@ -266,10 +292,33 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
 .fctasub{font-size:16px;color:var(--mu2);margin-bottom:3rem;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
 .fctabtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
 .fctanote{font-size:11px;color:var(--mu);margin-top:1.5rem;font-family:"Space Grotesk",sans-serif;letter-spacing:1px}
+/* SCROLL PROGRESS BAR */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cu),var(--cl));z-index:1000;box-shadow:0 0 12px rgba(200,149,108,.65);transition:width .12s linear;pointer-events:none}
+/* HOTEL CTA ROW + PHOTOS BUTTON */
+.pcta-row{display:flex;gap:8px;flex-wrap:wrap}
+.pcta-row .pcta{margin:0;flex:1 1 130px;text-align:center}
+.pcta-row .pcta:first-child{flex:1.3 1 140px}
+.pcta-ghost{background:transparent;color:var(--cu);border:1px solid var(--bo2);font-weight:600}
+.pcta-ghost:hover{background:var(--glow);color:var(--cl);border-color:var(--cu);transform:translateY(-1px)}
+/* FAQ */
+.faq{background:var(--bg2)}
+.faqs{margin-top:2.5rem;display:flex;flex-direction:column;gap:.9rem;max-width:840px}
+.faqi{background:var(--bg3);border:1px solid var(--bo);border-radius:14px;overflow:hidden;transition:border-color .3s,background .3s}
+.faqi:hover{border-color:var(--bo2)}
+.faqi.open{background:linear-gradient(135deg,var(--glow2),transparent);border-color:var(--bo2)}
+.faqq{padding:1.1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;font-size:14.5px;font-weight:600;line-height:1.5;user-select:none}
+.faqq .qx{color:var(--cu);font-size:1.35rem;font-weight:300;transition:transform .35s;flex-shrink:0;line-height:1}
+.faqi.open .qx{transform:rotate(135deg)}
+.faqa{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faqi.open .faqa{max-height:340px}
+.faqa p{padding:0 1.3rem 1.2rem;font-size:13.5px;color:var(--mu2);line-height:1.9}
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}.rev,.revl,.revr{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
 
+<div id="progress"></div>
 <div id="cglow"></div>
 
 <!-- NAV -->
@@ -357,16 +406,20 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
     <div style="height:2rem"></div>
     <div class="pctrl">
       <div class="tgg">
-        <button class="tgb a" onclick="setDays(4,this)">4 أيام 3 ليالي</button>
-        <button class="tgb" onclick="setDays(5,this)">5 أيام 4 ليالي</button>
-      </div>
-      <div class="ttabs">
-        <button class="tt a" onclick="setTier('budget',this)">Budget</button>
-        <button class="tt" onclick="setTier('standard',this)">Standard</button>
-        <button class="tt" onclick="setTier('premium',this)">Premium</button>
-        <button class="tt" onclick="setTier('lagoon',this)">Lagoon 🌊</button>
+        <button class="tgb a" onclick="setDays(4,this)">4 أيام · 3 ليالي</button>
+        <button class="tgb" onclick="setDays(5,this)">5 أيام · 4 ليالي</button>
       </div>
     </div>
+    <div class="tierbar">
+      <span class="tierbar-lbl">اختار فئة الإقامة 👇 (كل فئة فنادق ومستوى وسعر مختلف)</span>
+      <div class="ttabs">
+        <button class="tt a" data-tier="budget" onclick="setTier('budget',this)">💸 Budget</button>
+        <button class="tt" data-tier="standard" onclick="setTier('standard',this)">🏨 Standard</button>
+        <button class="tt" data-tier="premium" onclick="setTier('premium',this)">✨ Premium</button>
+        <button class="tt" data-tier="lagoon" onclick="setTier('lagoon',this)">🌊 Lagoon</button>
+      </div>
+    </div>
+    <div class="tierinfo" id="tierInfo"></div>
     <div class="pgrid" id="pgrid">
 
       <!-- ═══════════ BUDGET ═══════════ -->
@@ -392,25 +445,25 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
         </div>
       </div>
 
-      <!-- Antika Camp -->
+      <!-- Antika Hotel -->
       <div class="pc sh2" data-tier="budget">
         <div class="pctop">
-          <span class="pbdg bb">Budget · Vintage Soul 🏺</span>
-          <div class="pname">Antika Camp</div>
-          <div class="ploc">دهب · أجواء أنتيكا · طابع بدوي مميز</div>
+          <span class="pbdg bb">Budget · Pool 🏊</span>
+          <div class="pname">Antika Hotel</div>
+          <div class="ploc">دهب · حمام سباحة · طابع أنتيكا مميز</div>
         </div>
         <div class="pbody">
           <div class="pfeat">
-            <div class="pfi">أجواء بوهيمية فريدة — ديكور أنتيكا وروح سيناء الأصيلة</div>
-            <div class="pfi">المكان اللي بيخلي الناس ترجع تاني وتاني وتاني</div>
-            <div class="pfi">Chill vibes وناس تانية حلوة — النوع ده من التجارب مش بيتكرر</div>
+            <div class="pfi">حمام سباحة جوه الفندق — تسبح وترتاح من غير ما تتحرك</div>
+            <div class="pfi">أجواء أنتيكا بديكور فريد وروح سيناء الأصيلة</div>
+            <div class="pfi">المكان اللي بيخلي الناس ترجعله تاني وتالت</div>
           </div>
           <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
           <div class="pprices">
             <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,300</div><div class="ppu">جنيه / فرد</div></div>
             <div class="pp"><div class="ppl">5 أيام</div><div class="pn">4,100</div><div class="ppu">جنيه / فرد</div></div>
           </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Antika Camp" class="pcta" target="_blank">احجز دلوقتي 📱</a>
+          <a href="https://wa.me/201005744083?text=عايز احجز Antika Hotel" class="pcta" target="_blank">احجز دلوقتي 📱</a>
         </div>
       </div>
 
@@ -424,7 +477,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
         <div class="pbody">
           <div class="pfeat">
             <div class="pfi">مباشرة على البحر — الكافيه والإفطار بيطل على المياه</div>
-            <div class="pfi">فطار مصري أو كونتيننتال بكافيه موخيتو</div>
+            <div class="pfi">الفطار اختياري بتكلفة إضافية في كافيه موخيتو (مصري أو كونتيننتال)</div>
             <div class="pfi">جنب الكوبري الخشبي — أكتر spot فيه صور في دهب</div>
           </div>
           <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
@@ -449,7 +502,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
           <div class="pfeat">
             <div class="pfi">غرف فندقية حديثة — مش كامب — بأعلى مستوى</div>
             <div class="pfi">كافيه موخيتو الشهير مباشرة على البحر</div>
-            <div class="pfi">فطار مصري أو كونتيننتال مع إطلالة البحر</div>
+            <div class="pfi">الفطار اختياري بتكلفة إضافية — مصري أو كونتيننتال على البحر</div>
           </div>
           <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
           <div class="pprices">
@@ -529,12 +582,13 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
       <!-- Sunset Luxury Hotel -->
       <div class="pc" data-tier="standard">
         <div class="pctop">
-          <span class="pbdg bs">Standard · Sunset Views 🌇</span>
+          <span class="pbdg bs">Standard · B&amp;B · Sunset 🌇</span>
           <div class="pname">Sunset Luxury Hotel</div>
           <div class="ploc">الممشى السياحي · إطلالة الغروب</div>
         </div>
         <div class="pbody">
           <div class="pfeat">
+            <div class="pfi">فطار يومي شامل — تبدأ يومك على راحتك</div>
             <div class="pfi">غرف فندقية راقية في قلب الممشى السياحي</div>
             <div class="pfi">أحلى إطلالة غروب في دهب — الاسم مش صدفة</div>
             <div class="pfi">خطوات من كل الكافيهات والمطاعم الشهيرة</div>
@@ -561,7 +615,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
           <div class="pfeat">
             <div class="pfi">Panoramic Sea View مباشر من الغرفة</div>
             <div class="pfi">من أكتر الغرف طلباً في دهب — حجز مبكر ضروري</div>
-            <div class="pfi">فطار كونتيننتال مع إطلالة لا توصف على البحر</div>
+            <div class="pfi">الفطار اختياري بتكلفة إضافية مع إطلالة لا توصف على البحر</div>
           </div>
           <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
           <div class="pprices">
@@ -584,7 +638,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
           <div class="pfeat">
             <div class="pfi">تراس خاص بيطل مباشرة على البحر الأحمر</div>
             <div class="pfi">أعلى مستوى في موخيتو — مميز جداً للعرسان</div>
-            <div class="pfi">فطار كونتيننتال مع sunrise على البحر</div>
+            <div class="pfi">الفطار اختياري بتكلفة إضافية مع sunrise على البحر</div>
           </div>
           <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
           <div class="pprices">
@@ -919,6 +973,39 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
         </div>
       </div>
 
+      <!-- Day 5 -->
+      <div class="iday rev">
+        <div class="idayh" onclick="toggleDay(this)">
+          <div class="idayl">
+            <div class="idaynum">05</div>
+            <div>
+              <div class="idaytitle">اليوم الخامس — توديع دهب (رحلة 5 أيام)</div>
+              <div class="idaysub">Gathering الشروق · Hidden Gem خاص بـ Cabana · وداع على البحر</div>
+            </div>
+          </div>
+          <div class="idayarr">▼</div>
+        </div>
+        <div class="idaybody">
+          <div class="idaycontent">
+            <div class="iact">
+              <div class="iacttime">قبل الشروق</div>
+              <div class="iactico">🌅</div>
+              <div><h4>Gathering الشروق — كلنا مع بعض</h4><p>نصحى بدري ونطلع مكان واحد — Hidden Gem من أماكن Cabana اللي محدش بيعرفها — ونستنى الشمس تطلع على دهب سوا. قهوة، سكون، وكلام من القلب. أحلى طريقة تبدأ بيها آخر يوم.</p></div>
+            </div>
+            <div class="iact">
+              <div class="iacttime">الصبح</div>
+              <div class="iactico">🤍</div>
+              <div><h4>توديع دهب</h4><p>آخر مشوار على البحر، صور للجروب كله، وكلمة وداع قبل الرجوع. مش بنقول مع السلامة — بنقول لحد ما نرجع. ودهب دايماً بتنادي تاني.</p></div>
+            </div>
+            <div class="iact">
+              <div class="iacttime">الظهر</div>
+              <div class="iactico">🧳</div>
+              <div><h4>Check-out والعودة</h4><p>نجمع شنطنا وذكرياتنا ونتحرك للطريق وانت لسه حاسس بإيد دهب على كتفك. بترجع البيت بنسخة أهدى وأحلى من اللي سافرت بيها.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- Custom Experiences with snorkeling bg -->
@@ -1128,7 +1215,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
               <option value="">أي فندق / مش متأكد</option>
               <optgroup label="Budget">
                 <option>Torino Camp</option>
-                <option>Antika Camp</option>
+                <option>Antika Hotel</option>
                 <option>Mojito Palm</option>
               </optgroup>
               <optgroup label="Standard">
@@ -1244,6 +1331,63 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="con">
+    <div class="rev">
+      <span class="ey">FAQ</span>
+      <h2 class="sh">أسئلة بتتسألنا كتير.<span class="en">straight answers, no fluff.</span></h2>
+      <p class="ss">جمعنالك أكتر حاجات الناس بتسأل عنها قبل ما تحجز. لو سؤالك مش هنا، كلمنا على واتساب وهنرد عليك في دقايق.</p>
+    </div>
+    <div class="faqs">
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلة بتتحرك منين؟ ومتاحة من محافظتي؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>التحرك كل أحد وخميس من القاهرة والإسكندرية وكذا محافظة تانية، والهاي إس متاح بشكل يومي من أغلب المحافظات. قولنا إنت منين وإحنا نظبطلك أقرب نقطة تحرك ليك.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>السعر شامل إيه بالظبط؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>السعر شامل الإقامة، الانتقالات ذهاب وعودة، والتور ليدر اللي معاك طول الرحلة. الرحلات الداخلية زي السفاري واليخت والغواصة بتتحسب لوحدها بأسعار مميزة، وبنوضحلك كل تفصيلة قبل ما تأكد عشان متبقاش فيه أي مفاجآت.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلات الداخلية بكام؟ وليه مش مكتوبة على الموقع؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>سعرها بيختلف حسب البرنامج وعدد الأفراد، وعشان كده بنحب نظبطها معاك على واتساب علشان تطلعلك بأنسب سعر. قولنا عايز تعمل إيه بالظبط وإحنا نقولك الرقم النهائي على طول من غير لف ودوران.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>أنا رايح لوحدي — الموضوع هيبقى محرج؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>خالص. أغلب اللي بييجي معانا بييجي solo، ومن أول يوم الجروب بيبقى زي صحاب قُدام. التور ليدر بيكسر التلج بسرعة، وإنت حر تشارك في اللي تحبه وترتاح وقت ما تحب.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>بأحجز إزاي؟ ولازم أدفع كام مقدم؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>تكلمنا على واتساب، نظبط معاك الفندق والميعاد، وبتأكد حجزك بعربون 50% بس. الباقي بتدفعه قبل السفر بأسبوع. بنقبل إنستاباي، فودافون كاش، aCash، فيزا، وتحويل بنكي.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>ممكن أغير الفندق أو الميعاد بعد ما أحجز؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>أيوه، حسب التوافر. كلمنا بدري وإحنا بنعدّلهالك من غير أي رسوم زيادة طول ما فيه أماكن. والإلغاء قبل 7 أيام من السفر بيرجعلك العربون كامل أو تأجّل لميعاد تاني.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>الأكل والفطار داخل في السعر؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>بيختلف من فندق لفندق. فيه فنادق بفطار شامل أو بوفيه أو Half Board، وفيه فنادق (زي موخيتو) الفطار فيها اختياري بتكلفة بسيطة. كل ده مكتوب تحت كل فندق في قسم الباقات، ولو محتار كلمنا ونوضحلك.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>في حمامات سباحة؟ ومستوى الفنادق إيه؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>عندنا 4 فئات تختار منها: Budget (كامبات وفنادق اقتصادية)، Standard (فنادق حديثة وبعضها بحمام سباحة)، Premium (فنادق 4 و5 نجوم وسي فيو مباشر)، وLagoon (ريزورتات بشواطئ رملية وبوفيهات). اختار الفئة من فوق في قسم الباقات وهتشوف كل فندق وتفاصيله وسعره.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلة مناسبة للعائلات والأطفال؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>أكيد. عندنا برامج هادية وفنادق بحمامات سباحة وشقق وشاليهات خاصة مناسبة جداً للعائلات. قولنا إنتوا كام فرد وفيه أطفال ولا لأ، وإحنا نرشحلك أنسب فندق وأنسب برنامج ليكوا.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>بتعملوا تعاقدات للشركات والمدارس والجامعات؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>أيوه. عندنا تعاقدات وعروض خاصة للهيئات والشركات والمدارس والجامعات والجروبات الكبيرة — بأسعار مميزة وخدمة وتنظيم على مستوى أعلى. كلمنا بعدد الأفراد والميعاد وإحنا نظبطلك عرض مخصص يناسبكوا.</p></div>
+      </div>
+      <div class="faqi rev">
+        <div class="faqq" onclick="toggleFaq(this)"><span>لو حصل ظرف طارئ وألغيت، الفلوس بترجع؟</span><span class="qx">＋</span></div>
+        <div class="faqa"><p>الإلغاء قبل 7 أيام من السفر بيرجعلك العربون بالكامل، أو تأجّل لميعاد تاني يناسبك. لو الإلغاء خلال أقل من 7 أيام بنحاول نأجّلك بدل ما تخسر، قدر الإمكان. إحنا بشر وبنفهم إن الظروف بتحصل.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="con">
@@ -1263,6 +1407,7 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
         <a href="#packages">Packages</a>
         <a href="#itinerary">The Program</a>
         <a href="#honeymoon">Honeymoon</a>
+        <a href="#faq">الأسئلة الشائعة</a>
         <a href="#contact">Book Now</a>
       </div>
       <div class="ftcol">
@@ -1313,6 +1458,70 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
 // ✏️ ضع هنا رابط الـ Apps Script بعد ما تعمل الـ deploy
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeCSRtwjcAMPkVfY1oM3ZPHfagnHXcZx7fSQHOoggKUhRJlOI6whXfTmhdaly3vUhN/exec";
 
+/* ════════════════════════════════════════════════════════════════
+   📸 روابط صور الفنادق (جوجل درايف)
+   - فندق بلينك واحد: "https://drive.google.com/..."
+   - "request" → الزرار يكتب (by request) ويفتح واتساب
+   - "" فاضي → الزرار يفتح واتساب يطلب الصور
+   - فندق بأكتر من فولدر: {"اسم":"لينك","اسم":"لينك"}
+   مهم: خلي الفولدرات Share = "أي حد معاه الرابط" علشان الناس تقدر تفتحها.
+   ════════════════════════════════════════════════════════════════ */
+const MOJITO = "https://drive.google.com/drive/folders/19_FuvrfT1j7FnPQFHMVjNFM7JC_fenL9?usp=drive_link";
+const HOTEL_PHOTOS = {
+  "Torino Camp": "https://drive.google.com/drive/folders/16vw-NdapzrqeAm13ZukoSl3hy-SluZ4r?usp=drive_link",
+  "Antika Hotel": "https://drive.google.com/drive/folders/1KXborX0dI6ges54pZXSOvVMRH7nYAyk2?usp=drive_link",
+  // كل فنادق موخيتو نفس الفولدر
+  "Mojito Palm": MOJITO,
+  "Mojito Hotel Standard": MOJITO,
+  "Mojito Panorama Sea View": MOJITO,
+  "Mojito Terrace Sea View": MOJITO,
+  "Delta Dahab": "https://drive.google.com/drive/folders/1E_71CsCQkp65RH3LVqqTcktOVE0mfyhg?usp=drive_link",
+  "Desert Hotel": "https://drive.google.com/drive/folders/1e4GXgtsOBJAv-ISFvilRByWYWAEBKtWN?usp=drive_link",
+  "Cabana House": "https://drive.google.com/drive/folders/1Wn7sD1N9fg0HP9UIbbtGy-QFroBaGHe-?usp=drive_link",
+  "Sunset Luxury Hotel": "https://drive.google.com/drive/folders/1I2qywR4gB-vbV311_qpbH-yrty8Q2oUx?usp=drive_link",
+  "Nesima Hotel": "https://drive.google.com/drive/folders/1OPrBD2CMuKdko5ZcvJWtD11_5y8DhaQN?usp=drive_link",
+  "Assala Sea View": "request",   // الصور بـ by request
+  // كانيون ونوبيا أيلاند — فولدرين منفصلين
+  "Canyon Nubia Island": { "Canyon": "https://drive.google.com/drive/folders/1-6DOJzPkhVpXHRW2LfgeqKhHdnm_0R1C?usp=drive_link", "Nubia Island": "https://drive.google.com/drive/folders/1yt5QjHC2omz6hfHQdYc01uIYKO7EHsZ0?usp=drive_link" },
+  "Panda Dahab Resort": "https://drive.google.com/drive/folders/1uuSPxaNIfC19kkMJ-hW9guMvVKjFZ3rK?usp=drive_link",
+  "Ganet Sinai Resort": "https://drive.google.com/drive/folders/1B6sQhRD_aYdTaY-ayITyDOF6Z5glVR6m?usp=drive_link",
+  "Ecotel Bay View Resort": "https://drive.google.com/drive/folders/17zKnfqh_-_mDnWO-DxNeEkBvywDqFg8y?usp=drive_link",
+  "Retac Qunay Resort": "https://drive.google.com/drive/folders/10Xr9eiB7v9F2AYWASvV8alEAIHcvkDb_?usp=drive_link",
+  "Dahab Lagoon Resort": "https://drive.google.com/drive/folders/1AUKERvrUwqoyCC0KzrnAgMG5wpWKX0WR?usp=drive_link"
+};
+
+// Build the "صور الفندق" button(s) next to each hotel's booking button
+const waPhotos = label => "https://wa.me/201005744083?text=" + encodeURIComponent("ممكن أشوف صور " + label + "؟");
+function makePhotoBtn(text, href){
+  const a = document.createElement("a");
+  a.className = "pcta pcta-ghost";
+  a.target = "_blank"; a.rel = "noopener";
+  a.textContent = text; a.href = href;
+  return a;
+}
+document.querySelectorAll(".pc .pcta").forEach(cta => {
+  let key = "";
+  try { key = decodeURIComponent((cta.getAttribute("href").split("text=")[1] || "")).replace("عايز احجز", "").trim(); } catch(e) {}
+  const card = cta.closest(".pc");
+  const name = card ? (card.querySelector(".pname")?.textContent.trim() || key) : key;
+  const val = HOTEL_PHOTOS[key];
+
+  const row = document.createElement("div");
+  row.className = "pcta-row";
+  cta.parentNode.insertBefore(row, cta);
+  row.appendChild(cta);
+
+  if (val && typeof val === "object") {
+    Object.keys(val).forEach(lbl => row.appendChild(makePhotoBtn("📸 " + lbl, val[lbl] || waPhotos(lbl))));
+  } else if (val === "request") {
+    row.appendChild(makePhotoBtn("📸 الصور (by request)", waPhotos(name)));
+  } else if (val) {
+    row.appendChild(makePhotoBtn("📸 صور الفندق", val));
+  } else {
+    row.appendChild(makePhotoBtn("📸 صور الفندق", waPhotos(name)));
+  }
+});
+
 // Cursor glow
 const cg = document.getElementById("cglow");
 document.addEventListener("mousemove", e => {
@@ -1320,9 +1529,16 @@ document.addEventListener("mousemove", e => {
   cg.style.top = e.clientY + "px";
 });
 
-// Nav scroll
+// Nav scroll + progress bar
 const nav = document.getElementById("nav");
-window.addEventListener("scroll", () => nav.classList.toggle("sc", window.scrollY > 60));
+const prog = document.getElementById("progress");
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("sc", window.scrollY > 60);
+  if (prog) {
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
+  }
+}, {passive:true});
 
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
@@ -1358,6 +1574,19 @@ function setDays(d, btn) {
   btn.classList.add("a");
 }
 
+// Tier descriptions (shown under the tabs so the 4 categories are obvious)
+const TIER_INFO = {
+  budget:   {ic:"💸", h:"Budget — أوفر سعر وأحلى vibes", p:"كامبات وفنادق اقتصادية على الممشى السياحي. أنضف، أبسط، وأقرب للبحر والكافيهات.", price:"يبدأ من 2,650 ج / فرد"},
+  standard: {ic:"🏨", h:"Standard — غرف فندقية وراحة أعلى", p:"فنادق حديثة (مش كامب) بموقع ممتاز، بعضها بحمام سباحة وفطار. راحة أكتر بسعر معقول.", price:"يبدأ من 3,100 ج / فرد"},
+  premium:  {ic:"✨", h:"Premium — فخامة وسي فيو مباشر", p:"فنادق 4 و5 نجوم، غرف Sea View وبانوراما، وأشهر فنادق دهب. تجربة فاخرة بمعنى الكلمة.", price:"يبدأ من 4,350 ج / فرد"},
+  lagoon:   {ic:"🌊", h:"Lagoon — ريزورتات وشواطئ رملية", p:"ريزورتات اللاجونا والثري بولز بشواطئ رملية وبوفيهات Half/Full Board. هدوء وطبيعة مختلفة.", price:"يبدأ من 4,200 ج / فرد"}
+};
+function renderTierInfo(t){
+  const d = TIER_INFO[t], el = document.getElementById("tierInfo");
+  if(!el || !d) return;
+  el.innerHTML = `<div class="ti-ic">${d.ic}</div><div class="ti-txt"><h4>${d.h}</h4><p>${d.p}</p></div><div class="ti-price">${d.price}</div>`;
+}
+
 function setTier(t, btn) {
   curTier = t;
   document.querySelectorAll(".tt").forEach(b => b.classList.remove("a"));
@@ -1365,7 +1594,12 @@ function setTier(t, btn) {
   document.querySelectorAll(".pc").forEach(c => {
     c.classList.toggle("sh2", c.dataset.tier === t);
   });
+  renderTierInfo(t);
 }
+renderTierInfo("budget");
+
+// FAQ accordion
+function toggleFaq(el){ el.closest(".faqi").classList.toggle("open"); }
 
 // Itinerary accordion
 function toggleDay(header) {
