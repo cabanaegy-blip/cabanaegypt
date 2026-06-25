@@ -3,407 +3,474 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cabana Egypt — رحلات دهب وسيناء | دهب مش مجرد رحلة</title>
-<meta name="description" content="رحلات منظمة لدهب وسيناء من كل محافظات مصر — إقامة وانتقالات وتور ليدر، رحلات داخلية (سفاري · يخت · غواصة)، وباقات هوني مون. الأسعار تبدأ من 2,650 جنيه.">
+<title>Cabana Egypt — دهب مش مجرد رحلة، it's a whole mood</title>
+<meta name="description" content="رحلات مختلفة لدهب وسيناء — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها. باقات تبدأ من 2,650 جنيه.">
 
-<!-- ===== Link preview (WhatsApp / Facebook / Instagram / Twitter) ===== -->
-<!-- لتغيير صورة المعاينة: ارفع صورة باسم og-image.jpg (مقاس 1200×630) في نفس مجلد الموقع
-     وغيّر روابط og:image و twitter:image تحت لـ https://cabanaegypt.com/og-image.jpg -->
+<!-- Link preview (WhatsApp / Facebook). لصورة معاينة خاصة: ارفع og-image.jpg (1200×630) وغيّر الروابط تحت -->
 <link rel="canonical" href="https://cabanaegypt.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cabana Egypt">
 <meta property="og:locale" content="ar_EG">
 <meta property="og:url" content="https://cabanaegypt.com/">
 <meta property="og:title" content="Cabana Egypt — دهب مش مجرد رحلة">
-<meta property="og:description" content="رحلات لدهب وسيناء من كل محافظات مصر — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها. الأسعار تبدأ من 2,650 جنيه.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
-<meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:description" content="رحلات شاملة لدهب وسيناء مع تور ليدر حقيقي. باقات تبدأ من 2,650 جنيه.">
+<meta property="og:image" content="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="رحلات دهب وسيناء مع Cabana Egypt">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Cabana Egypt — دهب مش مجرد رحلة">
-<meta name="twitter:description" content="رحلات لدهب وسيناء من كل محافظات مصر — كل حاجة شاملة وتجربة مش هتنساها.">
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&h=630&q=70">
-<meta name="theme-color" content="#080808">
+<meta name="twitter:description" content="رحلات شاملة لدهب وسيناء مع تور ليدر حقيقي معاك.">
+<meta name="twitter:image" content="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg">
+<meta name="theme-color" content="#FBF6EE">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
 <!--
-  Cabana Egypt — index.html
-  • رقم الواتساب: 201005744083  • الأسعار: class="pn"
-  • روابط صور الفنادق (جوجل درايف): ابحث عن HOTEL_PHOTOS في آخر الصفحة
-
-  Google Apps Script (backend الفورم):
-
-function doPost(e) {
-  var sheet = SpreadsheetApp.openById("1Y2HGQzqMdY_rmn-kwX7Wd3EI54cVpqQpdNhsI8r_txs").getSheets()[0];
-  if(sheet.getLastRow()==0){
-    sheet.appendRow(["التاريخ","الاسم","الواتساب","موعد الرحلة","البرنامج","عدد الأفراد","تفضيل الفندق","نوع الرحلة","ملاحظات"]);
-    sheet.getRange(1,1,1,9).setFontWeight("bold").setBackground("#C8956C").setFontColor("#ffffff");
-    sheet.setFrozenRows(1);
-  }
-  var d = JSON.parse(e.postData.contents);
-  sheet.appendRow([
-    Utilities.formatDate(new Date(),"Africa/Cairo","dd/MM/yyyy HH:mm"),
-    d.name||"",d.phone||"",d.date||"",d.program||"",d.people||"",d.hotel||"",d.type||"",d.notes||""
-  ]);
-  return ContentService.createTextOutput(JSON.stringify({status:"success"})).setMimeType(ContentService.MimeType.JSON);
-}
-function doGet(){return ContentService.createTextOutput("Cabana Egypt Form API is running OK");}
+  Cabana Egypt — index.html (single file)
+  • رقم الواتساب: 201005744083
+  • روابط صور الفنادق: ابحث عن HOTEL_PHOTOS
+  • بيانات الفنادق والأسعار: ابحث عن HOTELS
+  • صور الموقع: ابحث عن IMG (يفضّل ترفعها على الريبو بدل اللينكات الخارجية)
 -->
 <style>
-:root{--bg:#080808;--bg2:#0F0F0F;--bg3:#141414;--cu:#C8956C;--cl:#E8C5A8;--glow:rgba(200,149,108,.1);--glow2:rgba(200,149,108,.05);--wh:#F5F0EB;--mu:rgba(245,240,235,.45);--mu2:rgba(245,240,235,.7);--bo:rgba(200,149,108,.12);--bo2:rgba(200,149,108,.22)}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#FBF6EE; --bg2:#FFFFFF; --bg3:#F4EBDD; --bg4:#EFE3D2;
+  --ink:#211C17; --ink2:#6B6054; --ink3:#9A8E7E;
+  --line:#E8DCCB; --line2:#DBCBB4;
+  --terra:#D2683F; --terra-d:#A84E2D; --terra-glow:rgba(210,104,63,.10);
+  --sea:#15897D; --gold:#BC8A3C;
+  --bud:#3C9A6B; --std:#3B7DC4; --prem:#C2873B; --lag:#1898A0;
+  --shadow:0 14px 40px -18px rgba(56,40,24,.28);
+  /* surfaces that stay dark in BOTH themes (stats / contact / footer bands) */
+  --band:#211C17; --band2:#2A2017;
+  --navsc:rgba(251,246,238,.9);
+  --pill:#211C17; --pill-ink:#fff;
+  --hm-grad:linear-gradient(135deg,#fdf1ec,#fbf6ee);
+  color-scheme:light;
+}
+:root[data-theme="dark"]{
+  --bg:#15110C; --bg2:#1F1812; --bg3:#241C15; --bg4:#2C2218;
+  --ink:#F3EADD; --ink2:#BCAF9D; --ink3:#8C8071;
+  --line:#322820; --line2:#473826;
+  --terra:#E27A4D; --terra-d:#C25E36; --terra-glow:rgba(226,122,77,.16);
+  --sea:#2CB6A6; --gold:#D6A24E;
+  --bud:#46B07C; --std:#5391D6; --prem:#D49A4B; --lag:#27B0B8;
+  --shadow:0 18px 48px -20px rgba(0,0,0,.65);
+  --band:#0E0A06; --band2:#16110C;
+  --navsc:rgba(21,17,12,.86);
+  --pill:#F3EADD; --pill-ink:#16110C;
+  --hm-grad:linear-gradient(135deg,#241712,#1a130d);
+  color-scheme:dark;
+}
+*{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--wh);font-family:"Cairo",sans-serif;overflow-x:hidden}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--cu);border-radius:2px}
-.con{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-section{padding:6rem 0}
-@keyframes blob{0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}50%{border-radius:30% 60% 70% 40%/50% 60% 30% 60%}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-@keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-@keyframes glowpulse{0%,100%{box-shadow:0 0 20px rgba(200,149,108,.1)}50%{box-shadow:0 0 50px rgba(200,149,108,.35)}}
-@keyframes fadeup{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-.rev{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.25,.46,.45,.94),transform .7s cubic-bezier(.25,.46,.45,.94)}
-.rev.on{opacity:1;transform:translateY(0)}
-.revl{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease}
-.revl.on{opacity:1;transform:translateX(0)}
-.revr{opacity:0;transform:translateX(28px);transition:opacity .7s ease,transform .7s ease}
-.revr.on{opacity:1;transform:translateX(0)}
-#cglow{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(200,149,108,.05) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:0;transition:left .4s ease,top .4s ease}
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:999;padding:1.2rem 2rem;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
-nav.sc{background:rgba(8,8,8,.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--bo)}
-.logo{font-family:"Space Grotesk",sans-serif;font-size:.95rem;font-weight:700;letter-spacing:5px;color:var(--wh);text-decoration:none;display:flex;align-items:center;gap:10px}
-.logodot{width:7px;height:7px;border-radius:50%;background:var(--cu);animation:blink 2s infinite;flex-shrink:0}
-.navr{display:flex;align-items:center;gap:1.5rem}
-.nava{font-size:13px;color:var(--mu2);text-decoration:none;font-family:"Space Grotesk",sans-serif;letter-spacing:.5px;transition:color .2s}
-.nava:hover{color:var(--cu)}
-.navbtn{background:var(--cu);color:#080808;padding:10px 22px;border-radius:50px;font-size:13px;font-weight:700;text-decoration:none;font-family:"Cairo",sans-serif;transition:all .2s;white-space:nowrap}
-.navbtn:hover{background:var(--cl);transform:scale(1.04)}
-@media(max-width:768px){nav{padding:1rem 1.25rem}.nava{display:none}}
-/* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:9rem 0 5rem;background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center 40%}
-.heroov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,8,.95) 0%,rgba(8,8,8,.8) 55%,rgba(8,8,8,.92) 100%);z-index:0}
-.hblob{position:absolute;top:-180px;right:-180px;width:750px;height:750px;background:radial-gradient(circle,rgba(200,149,108,.1) 0%,transparent 65%);border-radius:60% 40% 30% 70%/60% 30% 70% 40%;animation:blob 11s ease-in-out infinite;pointer-events:none;z-index:0}
-.hblob2{position:absolute;bottom:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(200,149,108,.06) 0%,transparent 65%);border-radius:40% 60% 70% 30%/40% 50% 60% 50%;animation:blob 15s ease-in-out infinite reverse;pointer-events:none;z-index:0}
-.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.htag{display:inline-flex;align-items:center;gap:8px;background:var(--glow);border:1px solid var(--bo2);padding:7px 18px;border-radius:50px;font-size:11px;color:var(--cu);font-family:"Space Grotesk",sans-serif;letter-spacing:3px;text-transform:uppercase;margin-bottom:1.75rem}
-.htdot{width:7px;height:7px;border-radius:50%;background:var(--cu);animation:blink 1.5s infinite}
-h1{font-size:clamp(3rem,7vw,6rem);font-weight:900;line-height:1.05;letter-spacing:-1.5px;margin-bottom:.75rem;animation:fadeup .8s ease both}
-h1 em{font-style:italic;font-family:"Space Grotesk",sans-serif;color:var(--cu);font-weight:300;font-size:.5em;display:block;letter-spacing:3px;margin-top:8px}
-.hsub{font-size:16px;color:var(--mu2);line-height:1.85;font-weight:300;max-width:490px;margin-bottom:2.5rem;animation:fadeup .8s .15s ease both}
-.hbtns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem;animation:fadeup .8s .25s ease both}
-.btnm{background:var(--cu);color:#080808;padding:16px 36px;border-radius:50px;font-size:15px;font-weight:700;text-decoration:none;font-family:"Cairo",sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all .25s;animation:glowpulse 3s ease-in-out infinite}
-.btnm:hover{background:var(--cl);transform:translateY(-2px)}
-.btng{background:transparent;color:var(--wh);padding:16px 36px;border-radius:50px;font-size:15px;font-weight:400;text-decoration:none;font-family:"Cairo",sans-serif;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bo2);transition:all .25s}
-.btng:hover{border-color:var(--cu);color:var(--cu);background:var(--glow)}
-.hstats{display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2.5rem;border-top:1px solid var(--bo);animation:fadeup .8s .35s ease both}
-.stn{font-family:"Space Grotesk",sans-serif;font-size:1.8rem;font-weight:700;color:var(--cu);line-height:1}
-.stl{font-size:11px;color:var(--mu);margin-top:4px;letter-spacing:.5px}
-.hcards{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.hcard{background:rgba(15,15,15,.75);backdrop-filter:blur(12px);border:1px solid var(--bo);border-radius:14px;padding:1.2rem;transition:all .3s;cursor:default}
-.hcard:hover{border-color:var(--bo2);transform:translateY(-4px);background:rgba(20,20,20,.85)}
-.hcico{font-size:1.6rem;margin-bottom:.7rem}
-.hcard h4{font-size:13px;font-weight:600;margin-bottom:3px}
-.hcard p{font-size:12px;color:var(--mu);line-height:1.55}
-.hcard.ft{grid-column:1/-1;display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(200,149,108,.12),rgba(200,149,108,.05));border-color:var(--bo2)}
-@media(max-width:768px){.hgrid{grid-template-columns:1fr}.hcards-wrap{display:none}h1{font-size:3.2rem}.hstats{gap:1.5rem}}
-/* MARQUEE */
-.mq-wrap{padding:1rem 0;background:var(--glow2);border-top:1px solid var(--bo);border-bottom:1px solid var(--bo);overflow:hidden}
-.mq-track{display:flex;white-space:nowrap;animation:mq 28s linear infinite}
-.mqi{font-family:"Space Grotesk",sans-serif;font-size:12px;letter-spacing:3px;color:var(--cu);padding:0 2rem;text-transform:uppercase;flex-shrink:0}
-.mqd{opacity:.3}
-/* SECTION LABELS */
-.ey{font-family:"Space Grotesk",sans-serif;font-size:10px;letter-spacing:5px;color:var(--cu);text-transform:uppercase;display:block;margin-bottom:1rem}
-.sh{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;line-height:1.15;margin-bottom:1.25rem}
-.sh .en{font-family:"Space Grotesk",sans-serif;font-size:.45em;font-weight:300;color:var(--mu);display:block;letter-spacing:3px;font-style:italic;margin-top:6px}
-.ss{font-size:15px;color:var(--mu2);line-height:1.85;font-weight:300;max-width:540px}
-/* PACKAGES */
-.pkgs{background:var(--bg)}
-.pctrl{display:flex;gap:12px;margin-bottom:2.5rem;flex-wrap:wrap;align-items:center}
-.tgg{display:flex;background:var(--bg2);border:1px solid var(--bo);border-radius:50px;padding:4px;gap:3px}
-.tgb{padding:8px 22px;border-radius:50px;border:none;background:transparent;color:var(--mu);font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;font-family:"Cairo",sans-serif}
-.tgb.a{background:var(--cu);color:#080808;font-weight:700}
-.tierbar{margin-bottom:.25rem}
-.tierbar-lbl{display:block;font-size:13.5px;color:var(--mu2);margin-bottom:.85rem;font-weight:600}
+body{font-family:"Cairo",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.en{font-family:"Space Grotesk",sans-serif;direction:ltr;unicode-bidi:isolate}
+.con{max-width:1180px;margin:0 auto;padding:0 22px}
+section{padding:78px 0}
+h1,h2,h3{line-height:1.25;font-weight:800}
+.ey{display:inline-block;font-family:"Space Grotesk",sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:14px}
+.sh{font-size:clamp(26px,4.4vw,42px);font-weight:900;letter-spacing:-.5px;margin-bottom:14px}
+.sh .lt{font-family:"Caveat",cursive;color:var(--terra);font-weight:700;font-size:1.18em;display:inline-block;margin-right:10px;transform:rotate(-3deg);transform-origin:bottom right}
+.ss{font-size:16px;color:var(--ink2);max-width:620px;line-height:1.85}
+
+/* progress + nav */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--terra),var(--gold));z-index:1000;box-shadow:0 0 12px rgba(210,104,63,.5);transition:width .12s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;align-items:center;justify-content:space-between;padding:16px 28px;transition:.35s}
+nav.sc{background:var(--navsc);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);padding:11px 28px}
+.logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:19px;letter-spacing:1px;color:#fff;transition:.35s}
+.logo b{color:var(--terra)}
+nav.sc .logo{color:var(--ink)}
+.nlinks{display:flex;gap:26px;align-items:center}
+.nlinks a{font-size:14.5px;font-weight:600;color:rgba(255,255,255,.92);transition:.2s}
+nav.sc .nlinks a{color:var(--ink2)}
+.nlinks a:hover{color:var(--terra)}
+.nbtn{background:var(--terra);color:#fff!important;padding:9px 20px;border-radius:50px;font-weight:700;font-size:14px;transition:.25s}
+.nbtn:hover{background:var(--terra-d);transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+nav.sc .burger{color:var(--ink)}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:120px 22px 80px}
+.hero-bg{position:absolute;inset:0;background:#2a2118;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.45),rgba(20,14,8,.25) 40%,rgba(20,14,8,.7))}
+.hero-in{position:relative;max-width:860px;z-index:2}
+.hero .loc{font-family:"Space Grotesk",sans-serif;letter-spacing:4px;font-size:13px;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:20px}
+.hero h1{font-size:clamp(34px,7vw,72px);font-weight:900;letter-spacing:-1px;line-height:1.1;text-shadow:0 4px 30px rgba(0,0,0,.3)}
+.hero h1 .moodline{display:block;font-family:"Caveat",cursive;font-weight:700;font-size:.72em;color:var(--terra);letter-spacing:0;margin-top:2px;transform:rotate(-2deg)}
+.hero p{font-size:clamp(16px,2.2vw,20px);color:rgba(255,255,255,.92);max-width:600px;margin:22px auto 32px;line-height:1.8}
+.hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 30px;border-radius:50px;font-weight:700;font-size:15.5px;transition:.25s;cursor:pointer;border:0}
+.btn-p{background:var(--terra);color:#fff}
+.btn-p:hover{background:var(--terra-d);transform:translateY(-2px);box-shadow:0 12px 30px -8px rgba(210,104,63,.6)}
+.btn-g{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.5);backdrop-filter:blur(6px)}
+.btn-g:hover{background:rgba(255,255,255,.24);transform:translateY(-2px)}
+.scrolldn{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:24px;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* stats */
+.stats{background:var(--band);color:#fff;padding:0}
+.stats .con{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{padding:34px 18px;text-align:center;border-left:1px solid rgba(255,255,255,.08)}
+.stat:first-child{border-left:0}
+.stat .n{font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--terra)}
+.stat .l{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+
+/* marquee */
+.marq{background:var(--terra);color:#fff;padding:15px 0;overflow:hidden;white-space:nowrap}
+.marq-t{display:inline-block;animation:scrollx 34s linear infinite;font-weight:600;font-size:15px}
+.marq-t span{margin:0 14px;opacity:.95}
+.marq-t .sep{color:rgba(255,255,255,.55)}
+@keyframes scrollx{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* feature grid */
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.fcard{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:26px 24px;transition:.3s}
+.fcard:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:var(--line2)}
+.fcard .ic{font-size:30px;margin-bottom:12px}
+.fcard h3{font-size:18px;font-weight:800;margin-bottom:6px}
+.fcard p{font-size:14px;color:var(--ink2);line-height:1.7}
+
+/* split image feature */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:46px;align-items:center}
+.split.rev{grid-template-columns:1fr 1.05fr}
+.split-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3}
+.split-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.split-img:hover img{transform:scale(1.05)}
+.checks{list-style:none;margin:22px 0 26px;display:flex;flex-direction:column;gap:11px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}
+.checks li b{color:var(--sea);font-size:17px;line-height:1.5}
+.tlink{display:inline-flex;align-items:center;gap:6px;color:var(--terra);font-weight:700;font-size:15px}
+.tlink:hover{gap:11px}
+
+/* packages */
+.pkg{background:var(--bg3)}
+.pctrl{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:34px}
+.tgg{display:inline-flex;background:var(--bg2);border:1px solid var(--line);border-radius:50px;padding:4px}
+.tgb{border:0;background:none;padding:9px 18px;border-radius:50px;font-family:"Cairo";font-size:13.5px;font-weight:700;color:var(--ink2);cursor:pointer;transition:.2s}
+.tgb.a{background:var(--pill);color:var(--pill-ink)}
+.tierbar{margin:26px 0 0}
+.tierbar-lbl{display:block;font-size:13.5px;color:var(--ink2);font-weight:600;margin-bottom:12px}
 .ttabs{display:flex;gap:10px;flex-wrap:wrap}
-.tt{padding:11px 22px;border-radius:14px;border:1.5px solid var(--bo);background:var(--bg2);color:var(--mu2);font-size:14px;font-weight:600;cursor:pointer;transition:all .25s;font-family:"Cairo",sans-serif}
-.tt:hover{border-color:var(--bo2);color:var(--wh);transform:translateY(-2px)}
-.tt.a{transform:translateY(-3px)}
-.tt[data-tier="budget"].a{border-color:#50C878;color:#50C878;background:rgba(50,200,100,.1);box-shadow:0 8px 24px rgba(50,200,100,.16)}
-.tt[data-tier="standard"].a{border-color:#6496FF;color:#6496FF;background:rgba(100,150,255,.1);box-shadow:0 8px 24px rgba(100,150,255,.16)}
-.tt[data-tier="premium"].a{border-color:var(--cu);color:var(--cu);background:var(--glow);box-shadow:0 8px 24px rgba(200,149,108,.2)}
-.tt[data-tier="lagoon"].a{border-color:#64C8FF;color:#64C8FF;background:rgba(100,200,255,.1);box-shadow:0 8px 24px rgba(100,200,255,.16)}
-.tierinfo{margin:1.3rem 0 2.2rem;padding:1.05rem 1.3rem;border-radius:16px;background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid var(--bo2);display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap}
-.tierinfo .ti-ic{font-size:1.8rem;flex-shrink:0}
+.tt{padding:11px 22px;border-radius:14px;border:1.5px solid var(--line);background:var(--bg2);color:var(--ink2);font-size:14px;font-weight:700;cursor:pointer;transition:.25s;font-family:"Cairo"}
+.tt:hover{transform:translateY(-2px);border-color:var(--line2)}
+.tt.a{transform:translateY(-3px);color:#fff}
+.tt[data-tier="budget"].a{background:var(--bud);border-color:var(--bud)}
+.tt[data-tier="standard"].a{background:var(--std);border-color:var(--std)}
+.tt[data-tier="premium"].a{background:var(--prem);border-color:var(--prem)}
+.tt[data-tier="lagoon"].a{background:var(--lag);border-color:var(--lag)}
+.tierinfo{margin:20px 0 6px;padding:16px 20px;border-radius:16px;background:var(--bg2);border:1px solid var(--line);display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.tierinfo .ti-ic{font-size:30px}
 .tierinfo .ti-txt{flex:1;min-width:220px}
-.tierinfo .ti-txt h4{font-size:14.5px;font-weight:700;margin-bottom:4px}
-.tierinfo .ti-txt p{font-size:12.5px;color:var(--mu2);line-height:1.6}
-.tierinfo .ti-price{font-family:"Space Grotesk",sans-serif;font-size:13px;color:var(--cu);font-weight:600;white-space:nowrap;background:var(--glow);border:1px solid var(--bo2);padding:7px 14px;border-radius:50px}
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem}
-.pc{background:var(--bg2);border:1px solid var(--bo);border-radius:20px;overflow:hidden;transition:all .35s;display:none}
-.pc.sh2{display:block}
-.pc:hover{border-color:var(--bo2);transform:translateY(-7px);box-shadow:0 24px 60px rgba(200,149,108,.1)}
-/* Hotel card image strip */
-.pimg{height:155px;background-size:cover;background-position:center;position:relative;overflow:hidden;flex-shrink:0}
-.pimg::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(15,15,15,.96) 100%)}
-.pimgbdg{position:absolute;bottom:10px;right:12px;z-index:1;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);border:1px solid rgba(200,149,108,.25);color:var(--cu);font-size:9px;padding:3px 9px;border-radius:50px;font-family:"Space Grotesk",sans-serif;letter-spacing:1.5px;text-transform:uppercase}
-.pctop{padding:1.2rem 1.4rem;position:relative;border-bottom:1px solid var(--bo);background:linear-gradient(135deg,var(--glow2),transparent)}
-.pbdg{display:inline-block;font-size:10px;font-family:"Space Grotesk",sans-serif;letter-spacing:2px;padding:4px 10px;border-radius:50px;text-transform:uppercase;margin-bottom:8px}
-.bb{background:rgba(50,200,100,.07);color:#50C878;border:1px solid rgba(50,200,100,.15)}
-.bs{background:rgba(100,150,255,.07);color:#6496FF;border:1px solid rgba(100,150,255,.15)}
-.bp{background:rgba(200,149,108,.1);color:var(--cu);border:1px solid var(--bo2)}
-.bl{background:rgba(100,200,255,.07);color:#64C8FF;border:1px solid rgba(100,200,255,.15)}
-.pname{font-size:1.15rem;font-weight:700;margin-bottom:3px}
-.ploc{font-size:11px;color:var(--mu);font-family:"Space Grotesk",sans-serif;letter-spacing:1px;margin-bottom:6px}
-.pstars{font-size:12px;color:#FFD700;letter-spacing:2px;margin-top:4px}
-.pbody{padding:1.4rem}
-.pfeat{margin-bottom:1.2rem}
-.pfi{display:flex;align-items:flex-start;gap:8px;font-size:12px;color:var(--mu2);padding:3px 0;line-height:1.5}
-.pfi::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--cu);flex-shrink:0;margin-top:5px}
-.pincl{background:rgba(200,149,108,.06);border:1px solid var(--bo);border-radius:10px;padding:.7rem 1rem;margin-bottom:1.1rem;font-size:11px;color:var(--mu2);line-height:1.7;font-family:"Space Grotesk",sans-serif}
-.pprices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1.2rem}
-.pp{background:rgba(200,149,108,.05);border:1px solid var(--bo);border-radius:11px;padding:11px;text-align:center}
-.ppl{font-size:10px;color:var(--mu);font-family:"Space Grotesk",sans-serif;margin-bottom:3px}
-.pn{font-family:"Space Grotesk",sans-serif;font-size:1.35rem;font-weight:700;color:var(--cu)}
-.ppu{font-size:10px;color:var(--mu)}
-.pcta{display:block;text-align:center;background:var(--cu);color:#080808;padding:12px;border-radius:11px;font-size:14px;font-weight:700;text-decoration:none;transition:all .2s;font-family:"Cairo",sans-serif}
-.pcta:hover{background:var(--cl)}
-/* ITINERARY */
-.itin{background:var(--bg2)}
-.idays{margin-top:3rem;display:flex;flex-direction:column;gap:1.5rem}
-.iday{background:var(--bg3);border:1px solid var(--bo);border-radius:20px;overflow:hidden;transition:all .3s;cursor:pointer}
-.iday:hover{border-color:var(--bo2)}
-.idayh{padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;justify-content:space-between}
-.idayl{display:flex;align-items:center;gap:1rem}
-.idaynum{width:44px;height:44px;border-radius:50%;background:var(--glow);border:1px solid var(--bo2);color:var(--cu);font-family:"Space Grotesk",sans-serif;font-size:1rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.idaytitle{font-size:15px;font-weight:600}
-.idaysub{font-size:12px;color:var(--mu);margin-top:2px;font-family:"Space Grotesk",sans-serif}
-.idayarr{font-size:14px;color:var(--cu);transition:transform .3s}
+.tierinfo .ti-txt h4{font-size:15px;font-weight:800;margin-bottom:2px}
+.tierinfo .ti-txt p{font-size:13px;color:var(--ink2);line-height:1.6}
+.tierinfo .ti-price{font-family:"Space Grotesk";font-size:13px;font-weight:600;color:var(--terra);background:var(--terra-glow);border:1px solid var(--line2);padding:8px 15px;border-radius:50px;white-space:nowrap}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.pc{background:var(--bg2);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.pc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line2)}
+.pc.hide{display:none}
+.pctop{padding:22px 22px 16px;border-bottom:1px solid var(--line)}
+.picon{font-size:30px;margin-bottom:8px}
+.pbdg{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.3px;padding:4px 11px;border-radius:50px;margin-bottom:9px}
+.bd-budget{background:rgba(60,154,107,.13);color:var(--bud)}
+.bd-standard{background:rgba(59,125,196,.13);color:var(--std)}
+.bd-premium{background:rgba(194,135,59,.15);color:var(--prem)}
+.bd-lagoon{background:rgba(24,152,160,.13);color:var(--lag)}
+.pname{font-size:20px;font-weight:800;margin-bottom:4px}
+.ploc{font-size:12.5px;color:var(--ink3)}
+.pbody{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1}
+.pfeat{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+.pfeat li{display:flex;gap:8px;font-size:13.2px;color:var(--ink2);line-height:1.55}
+.pfeat li b{color:var(--sea)}
+.pincl{font-size:11.5px;color:var(--ink3);background:var(--bg3);border-radius:10px;padding:9px 12px;margin-bottom:16px;line-height:1.7}
+.pprices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;margin-top:auto}
+.pp{background:var(--bg3);border-radius:12px;padding:12px;text-align:center}
+.pp .ppl{font-size:11px;color:var(--ink3);margin-bottom:2px}
+.pp .pn{font-family:"Space Grotesk";font-size:21px;font-weight:700;color:var(--ink)}
+.pp .ppu{font-size:10.5px;color:var(--ink3)}
+.pcta-row{display:flex;gap:8px;flex-wrap:wrap}
+.pcta{flex:1.3 1 140px;text-align:center;background:var(--terra);color:#fff;padding:12px;border-radius:12px;font-weight:700;font-size:14px;transition:.25s}
+.pcta:hover{background:var(--terra-d);transform:translateY(-1px)}
+.pcta-ghost{flex:1 1 130px;background:transparent;color:var(--terra);border:1px solid var(--line2);font-weight:700}
+.pcta-ghost:hover{background:var(--terra-glow);color:var(--terra-d);border-color:var(--terra)}
+
+/* how it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
+.step{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+.step .num{font-family:"Space Grotesk";font-size:42px;font-weight:700;color:var(--terra-glow);line-height:1;position:absolute;top:18px;left:22px}
+.step h3{font-size:18px;font-weight:800;margin:36px 0 8px}
+.step p{font-size:14px;color:var(--ink2);line-height:1.75}
+
+/* dark image band */
+.band{position:relative;color:#fff;text-align:center;padding:90px 22px}
+.band-bg{position:absolute;inset:0;z-index:-2;background:#1a130c}
+.band-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.6),rgba(20,14,8,.75))}
+.band h2{font-size:clamp(26px,4vw,40px);font-weight:900;margin-bottom:14px}
+.band p{font-size:16px;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 26px;line-height:1.85}
+
+/* itinerary */
+.idays{display:flex;flex-direction:column;gap:12px;margin-top:38px}
+.iday{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.3s}
+.iday.open{border-color:var(--line2);box-shadow:var(--shadow)}
+.idayh{display:flex;align-items:center;gap:16px;padding:18px 22px;cursor:pointer}
+.idaynum{font-family:"Space Grotesk";font-size:22px;font-weight:700;color:var(--terra);min-width:34px}
+.idaytitle{font-size:16px;font-weight:800}
+.idaysub{font-size:12.5px;color:var(--ink3);margin-top:2px}
+.idayarr{margin-right:auto;color:var(--terra);font-size:13px;transition:.3s}
 .iday.open .idayarr{transform:rotate(180deg)}
 .idaybody{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.iday.open .idaybody{max-height:700px}
-.idaycontent{padding:0 1.5rem 1.5rem;border-top:1px solid var(--bo)}
-.iact{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(200,149,108,.07)}
-.iact:last-child{border-bottom:none}
-.iacttime{font-family:"Space Grotesk",sans-serif;font-size:11px;color:var(--cu);min-width:65px;padding-top:3px;flex-shrink:0}
-.iactico{font-size:1.3rem;flex-shrink:0;padding-top:1px}
-.iact h4{font-size:13px;font-weight:600;margin-bottom:4px}
-.iact p{font-size:12px;color:var(--mu);line-height:1.7}
-/* HONEYMOON */
-.hm{background:linear-gradient(160deg,#130B05 0%,#0E0806 50%,#1C0E07 100%);position:relative;overflow:hidden}
-.hmglow{position:absolute;top:50%;left:35%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(220,120,60,.06) 0%,transparent 65%);pointer-events:none}
-.hmgrid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative;z-index:1}
-.hmey{font-family:"Space Grotesk",sans-serif;font-size:10px;letter-spacing:5px;color:#E8B88A;text-transform:uppercase;display:block;margin-bottom:1rem}
-.hmh2{font-size:clamp(2rem,3.5vw,3rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
-.hmh2 em{font-style:normal;color:#E8B88A}
-.hmsub{font-size:15px;color:rgba(245,225,205,.55);line-height:1.95;font-weight:300;margin-bottom:2rem}
-.hmfeats{margin-bottom:2.25rem}
-.hmfi{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid rgba(200,100,50,.1)}
-.hmfi:last-child{border-bottom:none}
-.hmfico{font-size:1.4rem;flex-shrink:0;margin-top:2px}
-.hmfi h4{font-size:14px;font-weight:600;margin-bottom:3px;color:rgba(245,225,205,.9)}
-.hmfi p{font-size:12px;color:rgba(245,225,205,.45);line-height:1.6}
-.btnhm{background:linear-gradient(135deg,#E8B88A,#C8956C);color:#130B05;padding:15px 34px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;font-family:"Cairo",sans-serif;display:inline-flex;align-items:center;gap:8px;transition:all .25s;box-shadow:0 0 30px rgba(200,100,50,.2)}
-.btnhm:hover{transform:translateY(-2px);box-shadow:0 0 50px rgba(200,100,50,.35)}
-.hmvcards{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.hmvc{background:rgba(200,100,50,.06);border:1px solid rgba(200,100,50,.12);border-radius:14px;padding:1.3rem;text-align:center;transition:all .3s}
-.hmvc:hover{border-color:rgba(200,149,108,.3);transform:translateY(-3px)}
-.hmvcico{font-size:1.8rem;margin-bottom:.7rem}
-.hmvc h4{font-size:13px;font-weight:600;margin-bottom:3px;color:rgba(245,225,205,.85)}
-.hmvc p{font-size:11px;color:rgba(245,225,205,.4);line-height:1.6}
-.hmvc.ft{grid-column:1/-1;display:flex;align-items:center;gap:1.3rem;text-align:right;background:linear-gradient(135deg,rgba(200,100,50,.1),rgba(200,149,108,.06));border-color:rgba(200,149,108,.2)}
-.hmvc.ft .hmvcico{font-size:2.2rem;flex-shrink:0}
-@media(max-width:768px){.hmgrid{grid-template-columns:1fr;gap:2.5rem}.hmvcards{display:none}}
-/* HOW */
-.how{background:var(--bg3)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3.5rem;position:relative}
-.steps::before{content:"";position:absolute;top:28px;right:17%;left:17%;height:1px;background:linear-gradient(to left,transparent,var(--bo2),var(--bo2),transparent)}
-.step{text-align:center}
-.stepn{width:56px;height:56px;border-radius:50%;background:var(--bg);border:1px solid var(--cu);color:var(--cu);font-family:"Space Grotesk",sans-serif;font-size:1.1rem;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;position:relative;z-index:1;box-shadow:0 0 24px rgba(200,149,108,.12)}
-.step h3{font-size:16px;font-weight:600;margin-bottom:8px}
-.step p{font-size:13px;color:var(--mu);line-height:1.7}
-@media(max-width:768px){.steps{grid-template-columns:1fr}.steps::before{display:none}}
-/* REVIEWS */
-.revs{background:var(--bg)}
-.rvgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
-.rv{background:var(--bg2);border:1px solid var(--bo);border-radius:16px;padding:1.5rem;transition:all .3s}
-.rv:hover{border-color:var(--bo2);box-shadow:0 12px 40px rgba(200,149,108,.07)}
-.rvstars{color:var(--cu);font-size:13px;letter-spacing:2px;margin-bottom:.75rem}
-.rvtext{font-size:14px;color:var(--mu2);line-height:1.85;margin-bottom:1.25rem;font-weight:300}
-.rvaval{display:flex;align-items:center;gap:10px}
-.rvav{width:36px;height:36px;border-radius:50%;background:var(--glow);border:1px solid var(--bo2);display:flex;align-items:center;justify-content:center;color:var(--cu);font-weight:700;font-size:13px;flex-shrink:0}
-.rvname{font-size:13px;font-weight:600}
-.rvtrip{font-size:11px;color:var(--mu);margin-top:2px;font-family:"Space Grotesk",sans-serif}
-@media(max-width:768px){.rvgrid{grid-template-columns:1fr}}
-/* FORM */
-.form-sec{background:var(--bg2)}
-.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.fform{display:flex;flex-direction:column;gap:1rem}
-.fg{display:flex;flex-direction:column;gap:6px}
-.fg label{font-size:13px;color:var(--mu2);font-weight:500}
-.fg input,.fg select,.fg textarea{background:var(--bg3);border:1px solid var(--bo);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--wh);font-family:"Cairo",sans-serif;outline:none;transition:border-color .2s;width:100%}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--cu);box-shadow:0 0 0 3px rgba(200,149,108,.1)}
-.fg select option{background:var(--bg3);color:var(--wh)}
-.fg textarea{resize:vertical;min-height:100px}
-.fg2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.fsubmit{background:var(--cu);color:#080808;padding:15px;border-radius:11px;font-size:15px;font-weight:700;border:none;cursor:pointer;font-family:"Cairo",sans-serif;transition:all .2s;margin-top:.5rem}
-.fsubmit:hover{background:var(--cl);transform:translateY(-2px)}
-.fsubmit:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.fmsg{padding:14px;border-radius:10px;font-size:14px;margin-top:.5rem;text-align:center;display:none}
-.fmsg.ok{background:rgba(50,200,100,.1);border:1px solid rgba(50,200,100,.2);color:#50C878;display:block}
-.fmsg.err{background:rgba(255,100,100,.1);border:1px solid rgba(255,100,100,.2);color:#ff6464;display:block}
-.finfo{display:flex;flex-direction:column;gap:1.5rem}
-.finfocard{background:var(--bg3);border:1px solid var(--bo);border-radius:16px;padding:1.5rem}
-.finfocard h4{font-size:14px;font-weight:600;color:var(--cu);margin-bottom:.75rem;display:flex;align-items:center;gap:8px}
-.finfocard p,.finfocard a{font-size:13px;color:var(--mu2);line-height:1.8;text-decoration:none}
-.finfocard a{color:var(--cu)}
-@media(max-width:768px){.fgrid{grid-template-columns:1fr}.fg2{grid-template-columns:1fr}}
-/* CANCEL POLICY */
-.cpgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.25rem;margin-top:2.5rem}
-/* FOOTER */
-footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)}
-.ftgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.ftname{font-family:"Space Grotesk",sans-serif;font-size:1rem;font-weight:700;letter-spacing:5px;margin-bottom:1rem}
-.ftname span{color:var(--cu)}
-.ftdesc{font-size:13px;color:var(--mu);line-height:1.85;margin-bottom:1.25rem}
-.ftpays{display:flex;gap:7px;flex-wrap:wrap}
-.ftpay{background:rgba(255,255,255,.04);border:1px solid var(--bo);color:var(--mu);padding:4px 10px;border-radius:6px;font-size:10px;font-family:"Space Grotesk",sans-serif;letter-spacing:1px}
-.ftcol h4{font-size:10px;font-family:"Space Grotesk",sans-serif;letter-spacing:4px;text-transform:uppercase;color:var(--cu);margin-bottom:1rem}
-.ftcol a{display:block;font-size:13px;color:var(--mu);text-decoration:none;padding:4px 0;transition:color .2s}
-.ftcol a:hover{color:var(--cu)}
-.ftbot{border-top:1px solid var(--bo);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(245,240,235,.2);font-family:"Space Grotesk",sans-serif;flex-wrap:wrap;gap:.75rem}
-.ftsoc{display:flex;gap:1.25rem}
-.ftsl{color:var(--mu);text-decoration:none;font-size:11px;letter-spacing:1.5px;transition:color .2s}
-.ftsl:hover{color:var(--cu)}
-@media(max-width:768px){.ftgrid{grid-template-columns:1fr;gap:2rem}.ftbot{flex-direction:column;text-align:center}}
-/* WA FLOAT */
-.wa{position:fixed;bottom:1.5rem;left:1.5rem;z-index:900;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 24px rgba(37,211,102,.4);animation:float 3.5s ease-in-out infinite;transition:transform .2s}
-.wa:hover{transform:scale(1.12)!important;animation:none}
-/* FINAL CTA */
-.fcta{background:linear-gradient(160deg,#0D0D0D,#150D06);border-top:1px solid var(--bo);padding:7rem 0;text-align:center;position:relative;overflow:hidden}
-.fcta::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:350px;background:radial-gradient(ellipse,rgba(200,149,108,.07) 0%,transparent 65%);pointer-events:none}
-.fcta .con{position:relative;z-index:1}
-.fctah{font-size:clamp(2.5rem,5vw,5rem);font-weight:900;line-height:1.05;margin-bottom:1rem;letter-spacing:-1px}
-.fctah em{font-style:normal;color:var(--cu)}
-.fctasub{font-size:16px;color:var(--mu2);margin-bottom:3rem;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.8}
-.fctabtns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.fctanote{font-size:11px;color:var(--mu);margin-top:1.5rem;font-family:"Space Grotesk",sans-serif;letter-spacing:1px}
-/* SCROLL PROGRESS BAR */
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cu),var(--cl));z-index:1000;box-shadow:0 0 12px rgba(200,149,108,.65);transition:width .12s linear;pointer-events:none}
-/* HOTEL CTA ROW + PHOTOS BUTTON */
-.pcta-row{display:flex;gap:8px;flex-wrap:wrap}
-.pcta-row .pcta{margin:0;flex:1 1 130px;text-align:center}
-.pcta-row .pcta:first-child{flex:1.3 1 140px}
-.pcta-ghost{background:transparent;color:var(--cu);border:1px solid var(--bo2);font-weight:600}
-.pcta-ghost:hover{background:var(--glow);color:var(--cl);border-color:var(--cu);transform:translateY(-1px)}
-/* FAQ */
-.faq{background:var(--bg2)}
-.faqs{margin-top:2.5rem;display:flex;flex-direction:column;gap:.9rem;max-width:840px}
-.faqi{background:var(--bg3);border:1px solid var(--bo);border-radius:14px;overflow:hidden;transition:border-color .3s,background .3s}
-.faqi:hover{border-color:var(--bo2)}
-.faqi.open{background:linear-gradient(135deg,var(--glow2),transparent);border-color:var(--bo2)}
-.faqq{padding:1.1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;cursor:pointer;font-size:14.5px;font-weight:600;line-height:1.5;user-select:none}
-.faqq .qx{color:var(--cu);font-size:1.35rem;font-weight:300;transition:transform .35s;flex-shrink:0;line-height:1}
+.iday.open .idaybody{max-height:460px}
+.idaybody p{padding:0 22px 20px 70px;font-size:14px;color:var(--ink2);line-height:1.85}
+
+/* honeymoon */
+.hm{background:var(--hm-grad)}
+.hm-card{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:46px 40px;text-align:center;box-shadow:var(--shadow)}
+.hm-card .ic{font-size:40px;margin-bottom:10px}
+.hm-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:24px 0 28px}
+.hm-tags span{background:var(--bg3);border:1px solid var(--line);border-radius:50px;padding:8px 16px;font-size:13px;font-weight:600;color:var(--ink2)}
+
+/* testimonials */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
+.tcard{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+.tstars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.tcard p{font-size:14px;color:var(--ink);line-height:1.85;margin-bottom:16px;flex:1}
+.tcard .who{font-size:13px;font-weight:800}
+.tcard .meta{font-size:11.5px;color:var(--ink3)}
+
+/* faq */
+.faqs{margin-top:38px;display:flex;flex-direction:column;gap:11px;max-width:840px}
+.faqi{background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}
+.faqi.open{border-color:var(--line2);box-shadow:var(--shadow)}
+.faqq{padding:17px 22px;display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;font-size:15px;font-weight:700}
+.faqq .qx{color:var(--terra);font-size:22px;font-weight:300;transition:.35s}
 .faqi.open .qx{transform:rotate(135deg)}
 .faqa{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faqi.open .faqa{max-height:340px}
-.faqa p{padding:0 1.3rem 1.2rem;font-size:13.5px;color:var(--mu2);line-height:1.9}
-/* REDUCED MOTION */
-@media(prefers-reduced-motion:reduce){*{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}.rev,.revl,.revr{opacity:1!important;transform:none!important}}
+.faqi.open .faqa{max-height:360px}
+.faqa p{padding:0 22px 20px;font-size:14px;color:var(--ink2);line-height:1.9}
+
+/* contact / form */
+.contact{background:var(--band);color:#fff}
+.contact .sh{color:#fff}
+.contact .ss{color:rgba(255,255,255,.75)}
+.cwrap{display:grid;grid-template-columns:1fr 1.1fr;gap:46px;margin-top:40px;align-items:start}
+.cinfo h3{font-size:19px;margin-bottom:18px}
+.cinfo .crow{display:flex;gap:12px;align-items:flex-start;margin-bottom:18px}
+.cinfo .crow .ci{font-size:22px}
+.cinfo .crow b{display:block;font-size:14.5px;margin-bottom:2px}
+.cinfo .crow span{font-size:13px;color:rgba(255,255,255,.65)}
+.fform{background:var(--bg2);border-radius:22px;padding:30px;color:var(--ink)}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:13px;font-weight:700;margin-bottom:7px}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 14px;border:1px solid var(--line2);border-radius:11px;font-family:"Cairo";font-size:14px;background:var(--bg);color:var(--ink);transition:.2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:0;border-color:var(--terra);box-shadow:0 0 0 3px var(--terra-glow)}
+.fg textarea{min-height:90px;resize:vertical}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsubmit{width:100%;background:var(--terra);color:#fff;border:0;padding:15px;border-radius:12px;font-family:"Cairo";font-size:16px;font-weight:800;cursor:pointer;transition:.25s}
+.fsubmit:hover{background:var(--terra-d)}
+.fsubmit:disabled{opacity:.6;cursor:default}
+.fmsg{margin-top:14px;font-size:14px;font-weight:600;text-align:center}
+.fmsg.ok{color:var(--bud)}
+
+/* final cta */
+.fcta{text-align:center;background:var(--bg3)}
+.fcta h2{font-size:clamp(28px,4.4vw,44px);font-weight:900;margin-bottom:14px}
+.fcta p{font-size:16px;color:var(--ink2);max-width:560px;margin:0 auto 28px;line-height:1.85}
+.pay{margin-top:24px;font-family:"Space Grotesk";font-size:12px;letter-spacing:2px;color:var(--ink3);text-transform:uppercase}
+
+/* footer */
+footer{background:var(--band);color:rgba(255,255,255,.7);padding:60px 0 28px}
+.fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px}
+.fcols .logo{color:#fff;margin-bottom:12px}
+.fcols p{font-size:13.5px;line-height:1.8;max-width:280px}
+.fcols h4{color:#fff;font-size:13px;font-weight:700;margin-bottom:14px;letter-spacing:.5px}
+.fcols ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fcols a,.fcols li{font-size:13.5px;transition:.2s}
+.fcols a:hover{color:var(--terra)}
+.fbot{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:22px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.5)}
+
+/* theme toggle */
+.tt-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50px;border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:#fff;font-size:17px;cursor:pointer;transition:.25s;backdrop-filter:blur(6px);flex-shrink:0}
+.tt-toggle:hover{transform:translateY(-1px);border-color:var(--terra);background:rgba(255,255,255,.2)}
+nav.sc .tt-toggle{border-color:var(--line2);background:var(--bg3);color:var(--ink)}
+nav.sc .tt-toggle:hover{border-color:var(--terra);color:var(--terra)}
+
+/* custom / design your own trip */
+.custom{background:var(--bg)}
+.custom-wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:46px;align-items:center;margin-top:8px}
+.custom-card{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:40px 36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.custom-card::before{content:"";position:absolute;top:-40px;left:-40px;width:160px;height:160px;background:var(--terra-glow);border-radius:50%;filter:blur(10px)}
+.custom-card .ic{font-size:40px;margin-bottom:12px;position:relative}
+.custom-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 18px;margin:24px 0 30px}
+.custom-list li{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--ink);line-height:1.6}
+.custom-list li b{color:var(--terra);font-size:16px}
+.custom-side{display:flex;flex-direction:column;gap:16px}
+.custom-side .ck{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:20px 22px;transition:.3s}
+.custom-side .ck:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--line2)}
+.custom-side .ck .em{font-size:26px;margin-bottom:6px}
+.custom-side .ck h4{font-size:15.5px;font-weight:800;margin-bottom:4px}
+.custom-side .ck p{font-size:13px;color:var(--ink2);line-height:1.65}
+
+/* policy */
+.policy{background:var(--bg3)}
+.pol-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+.pol-card{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:28px 26px;transition:.3s}
+.pol-card:hover{box-shadow:var(--shadow);border-color:var(--line2)}
+.pol-card .ph{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.pol-card .ph .ic{font-size:26px}
+.pol-card .ph h3{font-size:17.5px;font-weight:800}
+.pol-card ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.pol-card ul li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--ink2);line-height:1.7}
+.pol-card ul li b{color:var(--sea);font-size:15px;flex-shrink:0}
+.pol-note{margin-top:22px;font-size:13px;color:var(--ink3);background:var(--bg2);border:1px dashed var(--line2);border-radius:14px;padding:14px 18px;line-height:1.8}
+
+/* reveal */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+
+@media(max-width:880px){
+  .nlinks{display:none}.burger{display:block}
+  .nlinks.show{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg2);padding:18px 28px;gap:16px;border-bottom:1px solid var(--line)}
+  .nlinks.show a{color:var(--ink2)}
+  .fgrid,.cards,.steps,.tgrid{grid-template-columns:1fr 1fr}
+  .split,.split.rev,.cwrap{grid-template-columns:1fr}
+  .custom-wrap,.pol-grid{grid-template-columns:1fr}
+  .split.rev .split-img{order:-1}
+  .fcols{grid-template-columns:1fr 1fr}
+  .stats .con{grid-template-columns:1fr 1fr}
+  .stat:nth-child(odd){border-left:0}
+}
+@media(max-width:560px){
+  .fgrid,.cards,.steps,.tgrid,.fcols{grid-template-columns:1fr}
+  .fg2{grid-template-columns:1fr}
+  .custom-list{grid-template-columns:1fr}
+  section{padding:56px 0}
+  .idaybody p{padding-right:22px;padding-left:22px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rev{opacity:1!important;transform:none!important}}
 </style>
+<script>
+/* set theme before paint to avoid flash: saved choice, else system preference */
+(function(){
+  try{
+    var t=localStorage.getItem('cabana-theme');
+    if(!t){ t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+    document.documentElement.setAttribute('data-theme',t);
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 
-<div id="progress"></div>
-<div id="cglow"></div>
+<div id="prog"></div>
 
-<!-- NAV -->
 <nav id="nav">
-  <a href="#" class="logo"><span class="logodot"></span>CABANA EGYPT</a>
-  <div class="navr">
-    <a href="#packages" class="nava">Packages</a>
-    <a href="#itinerary" class="nava">Program</a>
-    <a href="#honeymoon" class="nava">Honeymoon</a>
-    <a href="#book" class="nava">Book Now</a>
-    <a href="https://wa.me/201005744083" class="navbtn" target="_blank">📱 احجز دلوقتي</a>
+  <a href="#top" class="logo">CABANA<b>EGYPT</b></a>
+  <div class="nlinks" id="nlinks">
+    <a href="#top">الرئيسية</a>
+    <a href="#packages">الباقات</a>
+    <a href="#program">البرنامج</a>
+    <a href="#custom">صمم رحلتك</a>
+    <a href="#honeymoon">Honeymoon</a>
+    <a href="#faq">الأسئلة</a>
+    <a href="#contact" class="nbtn">احجز دلوقتي</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="tt-toggle" id="themeBtn" aria-label="تبديل الوضع الليلي" title="الوضع الليلي / النهاري">🌙</button>
+    <button class="burger" id="burger" aria-label="القائمة">☰</button>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="heroov"></div>
-  <div class="hblob"></div>
-  <div class="hblob2"></div>
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <!-- IMG hero -->
+    <img src="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg" alt="غروب الشمس على شاطئ دهب والبحر الأحمر">
+  </div>
+  <div class="hero-in">
+    <p class="loc">Dahab · Sinai · Egypt</p>
+    <h1>دهب مش مجرد رحلة.<span class="moodline en">it's a whole mood.</span></h1>
+    <p>رحلات مختلفة لدهب وسيناء — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها.</p>
+    <div class="hbtns">
+      <a href="https://wa.me/201005744083" target="_blank" class="btn btn-p">📱 احجز على واتساب</a>
+      <a href="#packages" class="btn btn-g">🌊 شوف الباقات</a>
+    </div>
+  </div>
+  <a href="#why" class="scrolldn" aria-label="انزل">↓</a>
+</header>
+
+<!-- STATS -->
+<section class="stats">
   <div class="con">
-    <div class="hgrid">
-      <div>
-        <div class="htag"><span class="htdot"></span>Dahab · Sinai · Egypt</div>
-        <!-- EDIT TEXT: Main headline -->
-        <h1>دهب مش<br>مجرد رحلة.<em>it's a whole mood.</em></h1>
-        <p class="hsub">رحلات مختلفة لدهب وسيناء — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها.</p>
-        <div class="hbtns">
-          <a href="https://wa.me/201005744083" class="btnm" target="_blank">📱 احجز على واتساب</a>
-          <a href="#packages" class="btng">🌊 شوف الباقات</a>
-        </div>
-        <div class="hstats">
-          <div><div class="stn" data-count="10">0</div><div class="stl">+Yrs Team Experience</div></div>
-          <div><div class="stn">🐪</div><div class="stl">Bedouin Experience</div></div>
-          <div><div class="stn">⭐</div><div class="stl">High Quality Service</div></div>
-          <div><div class="stn">🔒</div><div class="stl">Private Groups</div></div>
-          <div><div class="stn">2,650</div><div class="stl">جنيه يبدأ منها</div></div>
-        </div>
+    <div class="stat"><div class="n en">+10</div><div class="l">سنين خبرة الفريق</div></div>
+    <div class="stat"><div class="n en">2,650</div><div class="l">جنيه يبدأ منها</div></div>
+    <div class="stat"><div class="n en">18</div><div class="l">فندق وريزورت</div></div>
+    <div class="stat"><div class="n en">5★</div><div class="l">تقييمات حقيقية</div></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marq" aria-hidden="true"><div class="marq-t" id="marq"></div></div>
+
+<!-- WHY -->
+<section id="why">
+  <div class="con">
+    <div class="rev">
+      <span class="ey">ليه Cabana</span>
+      <h2 class="sh">تجربة مختلفة من أول لحظة. <span class="lt en">for real.</span></h2>
+      <p class="ss">مش بنبيع رحلة — بنعيش معاك حالة. كل تفصيلة محسوبة عشان ترجع بنسخة أحلى من نفسك.</p>
+    </div>
+    <div class="fgrid">
+      <div class="fcard rev"><div class="ic">🧭</div><h3>Tour Leader معاك</h3><p>مش بس مرشد — صاحبك الحقيقي في الرحلة طول الوقت.</p></div>
+      <div class="fcard rev"><div class="ic">🚌</div><h3>من كل المحافظات</h3><p>القاهرة، إسكندرية، منصورة، وأكتر — رايح وجاي.</p></div>
+      <div class="fcard rev"><div class="ic">🤿</div><h3>رحلات داخلية</h3><p>سفاري · يخت · غواصة · Blue Hole · سهرة جبل.</p></div>
+      <div class="fcard rev"><div class="ic">📅</div><h3>4 أيام أو 5 أيام</h3><p>اختار البرنامج اللي يناسب وقتك وميزانيتك.</p></div>
+      <div class="fcard rev"><div class="ic">💍</div><h3>Honeymoon Packages</h3><p>باقات خاصة للعرسان — privacy وتجارب رومانسية.</p></div>
+      <div class="fcard rev"><div class="ic">✨</div><h3>Custom Experiences</h3><p>من camping في Blue Lagoon لـ Rave في الجبال.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE split -->
+<section style="background:var(--bg3)">
+  <div class="con">
+    <div class="split">
+      <div class="split-img rev">
+        <!-- ⚠️ IMG blue-hole: ارفع صورتك الحقيقية لـ Blue Hole باسم assets/blue-hole-dahab.jpg على الريبو وهتظهر تلقائياً.
+             لحد ما ترفعها، بتظهر صورة احتياطية تلقائياً عشان الموقع ما يبانش مكسور. -->
+        <img src="assets/blue-hole-dahab.jpg"
+             onerror="this.onerror=null;this.src='https://cabana-brighten-upgrade.lovable.app/assets/lagoon-CrAi0Iv7.jpg'"
+             alt="Blue Hole دهب — من أشهر مواقع الغوص في العالم">
       </div>
-      <div class="revr hcards-wrap">
-        <div class="hcards">
-          <div class="hcard"><div class="hcico">🧭</div><h4>Tour Leader معاك</h4><p>مش بس مرشد — صاحبك الحقيقي في الرحلة طول الوقت</p></div>
-          <div class="hcard"><div class="hcico">🚌</div><h4>من كل المحافظات</h4><p>القاهرة، إسكندرية، منصورة، وأكتر — رايح وجاي</p></div>
-          <!-- EDIT TEXT: Internal trips card — intentionally no mention of cost -->
-          <div class="hcard"><div class="hcico">🤿</div><h4>رحلات داخلية</h4><p>سفاري · يخت · غواصة · Blue Hole · سهرة جبل — تجارب دهب الحقيقية</p></div>
-          <div class="hcard"><div class="hcico">📅</div><h4>4 أيام أو 5 أيام</h4><p>اختار البرنامج اللي يناسب وقتك وميزانيتك</p></div>
-          <div class="hcard"><div class="hcico">💍</div><h4>Honeymoon Packages</h4><p>باقات خاصة للعرسان — privacy وتجارب رومانسية لا تُنسى</p></div>
-          <div class="hcard"><div class="hcico">🏆</div><h4>Experienced Team</h4><p>فريق بخبرة +10 سنين في السياحة والـ Bedouin experience</p></div>
-          <div class="hcard ft"><div class="hcico">✨</div><div><h4>Custom Experiences</h4><p>من camping في Blue Lagoon لـ Rave في الجبال — بنعمل اللي إنت عايزه</p></div></div>
-        </div>
+      <div class="rev">
+        <span class="ey">The Experience</span>
+        <h2 class="sh">من Blue Hole لـ Hidden Gems</h2>
+        <p class="ss">snorkeling في أشهر أماكن الغوص، يخت وقت الغروب، سفاري في الصحراء، وليالي بدوية تحت نجوم سيناء. كل يوم حكاية لوحده — وكلها ببصمة Cabana اللي ما فيش زيها.</p>
+        <ul class="checks">
+          <li><b>✓</b> لاجونا دهب — رحلة مجانية أول يوم</li>
+          <li><b>✓</b> ثري بولز (Three Pools) — رحلة مجانية تالت يوم</li>
+          <li><b>✓</b> Yacht Sunset + BBQ في نص البحر</li>
+          <li><b>✓</b> Hidden Gem بانوراما خاص بـ Cabana</li>
+        </ul>
+        <a href="#program" class="tlink">شوف البرنامج يوم بيوم ←</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TOP MARQUEE -->
-<div class="mq-wrap">
-  <div class="mq-track">
-    <span class="mqi">"دهب مش مكان — دهب حالة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">The sea is calling. And you must go. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"بعد دهب مش بتبقى نفس الشخص" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Salt in the air. Sand in my hair. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"وقت الغروب في دهب ملوش شبيه" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Life is better with fins on. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب علمتني إن أحلى اللحظات هي اللحظات البسيطة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Not all who wander are lost — some are just in Dahab. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب مش مكان — دهب حالة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">The sea is calling. And you must go. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"بعد دهب مش بتبقى نفس الشخص" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Salt in the air. Sand in my hair. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"وقت الغروب في دهب ملوش شبيه" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Life is better with fins on. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب علمتني إن أحلى اللحظات هي اللحظات البسيطة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Not all who wander are lost — some are just in Dahab. ♥</span><span class="mqi mqd">✦</span>
-  </div>
-</div>
-
 <!-- PACKAGES -->
-<section class="pkgs" id="packages">
+<section class="pkg" id="packages">
   <div class="con">
     <div class="rev">
       <span class="ey">Our Packages</span>
-      <h2 class="sh">اختار رحلتك.<span class="en">built around your budget.</span></h2>
-      <p class="ss">من الكامبات الدافية على الممشى لأرقى ريزورتات اللاجونا — كل باقة شاملة انتقالات ذهاب وعودة + تور ليدر. والرحلات الداخلية (سفاري · يخت · غواصة) متاحة بأسعار تنافسية.</p>
+      <h2 class="sh">اختار رحلتك. <span class="lt en">built around your budget.</span></h2>
+      <p class="ss">من الكامبات الدافية على الممشى لأرقى ريزورتات اللاجونا — كل باقة شاملة انتقالات + تور ليدر.</p>
     </div>
-    <div style="height:2rem"></div>
     <div class="pctrl">
       <div class="tgg">
         <button class="tgb a" onclick="setDays(4,this)">4 أيام · 3 ليالي</button>
@@ -420,621 +487,78 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
       </div>
     </div>
     <div class="tierinfo" id="tierInfo"></div>
-    <div class="pgrid" id="pgrid">
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
 
-      <!-- ═══════════ BUDGET ═══════════ -->
-      <!-- Torino Camp -->
-      <div class="pc sh2" data-tier="budget">
-        <div class="pctop">
-          <span class="pbdg bb">Budget</span>
-          <div class="pname">Torino Camp</div>
-          <div class="ploc">الممشى السياحي · صف تاني · اللايت هاوس</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">أجواء كامب مميزة وبشرية — المكان المثالي للسوشيال vibes</div>
-            <div class="pfi">خطوات من البحر وكل كافيهات اللايت هاوس</div>
-            <div class="pfi">غرف مريحة ونظيفة بديكور بدوي أصيل</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">2,650</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">3,200</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Torino Camp" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Antika Hotel -->
-      <div class="pc sh2" data-tier="budget">
-        <div class="pctop">
-          <span class="pbdg bb">Budget · Pool 🏊</span>
-          <div class="pname">Antika Hotel</div>
-          <div class="ploc">دهب · حمام سباحة · طابع أنتيكا مميز</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">حمام سباحة جوه الفندق — تسبح وترتاح من غير ما تتحرك</div>
-            <div class="pfi">أجواء أنتيكا بديكور فريد وروح سيناء الأصيلة</div>
-            <div class="pfi">المكان اللي بيخلي الناس ترجعله تاني وتالت</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,300</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">4,100</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Antika Hotel" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Mojito Palm -->
-      <div class="pc sh2" data-tier="budget">
-        <div class="pctop">
-          <span class="pbdg bb">Budget · First Row 🌊</span>
-          <div class="pname">Mojito Palm</div>
-          <div class="ploc">الممشى السياحي · صف أول على البحر</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">مباشرة على البحر — الكافيه والإفطار بيطل على المياه</div>
-            <div class="pfi">الفطار اختياري بتكلفة إضافية في كافيه موخيتو (مصري أو كونتيننتال)</div>
-            <div class="pfi">جنب الكوبري الخشبي — أكتر spot فيه صور في دهب</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">2,650</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">3,200</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Mojito Palm" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- ═══════════ STANDARD ═══════════ -->
-      <!-- Mojito Hotel Standard -->
-      <div class="pc" data-tier="standard">
-        <div class="pctop">
-          <span class="pbdg bs">Standard</span>
-          <div class="pname">Mojito Hotel</div>
-          <div class="ploc">اللايت هاوس · صف أول بحر</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">غرف فندقية حديثة — مش كامب — بأعلى مستوى</div>
-            <div class="pfi">كافيه موخيتو الشهير مباشرة على البحر</div>
-            <div class="pfi">الفطار اختياري بتكلفة إضافية — مصري أو كونتيننتال على البحر</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,100</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">3,750</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Mojito Hotel Standard" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Delta Dahab -->
-      <div class="pc" data-tier="standard">
-        <div class="pctop">
-          <span class="pbdg bs">Standard · Pool</span>
-          <div class="pname">Delta Dahab</div>
-          <div class="ploc">قلب الممشى السياحي · Swimming Pool</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">Swimming Pool في قلب الممشى السياحي</div>
-            <div class="pfi">فطار ومشروبات شاملة طول اليوم</div>
-            <div class="pfi">موقع مركزي — ثواني من كل حاجة</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,450</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">4,250</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Delta Dahab" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Desert Hotel — EDIT: DESERT_HOTEL_PRICE -->
-      <div class="pc" data-tier="standard">
-        <div class="pctop">
-          <span class="pbdg bs">Standard · Desert Vibes 🏜️</span>
-          <div class="pname">Desert Hotel</div>
-          <div class="ploc">دهب · طابع بدوي · قريب من البحر</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">طابع بدوي أصيل وروح سيناء الحقيقية</div>
-            <div class="pfi">هدوء وخصوصية — بعيد عن الصخب مقرب من كل حاجة</div>
-            <div class="pfi">تجربة مختلفة — ما بين صحراء دهب وشواطئها</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,500</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">4,400</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Desert Hotel" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Cabana House — moved from Budget to Standard -->
-      <div class="pc" data-tier="standard">
-        <div class="pctop">
-          <span class="pbdg bs">Standard · Privacy 🏠</span>
-          <div class="pname">Cabana House</div>
-          <div class="ploc">العسلة (Assala) · شقق خاصة · سي فيو</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">شقق خاصة بالكامل — مطبخ، صالة، وprivacy تامة</div>
-            <div class="pfi">منطقة العسلة الهادية — بعيد عن الازدحام تماماً</div>
-            <div class="pfi">إطلالة على البحر الأحمر — الفرد الثالث والرابع بـ 50%</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">3,300</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">4,000</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Cabana House" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Sunset Luxury Hotel -->
-      <div class="pc" data-tier="standard">
-        <div class="pctop">
-          <span class="pbdg bs">Standard · B&amp;B · Sunset 🌇</span>
-          <div class="pname">Sunset Luxury Hotel</div>
-          <div class="ploc">الممشى السياحي · إطلالة الغروب</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">فطار يومي شامل — تبدأ يومك على راحتك</div>
-            <div class="pfi">غرف فندقية راقية في قلب الممشى السياحي</div>
-            <div class="pfi">أحلى إطلالة غروب في دهب — الاسم مش صدفة</div>
-            <div class="pfi">خطوات من كل الكافيهات والمطاعم الشهيرة</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,100</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">5,000</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Sunset Luxury Hotel" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- ═══════════ PREMIUM ═══════════ -->
-      <!-- Mojito Panorama -->
-      <div class="pc" data-tier="premium">
-        <div class="pctop">
-          <span class="pbdg bp">Premium · Panorama 🌅</span>
-          <div class="pname">Mojito — Panorama Sea View</div>
-          <div class="ploc">اللايت هاوس · Panorama Sea View</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">Panoramic Sea View مباشر من الغرفة</div>
-            <div class="pfi">من أكتر الغرف طلباً في دهب — حجز مبكر ضروري</div>
-            <div class="pfi">الفطار اختياري بتكلفة إضافية مع إطلالة لا توصف على البحر</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,350</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">5,550</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Mojito Panorama Sea View" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Mojito Terrace -->
-      <div class="pc" data-tier="premium">
-        <div class="pctop">
-          <span class="pbdg bp">Premium · Terrace 🏖️</span>
-          <div class="pname">Mojito — Terrace Sea View</div>
-          <div class="ploc">اللايت هاوس · تراس خاص على البحر</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">تراس خاص بيطل مباشرة على البحر الأحمر</div>
-            <div class="pfi">أعلى مستوى في موخيتو — مميز جداً للعرسان</div>
-            <div class="pfi">الفطار اختياري بتكلفة إضافية مع sunrise على البحر</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,600</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">5,900</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Mojito Terrace Sea View" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Nesima Hotel -->
-      <div class="pc" data-tier="premium">
-        <div class="pctop">
-          <span class="pbdg bp">Premium · Dive Hub ⭐</span>
-          <div class="pname">Nesima Hotel</div>
-          <div class="ploc">الممشى السياحي · صف أول · Swimming Pool</div>
-          <div class="pstars">★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">4 نجوم راسخة — أشهر فنادق دهب وأكتشوا ثقة</div>
-            <div class="pfi">Swimming Pool + مطعم على البحر مباشرة</div>
-            <div class="pfi">مركز غوص Nesima الشهير — للمهتمين بالـ Diving</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,800</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">6,000</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Nesima Hotel" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Assala Sea View Collection — replaces Pano Palm Studios -->
-      <div class="pc" data-tier="premium">
-        <div class="pctop">
-          <span class="pbdg bp">Premium · Assala Sea View 🌊</span>
-          <div class="pname">Assala Sea View</div>
-          <div class="ploc">العسلة (Assala) · Studios · Chalets · Apartments</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">Studios وشاليهات وأبارتمنتات مباشرة على البحر — إنت بتختار</div>
-            <div class="pfi">العسلة الهادية — أبعد عن الضوضاء، أقرب للـ vibes الحقيقية</div>
-            <div class="pfi">الفرد الثالث والرابع بـ 50% — مثالي للجروب والعرسان</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">5,600</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">6,600</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Assala Sea View" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- ═══════════ LAGOON ═══════════ -->
-      <!-- Canyon / Nubia Island -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · B&amp;B 🏝️</span>
-          <div class="pname">Canyon / Nubia Island</div>
-          <div class="ploc">اللاجونا · شاطئ رملي · بوفيه فطار</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">شاطئ رملي طبيعي في منطقة اللاجونا الخلابة</div>
-            <div class="pfi">بوفيه فطار أوبن — متنوع ومريح</div>
-            <div class="pfi">هدوء تام وطبيعة مختلفة عن الممشى</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,200</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">5,200</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Canyon Nubia Island" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Panda Dahab Resort -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · B&amp;B</span>
-          <div class="pname">Panda Dahab Resort</div>
-          <div class="ploc">اللاجونا · شاطئ رملي · فطار شامل</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">Resort feel على شاطئ رملي في اللاجونا</div>
-            <div class="pfi">فطار شامل يومياً في الريزورت</div>
-            <div class="pfi">مناسب للعائلات والجروبات — هادي ومريح</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">4,800</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">6,000</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Panda Dahab Resort" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Ganet Sinai Resort -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · B&amp;B · First Row</span>
-          <div class="pname">Ganet Sinai Resort</div>
-          <div class="ploc">اللاجونا · صف أول · بوفيه أوبن</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">صف أول في اللاجونا — مباشر على الشاطئ الرملي</div>
-            <div class="pfi">بوفيه فطار أوبن يومياً — واسع ومتنوع</div>
-            <div class="pfi">Deluxe Sea View متاح بسعر إضافي</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">5,200</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">6,600</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Ganet Sinai Resort" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Ecotel Bay View -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · Half Board 👑</span>
-          <div class="pname">Ecotel Bay View Resort</div>
-          <div class="ploc">الثري بولز · صف أول · Half Board</div>
-          <div class="pstars">★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">4 نجوم في منطقة الثري بولز — واحدة من أجمل بقاع دهب</div>
-            <div class="pfi">Half Board يومياً — فطار وعشاء في الريزورت</div>
-            <div class="pfi">شاطئ بحري مباشر مع بحر الثري بولز الشهير</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">9,100</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">11,800</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Ecotel Bay View Resort" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Retac Qunay Resort -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · Luxury 👑👑</span>
-          <div class="pname">Retac Qunay Resort</div>
-          <div class="ploc">بين الثري بولز واللاجونا · Half Board</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">5 نجوم في أفضل موقع — بين الثري بولز واللاجونا</div>
-            <div class="pfi">Half Board يومياً في مطعم ريزورت متميز</div>
-            <div class="pfi">غرف Deluxe وSea View بإضافة بسيطة</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">9,600</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">12,400</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Retac Qunay Resort" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
-      <!-- Dahab Lagoon Resort -->
-      <div class="pc" data-tier="lagoon">
-        <div class="pctop">
-          <span class="pbdg bl">Lagoon · Ultra Luxury 👑👑👑</span>
-          <div class="pname">Dahab Lagoon Resort</div>
-          <div class="ploc">اللاجونا · 5 نجوم · الأرقى في دهب</div>
-          <div class="pstars">★★★★★</div>
-        </div>
-        <div class="pbody">
-          <div class="pfeat">
-            <div class="pfi">الأفخم والأرقى في دهب على الإطلاق — لا مجال للمقارنة</div>
-            <div class="pfi">Half Board في مطعم مستوى عالمي على البحر</div>
-            <div class="pfi">شاطئ رملي خاص على لاجونا دهب الساحرة</div>
-          </div>
-          <div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>
-          <div class="pprices">
-            <div class="pp"><div class="ppl">4 أيام</div><div class="pn">12,100</div><div class="ppu">جنيه / فرد</div></div>
-            <div class="pp"><div class="ppl">5 أيام</div><div class="pn">15,800</div><div class="ppu">جنيه / فرد</div></div>
-          </div>
-          <a href="https://wa.me/201005744083?text=عايز احجز Dahab Lagoon Resort" class="pcta" target="_blank">احجز دلوقتي 📱</a>
-        </div>
-      </div>
-
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="con">
+    <div class="rev">
+      <span class="ey">How it works</span>
+      <h2 class="sh">3 خطوات بس. <span class="lt en">simple as breathing.</span></h2>
+      <p class="ss">ما فيش تعقيدات. من ما تختار رحلتك للحجز المؤكد — في دقائق.</p>
+    </div>
+    <div class="steps">
+      <div class="step rev"><div class="num en">01</div><h3>اختار رحلتك</h3><p>شوف الفنادق والأسعار واختار اللي يناسبك — Budget، Standard، Premium، أو Lagoon.</p></div>
+      <div class="step rev"><div class="num en">02</div><h3>كلمنا على واتساب</h3><p>ضغطة واحدة وبنرد عليك في أقل من 15 دقيقة. بنأكدلك المواعيد ونحجزلك مكانك.</p></div>
+      <div class="step rev"><div class="num en">03</div><h3>عربون 50% وخلاص</h3><p>نص السعر بس بيحجزلك مكانك فوراً. الباقي قبل السفر. InstaPay · Vodafone Cash · Visa.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ITINERARY -->
-<section class="itin" id="itinerary">
+<!-- BEDOUIN BAND -->
+<section class="band">
+  <div class="band-bg"><!-- IMG bedouin --><img src="https://cabana-brighten-upgrade.lovable.app/assets/bedouin-night-RDNNPnjk.jpg" alt="ليلة بدوية في صحراء سيناء تحت النجوم"></div>
+  <div class="rev">
+    <span class="ey" style="color:#f0b89e">ليلة لا تتكرر</span>
+    <h2>ليلة جبل الطويلات</h2>
+    <p>تنورة و fire show · مزيكا حية · شاي بدوي تحت سماء نجوم سيناء. خمس مزاجات في ليلة واحدة.</p>
+    <a href="https://wa.me/201005744083?text=عايز أحجز رحلة دهب مع Cabana" target="_blank" class="btn btn-p">احجز مكانك 📱</a>
+  </div>
+</section>
+
+<!-- PROGRAM / ITINERARY -->
+<section id="program">
   <div class="con">
     <div class="rev">
-      <span class="ey">The Program</span>
-      <h2 class="sh">كل يوم حكاية لوحده.<span class="en">day by day. moment by moment.</span></h2>
-      <p class="ss">مش بس رحلة — دي حكاية كاملة. كل يوم فيه تجربة مختلفة تماماً عن اللي قبله — وكلها ببصمة Cabana اللي ما فيش زيها.</p>
+      <span class="ey">Day by Day</span>
+      <h2 class="sh">البرنامج يوم بيوم</h2>
+      <p class="ss">كل يوم في دهب له طعم مختلف. دي رحلة الـ 5 أيام بالكامل — رحلة الـ 4 أيام نفس الروح في وقت أقصر.</p>
     </div>
-    <div style="height:2rem"></div>
-    <div class="idays">
+    <div class="idays" id="idays"></div>
+  </div>
+</section>
 
-      <!-- Day 1 -->
-      <div class="iday open rev">
-        <div class="idayh" onclick="toggleDay(this)">
-          <div class="idayl">
-            <div class="idaynum">01</div>
-            <div>
-              <div class="idaytitle">اليوم الأول — البداية اللي هتفرق</div>
-              <div class="idaysub">وصول · اللاجونا مجاناً · ليلة بدوية في الجبل</div>
-            </div>
-          </div>
-          <div class="idayarr">▼</div>
-        </div>
-        <div class="idaybody">
-          <div class="idaycontent">
-            <div class="iact">
-              <div class="iacttime">وصول</div>
-              <div class="iactico">🏨</div>
-              <div><h4>أول نفس هواء دهب</h4><p>نوصل، نستلم الغرف، وتحس من الوهلة الأولى إن دهب مختلفة. البحر قريب، الهواء تاني، والوقت بدأ يتحرك بإيقاع مختلف.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">بعد الظهر</div>
-              <div class="iactico">🌊</div>
-              <div><h4>لاجونا دهب — رحلة مجانية أول يوم</h4><p>البداية الحقيقية. نجمع الجروب، نكسر التلج على خلفية مياه اللاجونا الفيروزية، وأنشطة ومسابقات وصور على غروب ما يتكررش. وده بالمجان — دليل إننا مختلفين.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">8:30 م</div>
-              <div class="iactico">🔥</div>
-              <div><h4>جبل الطويلات — ليلة مش هتنساها</h4><p>تنورة وfire show · مزيكا حية · رقص شرقي · شاي بدوي تحت سماء نجوم سيناء. خمس مزاجات في ليلة واحدة — وكل لحظة فيها بتستاهل الرحلة كلها.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Day 2 -->
-      <div class="iday rev">
-        <div class="idayh" onclick="toggleDay(this)">
-          <div class="idayl">
-            <div class="idaynum">02</div>
-            <div>
-              <div class="idaytitle">اليوم التاني — المغامرة الحقيقية</div>
-              <div class="idaysub">Blue Hole · Abu Galum · Blue Lagoon · Stargazing أو Rave</div>
-            </div>
-          </div>
-          <div class="idayarr">▼</div>
-        </div>
-        <div class="idaybody">
-          <div class="idaycontent">
-            <div class="iact">
-              <div class="iacttime">الصبح</div>
-              <div class="iactico">🐠</div>
-              <div><h4>Blue Hole وأبو جالوم</h4><p>Snorkeling في واحد من أشهر أماكن الغوص في العالم بالظبط. وبعدها lunch على شاطئ أبو جالوم — طبيعة بكر ما لهاش وصف، تحسس إنك في مكان لوحدك.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">بعد الظهر</div>
-              <div class="iactico">💙</div>
-              <div><h4>Blue Lagoon</h4><p>المياه الفيروزية دي مش فيلتر — على الحقيقة أجمل بكتير بكتير. أكتر spot في دهب بيخلي الناس تسيب كل حاجة وتعوم بدون ما تفكر.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">الليل</div>
-              <div class="iactico">⭐</div>
-              <div><h4>إنت بتختار مودك الليلة</h4><p>Star Gazing في وادي ستارز — الصحرا، السكون، ونجوم ما لهاش نهاية. أو Rave في نص الجبل لو المود كده. اثنين في دهب واثنين ما موجودينش في أي مكان تاني.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Day 3 -->
-      <div class="iday rev">
-        <div class="idayh" onclick="toggleDay(this)">
-          <div class="idayl">
-            <div class="idaynum">03</div>
-            <div>
-              <div class="idaytitle">اليوم التالت — أكتر يوم مليان</div>
-              <div class="idaysub">Three Pools · سفاري · Yacht Sunset · Hidden Gem</div>
-            </div>
-          </div>
-          <div class="idayarr">▼</div>
-        </div>
-        <div class="idaybody">
-          <div class="idaycontent">
-            <div class="iact">
-              <div class="iacttime">الصبح</div>
-              <div class="iactico">🏝️</div>
-              <div><h4>Three Pools وسفاري وادي قني</h4><p>Snorkeling في أجمل spots · قعدة على البحر في كافيه خرافي · وبعدين Beach Buggy في الصحراء — طبيعتين ضدين في يوم واحد مش هتصدق إنه صح.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">4 م — غروب</div>
-              <div class="iactico">🚤</div>
-              <div><h4>Yacht في البحر الأحمر</h4><p>اليخت يتحرك والشمس بتغرب. نزول في البحر، Snorkeling، موسيقى على الديك، وعشاء BBQ وانتوا طايرين فوق المياه. اللحظة دي بتحسس إنك عايش مش بس موجود.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">الليل</div>
-              <div class="iactico">🌄</div>
-              <div><h4>Hidden Gem — خاص بـ Cabana</h4><p>أعلى نقطة سرية تشوف منها دهب كلها بانوراما كاملة. بحر + جبل + صحرا في لقطة واحدة. ده المكان اللي بنوديه بس لناسنا — ما بتلاقيهوش في أي برنامج تاني.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Day 4 -->
-      <div class="iday rev">
-        <div class="idayh" onclick="toggleDay(this)">
-          <div class="idayl">
-            <div class="idaynum">04</div>
-            <div>
-              <div class="idaytitle">اليوم الرابع — Check-out أو يوم تاني جامد</div>
-              <div class="idaysub">رحلة 4 أيام: عودة بذكريات · رحلة 5 أيام: مغامرة جديدة</div>
-            </div>
-          </div>
-          <div class="idayarr">▼</div>
-        </div>
-        <div class="idaybody">
-          <div class="idaycontent">
-            <div class="iact">
-              <div class="iacttime">رحلة 4 أيام</div>
-              <div class="iactico">🧳</div>
-              <div><h4>Check-out والعودة بحكاية</h4><p>آخر نظرة على البحر، آخر شربة قهوة على الكورنيش، وبعدين الطريق للبيت وانت بتحسب امتى ترجع تاني. التشيك أوت من دهب — مش من الرحلة.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">رحلة 5 أيام</div>
-              <div class="iactico">🏜️</div>
-              <div><h4>وادي الوشواش ونويبع — Day Use</h4><p>تغيير مود كامل. جبال بحرية وشلالات ومياه صافية في واد ما شفتش حاجة زيه. تجربة تانية خالص قبل رجوعك — وخاتمة تليق برحلة زي دي.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Day 5 -->
-      <div class="iday rev">
-        <div class="idayh" onclick="toggleDay(this)">
-          <div class="idayl">
-            <div class="idaynum">05</div>
-            <div>
-              <div class="idaytitle">اليوم الخامس — توديع دهب (رحلة 5 أيام)</div>
-              <div class="idaysub">Gathering الشروق · Hidden Gem خاص بـ Cabana · وداع على البحر</div>
-            </div>
-          </div>
-          <div class="idayarr">▼</div>
-        </div>
-        <div class="idaybody">
-          <div class="idaycontent">
-            <div class="iact">
-              <div class="iacttime">قبل الشروق</div>
-              <div class="iactico">🌅</div>
-              <div><h4>Gathering الشروق — كلنا مع بعض</h4><p>نصحى بدري ونطلع مكان واحد — Hidden Gem من أماكن Cabana اللي محدش بيعرفها — ونستنى الشمس تطلع على دهب سوا. قهوة، سكون، وكلام من القلب. أحلى طريقة تبدأ بيها آخر يوم.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">الصبح</div>
-              <div class="iactico">🤍</div>
-              <div><h4>توديع دهب</h4><p>آخر مشوار على البحر، صور للجروب كله، وكلمة وداع قبل الرجوع. مش بنقول مع السلامة — بنقول لحد ما نرجع. ودهب دايماً بتنادي تاني.</p></div>
-            </div>
-            <div class="iact">
-              <div class="iacttime">الظهر</div>
-              <div class="iactico">🧳</div>
-              <div><h4>Check-out والعودة</h4><p>نجمع شنطنا وذكرياتنا ونتحرك للطريق وانت لسه حاسس بإيد دهب على كتفك. بترجع البيت بنسخة أهدى وأحلى من اللي سافرت بيها.</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+<!-- CUSTOM / DESIGN YOUR OWN -->
+<section class="custom" id="custom">
+  <div class="con">
+    <div class="rev">
+      <span class="ey">Build Your Own</span>
+      <h2 class="sh">صمم رحلتك زي ما إنت عايز. <span class="lt en">your trip, your rules.</span></h2>
+      <p class="ss">مش لاقي الباقة اللي على مزاجك بالظبط؟ ولا عايز تزود يوم، تغيّر فندق، أو تضيف مغامرة معينة؟ قولنا الفكرة اللي في دماغك وإحنا نبنيلك رحلة مفصّلة عليك إنت — يوم بيوم، فندق بفندق، وكل تفصيلة بمزاجك.</p>
     </div>
-
-    <!-- Custom Experiences with snorkeling bg -->
-    <div class="rev" style="margin-top:2.5rem;border-radius:20px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:center">
-      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(200,149,108,.07) 0%,rgba(8,8,8,.4) 100%);border-radius:20px"></div>
-      <div style="position:relative;z-index:1;padding:2.5rem 2rem;width:100%">
-        <div style="display:flex;align-items:flex-start;gap:2rem;flex-wrap:wrap">
-          <div style="flex:1;min-width:260px">
-            <span style="font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:4px;color:var(--cu);text-transform:uppercase;display:block;margin-bottom:.75rem">Add-On Experiences</span>
-            <h3 style="font-size:1.5rem;font-weight:700;margin-bottom:.75rem;line-height:1.3">صمّم رحلتك<br>زي ما إنت عايز.</h3>
-            <p style="font-size:13px;color:rgba(245,240,235,.65);line-height:1.8;max-width:400px">كل تجربة تضيفها بتبقى لحظة زيادة في الذاكرة. اختار من قائمة الإضافات أو قولنا إيه اللي في بالك وإحنا بنجيبهولك.</p>
-          </div>
-          <div style="flex:2;min-width:280px">
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px">
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🤿 <strong>Snorkeling</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">Blue Hole · Three Pools · Abu Galum</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🌊 <strong>غواصة (Sub)</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">تحت الماء في البحر الأحمر</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🐟 <strong>صيد السمك</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">في عرض البحر الأحمر</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">⛰️ <strong>جبل موسى</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">Sunrise على قمة التاريخ</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🌈 <strong>Colored Canyon</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">ألوان الصحراء من جوه</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🐴 <strong>Horse Riding</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">على شاطئ دهب وقت الغروب</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🚙 <strong>Jeep Safari</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">وادي قني + الصحراء + وادي الوشواش</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">⛺ <strong>Blue Lagoon Camping</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">ليلة تحت النجوم</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🧘 <strong>Retreat Day</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">Ice Bath + Meditation + Yoga</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🎧 <strong>Rave في الجبال</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">موسيقى + ليل سيناء</span></div>
-              <div style="background:rgba(200,149,108,.1);border:1px solid rgba(200,149,108,.2);border-radius:10px;padding:10px 13px;font-size:12px;color:rgba(245,240,235,.85)">🍖 <strong>Mandi بدوي</strong><br><span style="color:rgba(245,240,235,.5);font-size:11px">في الصحراء — خيمة + نار</span></div>
-            </div>
-            <a href="https://wa.me/201005744083?text=عايز custom experience في دهب" style="display:inline-flex;align-items:center;gap:6px;margin-top:1.25rem;color:var(--cu);font-weight:700;font-size:13px;text-decoration:none;border:1px solid rgba(200,149,108,.3);padding:10px 20px;border-radius:50px;background:rgba(200,149,108,.07);transition:all .2s" target="_blank">📱 استفسر عن الإضافات ←</a>
-          </div>
-        </div>
+    <div class="custom-wrap">
+      <div class="custom-card rev">
+        <div class="ic">🎨</div>
+        <h3 style="font-size:21px;font-weight:800;margin-bottom:6px">إنت بتحدد، إحنا بننفّذ</h3>
+        <p style="font-size:14px;color:var(--ink2);line-height:1.8;margin-bottom:4px">اختار من الحاجات دي اللي يعجبك — أو اطلب حاجة مالقتهاش هنا خالص:</p>
+        <ul class="custom-list">
+          <li><b>✦</b> عدد الأيام (3 · 4 · 5 · أو أكتر)</li>
+          <li><b>✦</b> فئة الفندق والميزانية</li>
+          <li><b>✦</b> رحلات داخلية تختارها بنفسك</li>
+          <li><b>✦</b> Camping في Blue Lagoon</li>
+          <li><b>✦</b> Rave أو Stargazing على البحر</li>
+          <li><b>✦</b> سفاري · يخت · غواصة · Blue Hole</li>
+          <li><b>✦</b> رحلة Solo · Group · عائلة · عرسان</li>
+          <li><b>✦</b> تعاقدات شركات ومدارس وجامعات</li>
+        </ul>
+        <a href="https://wa.me/201005744083?text=عايز أصمم رحلة خاصة بيا لدهب مع Cabana" target="_blank" class="btn btn-p">كلمنا ونظبطها سوا 📱</a>
+      </div>
+      <div class="custom-side">
+        <div class="ck rev"><div class="em">🧩</div><h4>مرن بالكامل</h4><p>كل حاجة قابلة للتعديل — الميعاد، المدة، الفندق، والأنشطة. الرحلة بتتفصّل على مقاسك.</p></div>
+        <div class="ck rev"><div class="em">💬</div><h4>تخطيط على واتساب</h4><p>نتكلم سوا، نفهم إنت عايز إيه بالظبط، ونرجعلك ببرنامج مكتوب وسعر واضح من غير مفاجآت.</p></div>
+        <div class="ck rev"><div class="em">🌟</div><h4>أماكن Cabana السرية</h4><p>Hidden Gems وتجارب مش هتلاقيها مع أي حد تاني — بنضيفها لرحلتك الخاصة لو حبيت.</p></div>
       </div>
     </div>
   </div>
@@ -1042,600 +566,338 @@ footer{background:#040404;padding:3.5rem 0 1.5rem;border-top:1px solid var(--bo)
 
 <!-- HONEYMOON -->
 <section class="hm" id="honeymoon">
-  <div class="hmglow"></div>
   <div class="con">
-    <div class="hmgrid">
-      <div class="revl">
-        <span class="hmey">Honeymoon ✦ Special Package</span>
-        <h2 class="hmh2">أول خطوة في<br><em>قصتكم مع بعض.</em></h2>
-        <p class="hmsub">دهب مش بس وجهة — دي تجربة بتقرب الناس من بعض. بحر صافي، هدوء من كل حاجة، ولحظات ماتنساها طول عمرك. إحنا بنرتب كل التفاصيل عشان تبقوا مع بعض بس.</p>
-        <div class="hmfeats">
-          <div class="hmfi"><div class="hmfico">🌅</div><div><h4>Sea View Rooms مختارة خصيصاً</h4><p>بنختار لكم أحسن غرف السي فيو المباشر — تصحوا كل يوم على البحر الأحمر وانتوا مع بعض. مش تفصيلة صغيرة — دي اللحظة الأولى كل صبح.</p></div></div>
-          <div class="hmfi"><div class="hmfico">🧺</div><div><h4>Romantic Picnic في Hidden Gem</h4><p>عشاء رومانسي في مكان سري ما يعرفوش غير إحنا — شموع، بحر، وسماء نجوم فوقيكم. البرنامج ده مش في أي قائمة — ده خاص بيكم.</p></div></div>
-          <div class="hmfi"><div class="hmfico">🤫</div><div><h4>Privacy تامة طول الرحلة</h4><p>تنسيق خاص من غير ما تتقلقوا على أي تفصيلة — إحنا بنهتم بكل حاجة عشان تعيشوا اللحظة من غير ضغط ولا تفكير.</p></div></div>
-          <div class="hmfi"><div class="hmfico">🏝️</div><div><h4>Optional — إضافة نويبع</h4><p>ممكن نزود الرحلة بأيام في نويبع — طبيعة مختلفة تماماً، هدوء أعمق، وتجربة تانية ليكم اتنين.</p></div></div>
-        </div>
-        <a href="https://wa.me/201005744083?text=عايزين نحجز باقة شهر عسل في دهب" class="btnhm" target="_blank">💍 استفسر عن Honeymoon Package</a>
+    <div class="hm-card rev">
+      <div class="ic">💍</div>
+      <span class="ey">Honeymoon</span>
+      <h2 class="sh">أول خطوة في حياتكوا سوا.</h2>
+      <p class="ss" style="margin:0 auto">باقات شهر عسل مصممة للعرسان — privacy تامة، sea view، وعشاء رومانسي في أماكن خاصة ما حدش يعرفها غير Cabana. إنتوا بس عيشوا اللحظة، وإحنا نظبط كل حاجة.</p>
+      <div class="hm-tags">
+        <span>🌅 Sunset Dinner</span><span>🛥️ Private Yacht</span><span>🏖️ Sea View Rooms</span><span>🤫 Hidden Gems</span><span>📸 Photo Session</span>
       </div>
-      <div class="revr">
-        <div class="hmvcards">
-          <!-- New honeymoon highlights replacing old cards -->
-          <div class="hmvc">
-            <div class="hmvcico">🛥️</div>
-            <h4>يخت وقت الغروب</h4>
-            <p>فوق البحر الأحمر والشمس بتغرب وانتوا اتنين — مشهد مش هيتكرر في حياتك</p>
-          </div>
-          <div class="hmvc">
-            <div class="hmvcico">🏜️</div>
-            <h4>سفاري في الصحراء</h4>
-            <p>4×4 وبيتش باجي بين جبال سيناء — adventure رومانسي زي ما إنتوا عايزين</p>
-          </div>
-          <div class="hmvc">
-            <div class="hmvcico">🗝️</div>
-            <h4>Hidden Gems سرية</h4>
-            <p>أماكن في دهب ما بيعرفهاش غيرنا — مخصصين ليكم اتنين بس. لحظات خارج أي برنامج تاني</p>
-          </div>
-          <div class="hmvc">
-            <div class="hmvcico">🌙</div>
-            <h4>عشاء تحت النجوم</h4>
-            <p>سماء سيناء zero light pollution — نجوم بالملايين وانتوا مع بعض في الصحرا</p>
-          </div>
-          <div class="hmvc ft">
-            <div class="hmvcico">💍</div>
-            <div>
-              <h4>Special Honeymoon Package</h4>
-              <p>تواصلوا معنا وبنعمل لكم برنامج خاص يناسب طبيعة علاقتكم وأحلامكم — ما فيش نسختين متطابقتين. كل تجربة بنصممها من الصفر ليكم.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a href="https://wa.me/201005744083?text=عايزين باقة Honeymoon في دهب" target="_blank" class="btn btn-p">اعرف تفاصيل الهوني مون 💍</a>
     </div>
   </div>
 </section>
 
-<!-- HOW TO BOOK — 3 STEPS -->
-<section class="how" id="book">
-  <div class="con">
-    <div class="rev" style="text-align:center;max-width:600px;margin:0 auto">
-      <span class="ey">How it works</span>
-      <h2 class="sh">3 خطوات بس.<span class="en">simple as breathing.</span></h2>
-      <p style="font-size:15px;color:var(--mu2);line-height:1.85;font-weight:300;margin-top:.5rem">ما فيش تعقيدات. ما فيش انتظار. من ما تختار رحلتك للحجز المؤكد — في دقائق.</p>
-    </div>
-    <div class="steps">
-      <div class="step rev">
-        <div class="stepn">01</div>
-        <h3>اختار رحلتك</h3>
-        <p>شوف الفنادق والأسعار واختار اللي يناسبك — Budget, Standard, Premium, أو Lagoon. كل خيار فيه اللي يعجبك وبالميزانية دي.</p>
-      </div>
-      <div class="step rev" style="transition-delay:.12s">
-        <div class="stepn">02</div>
-        <h3>كلمنا على واتساب</h3>
-        <p>ضغطة واحدة وبنرد عليك في أقل من 15 دقيقة. بنأكدلك المواعيد، بنجاوب على كل سؤال، وبنحجزلك مكانك بدون أي ضغط.</p>
-      </div>
-      <div class="step rev" style="transition-delay:.24s">
-        <div class="stepn">03</div>
-        <h3>عربون 50% وخلاص</h3>
-        <p>نص السعر بس بيحجزلك مكانك فوراً وبشكل مؤكد. الباقي بتدفعه قبل السفر. InstaPay · Vodafone Cash · Visa — كلها متاحة.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section class="revs">
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg3)">
   <div class="con">
     <div class="rev">
       <span class="ey">Real Talk</span>
-      <h2 class="sh">بيقولوا إيه عنا.<span class="en">no cap.</span></h2>
+      <h2 class="sh">بيقولوا إيه عننا. <span class="lt en">no filter.</span></h2>
+      <p class="ss">مش إحنا اللي بنحكي — هما اللي بيحكوا. ودي شوية من كلامهم بعد الرحلة، زي ما بعتوهولنا بالظبط.</p>
     </div>
-    <div class="rvgrid">
-      <div class="rv rev">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"رحت لوحدي وكنت خايف يبقى awkward — بس من أول يوم الجروب بقى زي الأصحاب القدامى. التور ليدر كان the GOAT literally 🔥"</p>
-        <div class="rvaval"><div class="rvav">م</div><div><div class="rvname">مصطفى خالد</div><div class="rvtrip">Solo Trip · Mojito Palm · 5 أيام</div></div></div>
-      </div>
-      <div class="rv rev" style="transition-delay:.1s">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"جينا في شهر العسل وكانت exactly اللي احنا محتاجينه. Privacy، sea view، وعشاء رومانسي في مكان ما عرفناهوش إلا مع Cabana 💍"</p>
-        <div class="rvaval"><div class="rvav">ن</div><div><div class="rvname">نور وعمر</div><div class="rvtrip">Honeymoon · Mojito Terrace</div></div></div>
-      </div>
-      <div class="rv rev" style="transition-delay:.2s">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"السعر كان shock — بالإيجاب. ما كنتش متوقع كل ده بالسعر ده. الـ hidden gem ليلة 3 كانت unreal أنا ما بصدقش إني شفت ده بعيني 🌅"</p>
-        <div class="rvaval"><div class="rvav">ا</div><div><div class="rvname">أحمد سامي</div><div class="rvtrip">Group Trip · 4 أيام · Delta Dahab</div></div></div>
-      </div>
-      <div class="rv rev" style="transition-delay:.3s">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"اليخت trip ليلة 3 كانت من أحلى لحظات حياتي. BBQ وغروب في نص البحر 😭 هرجع تاني 100%"</p>
-        <div class="rvaval"><div class="rvav">س</div><div><div class="rvname">سارة ورنا</div><div class="rvtrip">Girls Trip · Assala Sea View · 5 أيام</div></div></div>
-      </div>
-      <div class="rv rev" style="transition-delay:.4s">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"كانت أول رحلة solo في حياتي وكنت nervous — بس Cabana خلت الموضوع easy جداً. الجروب كان حلو والتنظيم perfect ✨"</p>
-        <div class="rvaval"><div class="rvav">د</div><div><div class="rvname">دينا طارق</div><div class="rvtrip">Solo · 5 أيام · Nesima Hotel</div></div></div>
-      </div>
-      <div class="rv rev" style="transition-delay:.5s">
-        <div class="rvstars">★★★★★</div>
-        <p class="rvtext">"جينا 8 أصحاب وكانت رحلة في التاريخ. الـ Bedouin experience ليلة 1 والـ Blue Hole يوم 2 — صعب تختار أي وقت كان أحلى 🔵"</p>
-        <div class="rvaval"><div class="rvav">ع</div><div><div class="rvname">عمر وشباب</div><div class="rvtrip">Group 8 أفراد · Lagoon · Ecotel</div></div></div>
-      </div>
+    <div class="tgrid">
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>روحت لوحدي وكنت متردد صراحة، بس من تاني يوم حسيت إني مع ناس عارفهم من زمان. التور ليدر كان معانا في كل حاجة، والتنظيم مكنش فيه أي لخبطة. رجعت ونفسي أرجع تاني.</p><div class="who">كريم عبد الرحمن</div><div class="meta">Solo Trip · Mojito Palm · 5 أيام</div></div>
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>اخترنا Cabana لشهر العسل وكانت من أحسن قراراتنا. التيراس بتاع الأوضة على البحر مباشرة، والعشا اللي رتبوه لنا في مكان هادي مكانش متوقع خالص. تفاصيل بسيطة بس عملت فرق كبير.</p><div class="who">منة الله وأحمد</div><div class="meta">Honeymoon · Mojito Terrace</div></div>
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>كنت مستغرب إزاي السعر ده شامل كل ده. أكتر حاجة عجبتني الـ Hidden Gem في تالت يوم — مكان مكنتش أعرف إنه موجود أصلاً. الجروب كله اتبسط على الآخر.</p><div class="who">يوسف إبراهيم</div><div class="meta">Group Trip · Delta Dahab · 4 أيام</div></div>
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>احنا 4 بنات قررنا نسافر لوحدنا وكنا قلقانين شوية في الأول. Cabana ظبطولنا كل حاجة من الأول للآخر، وحسينا بأمان طول الرحلة. اليخت وقت الغروب كان أحلى يوم فينا.</p><div class="who">سلمى مجدي</div><div class="meta">Girls Trip · Assala Sea View · 5 أيام</div></div>
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>أول مرة أسافر دهب وكانت أول رحلة لوحدي في حياتي. خفت في الأول بس الموضوع طلع أسهل بكتير مما تخيلت. التنظيم محترم والناس بشوشة. تجربة هرشحها لأي حد متردد.</p><div class="who">محمد فتحي</div><div class="meta">Solo · Nesima Hotel · 5 أيام</div></div>
+      <div class="tcard rev"><div class="tstars">★★★★★</div><p>جينا 8 أصحاب وكانت رحلة مش هننساها. ليلة الجبل والـ Blue Hole كانوا أحسن حاجة فيها. كل حاجة كانت ماشية بنظام من غير ما نتعب نفسنا في أي ترتيب — احنا بس قعدنا نستمتع.</p><div class="who">نادر سمير وأصحابه</div><div class="meta">Group · Ecotel Bay View · 8 أفراد</div></div>
     </div>
   </div>
 </section>
 
-<!-- FORM -->
-<section class="form-sec" id="contact">
+<!-- CONTACT -->
+<section class="contact" id="contact">
   <div class="con">
     <div class="rev">
-      <span class="ey">Book Your Trip</span>
-      <h2 class="sh">ابدأ رحلتك دلوقتي.<span class="en">we'll handle the rest.</span></h2>
+      <span class="ey">احجز دلوقتي</span>
+      <h2 class="sh">جاهز للرحلة؟ <span class="lt en">let's go.</span></h2>
+      <p class="ss">سيبلنا بياناتك وهنرجعلك على واتساب في أقل من 15 دقيقة بكل التفاصيل والأسعار.</p>
     </div>
-    <div style="height:2rem"></div>
-    <div class="fgrid">
-      <div>
-        <form class="fform" id="cabana-form">
-          <div class="fg">
-            <label>الاسم الكامل *</label>
-            <input type="text" name="name" placeholder="اسمك هنا..." required>
-          </div>
-          <div class="fg2">
-            <div class="fg">
-              <label>رقم الواتساب *</label>
-              <input type="tel" name="phone" placeholder="01XXXXXXXXX" required>
-            </div>
-            <div class="fg">
-              <label>موعد الرحلة المفضل</label>
-              <input type="date" name="date">
-            </div>
-          </div>
-          <div class="fg2">
-            <div class="fg">
-              <label>البرنامج</label>
-              <select name="program">
-                <option value="">اختار...</option>
-                <option>4 أيام 3 ليالي</option>
-                <option>5 أيام 4 ليالي</option>
-              </select>
-            </div>
-            <div class="fg">
-              <label>عدد الأفراد</label>
-              <select name="people">
-                <option value="">اختار...</option>
-                <option>1 فرد (Solo)</option>
-                <option>2 أفراد</option>
-                <option>3-5 أفراد</option>
-                <option>6-10 أفراد</option>
-                <option>+10 أفراد</option>
-              </select>
-            </div>
-          </div>
-          <div class="fg">
-            <label>تفضيل الفندق</label>
-            <select name="hotel">
-              <option value="">أي فندق / مش متأكد</option>
-              <optgroup label="Budget">
-                <option>Torino Camp</option>
-                <option>Antika Hotel</option>
-                <option>Mojito Palm</option>
-              </optgroup>
-              <optgroup label="Standard">
-                <option>Mojito Hotel Standard</option>
-                <option>Delta Dahab</option>
-                <option>Desert Hotel</option>
-                <option>Sunset Luxury Hotel</option>
-                <option>Cabana House (Assala)</option>
-              </optgroup>
-              <optgroup label="Premium">
-                <option>Mojito Panorama Sea View</option>
-                <option>Mojito Terrace Sea View</option>
-                <option>Nesima Hotel</option>
-                <option>Assala Sea View (Studios / Chalets)</option>
-              </optgroup>
-              <optgroup label="Lagoon">
-                <option>Canyon / Nubia Island</option>
-                <option>Panda Dahab Resort</option>
-                <option>Ganet Sinai Resort</option>
-                <option>Ecotel Bay View</option>
-                <option>Retac Qunay</option>
-                <option>Dahab Lagoon Resort</option>
-              </optgroup>
-            </select>
-          </div>
-          <div class="fg">
-            <label>نوع الرحلة</label>
-            <select name="type">
-              <option value="">اختار...</option>
-              <option>Group Trip</option>
-              <option>Honeymoon Package</option>
-              <option>Solo Trip</option>
-              <option>Family Trip</option>
-              <option>Corporate / Custom</option>
-            </select>
-          </div>
-          <div class="fg">
-            <label>ملاحظات أو طلبات خاصة</label>
-            <textarea name="notes" placeholder="أي حاجة عايز تقولهالنا..."></textarea>
-          </div>
-          <button type="submit" class="fsubmit" id="fsubmit">ابعت الطلب 📩</button>
-          <div class="fmsg" id="fmsg"></div>
-        </form>
+    <div class="cwrap">
+      <div class="cinfo rev">
+        <h3>تواصل مباشر</h3>
+        <div class="crow"><div class="ci">📱</div><div><b>واتساب</b><span>01005744083 — أسرع طريقة</span></div></div>
+        <div class="crow"><div class="ci">🗓️</div><div><b>مواعيد التحرك</b><span>كل أحد وخميس من القاهرة والإسكندرية · هاي إس يومي من أغلب المحافظات</span></div></div>
+        <div class="crow"><div class="ci">💳</div><div><b>طرق الدفع</b><span>InstaPay · Vodafone Cash · aCash · Visa</span></div></div>
+        <div class="crow"><div class="ci">🏢</div><div><b>تعاقدات الشركات والمدارس</b><span>عروض خاصة للهيئات والجامعات والجروبات الكبيرة</span></div></div>
+        <div class="crow"><div class="ci">📸</div><div><b>تابعنا</b><span>Instagram · TikTok · Facebook — @cabana.egypt</span></div></div>
       </div>
-      <div class="finfo">
-        <div class="finfocard">
-          <h4>📱 تكلمنا مباشرة</h4>
-          <a href="https://wa.me/201005744083" target="_blank">واتساب: 01005744083</a>
-          <p style="margin-top:.5rem">بنرد في أقل من 15 دقيقة</p>
+      <form class="fform rev" id="cabana-form">
+        <div class="fg"><label>الاسم الكامل *</label><input type="text" name="name" placeholder="اسمك هنا..." required></div>
+        <div class="fg2">
+          <div class="fg"><label>رقم الواتساب *</label><input type="tel" name="phone" placeholder="01XXXXXXXXX" required></div>
+          <div class="fg"><label>موعد الرحلة المفضل</label><input type="date" name="date"></div>
         </div>
-        <div class="finfocard">
-          <h4>🗓️ مواعيد التحرك</h4>
-          <p>كل خميس وأحد من القاهرة<br>هاي إس يومي من جميع المحافظات<br>الإسكندرية · المنصورة · الزقازيق وأكتر</p>
+        <div class="fg2">
+          <div class="fg"><label>البرنامج</label><select name="program"><option value="">اختار...</option><option>4 أيام 3 ليالي</option><option>5 أيام 4 ليالي</option></select></div>
+          <div class="fg"><label>عدد الأفراد</label><select name="people"><option value="">اختار...</option><option>1 فرد (Solo)</option><option>2 أفراد</option><option>3-5 أفراد</option><option>6-10 أفراد</option><option>+10 أفراد</option></select></div>
         </div>
-        <div class="finfocard">
-          <h4>💳 طرق الدفع</h4>
-          <p>InstaPay · Vodafone Cash<br>aCash · Visa · تحويل بنكي</p>
+        <div class="fg"><label>تفضيل الفندق</label>
+          <select name="hotel">
+            <option value="">أي فندق / مش متأكد</option>
+            <optgroup label="Budget"><option>Torino Camp</option><option>Antika Hotel</option><option>Mojito Palm</option></optgroup>
+            <optgroup label="Standard"><option>Mojito Hotel Standard</option><option>Delta Dahab</option><option>Desert Hotel</option><option>Sunset Luxury Hotel</option><option>Cabana House (Assala)</option></optgroup>
+            <optgroup label="Premium"><option>Mojito Panorama Sea View</option><option>Mojito Terrace Sea View</option><option>Nesima Hotel</option><option>Assala Sea View (Studios / Chalets)</option></optgroup>
+            <optgroup label="Lagoon"><option>Canyon / Nubia Island</option><option>Panda Dahab Resort</option><option>Ganet Sinai Resort</option><option>Ecotel Bay View</option><option>Retac Qunay</option><option>Dahab Lagoon Resort</option></optgroup>
+          </select>
         </div>
-        <div class="finfocard">
-          <h4>📸 تابعونا</h4>
-          <a href="https://www.instagram.com/cabana.egypt" target="_blank">Instagram: @cabana.egypt</a><br>
-          <a href="https://www.tiktok.com/@cabanaegypt" target="_blank">TikTok: @cabanaegypt</a><br>
-          <a href="https://www.facebook.com/cabanaegypt" target="_blank">Facebook: Cabana Egypt</a>
-        </div>
-      </div>
+        <div class="fg"><label>نوع الرحلة</label><select name="type"><option value="">اختار...</option><option>Group Trip</option><option>Honeymoon Package</option><option>Solo Trip</option><option>Family Trip</option><option>Corporate / Custom</option></select></div>
+        <div class="fg"><label>ملاحظات أو طلبات خاصة</label><textarea name="notes" placeholder="أي حاجة عايز تقولهالنا..."></textarea></div>
+        <button type="submit" class="fsubmit" id="fsubmit">ابعت الطلب 📩</button>
+        <div class="fmsg" id="fmsg"></div>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- CANCELLATION POLICY -->
-<section style="background:var(--bg3);padding:4rem 0">
+<!-- PAYMENT & CANCELLATION POLICY -->
+<section class="policy" id="policy">
   <div class="con">
     <div class="rev">
-      <span class="ey">Policies</span>
-      <h2 class="sh" style="font-size:1.8rem">سياسة الدفع والإلغاء</h2>
+      <span class="ey">Payment &amp; Cancellation</span>
+      <h2 class="sh">سياسة الدفع والإلغاء. <span class="lt en">clear &amp; fair.</span></h2>
+      <p class="ss">كل حاجة واضحة من الأول — مفيش رسوم مخفية ولا مفاجآت. دي سياستنا في الدفع والإلغاء عشان تحجز وإنت مطمن.</p>
     </div>
-    <div class="cpgrid" style="margin-top:2rem">
-      <div style="background:var(--bg2);border:1px solid var(--bo);border-radius:14px;padding:1.3rem">
-        <div style="font-size:1.5rem;margin-bottom:.75rem">💰</div>
-        <h4 style="font-size:14px;font-weight:600;margin-bottom:.5rem;color:var(--cu)">العربون</h4>
-        <p style="font-size:13px;color:var(--mu);line-height:1.7">50% من قيمة الرحلة لتأكيد الحجز. الباقي يُدفع قبل موعد السفر بـ 7 أيام على الأقل.</p>
+    <div class="pol-grid">
+      <div class="pol-card rev">
+        <div class="ph"><div class="ic">💳</div><h3>سياسة الدفع</h3></div>
+        <ul>
+          <li><b>✓</b> بتأكد حجزك بعربون <b style="color:var(--terra)">50%</b> بس من إجمالي الباقة.</li>
+          <li><b>✓</b> الباقي بتدفعه قبل ميعاد السفر بأسبوع.</li>
+          <li><b>✓</b> الرحلات الداخلية (سفاري · يخت · غواصة) بتتحسب لوحدها بأسعار مميزة، وبنوضحلك كل تفصيلة قبل ما تأكد.</li>
+          <li><b>✓</b> طرق الدفع: InstaPay · Vodafone Cash · aCash · فيزا · تحويل بنكي.</li>
+        </ul>
       </div>
-      <div style="background:var(--bg2);border:1px solid var(--bo);border-radius:14px;padding:1.3rem">
-        <div style="font-size:1.5rem;margin-bottom:.75rem">✅</div>
-        <h4 style="font-size:14px;font-weight:600;margin-bottom:.5rem;color:var(--cu)">إلغاء قبل 7 أيام</h4>
-        <p style="font-size:13px;color:var(--mu);line-height:1.7">استرداد العربون بالكامل — أو تحويل الحجز لتاريخ آخر مناسبك.</p>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--bo);border-radius:14px;padding:1.3rem">
-        <div style="font-size:1.5rem;margin-bottom:.75rem">⚠️</div>
-        <h4 style="font-size:14px;font-weight:600;margin-bottom:.5rem;color:#E8A84A">إلغاء خلال 7 أيام</h4>
-        <p style="font-size:13px;color:var(--mu);line-height:1.7">العربون لا يُسترد. ممكن تحويل الحجز لتاريخ آخر بموافقة الإدارة.</p>
-      </div>
-      <div style="background:var(--bg2);border:1px solid var(--bo);border-radius:14px;padding:1.3rem">
-        <div style="font-size:1.5rem;margin-bottom:.75rem">🔄</div>
-        <h4 style="font-size:14px;font-weight:600;margin-bottom:.5rem;color:var(--cu)">تعديل الحجز</h4>
-        <p style="font-size:13px;color:var(--mu);line-height:1.7">تغيير الفندق أو التاريخ متاح حسب التوافر. تواصل معنا مبكراً عشان نعدل بدون رسوم.</p>
+      <div class="pol-card rev">
+        <div class="ph"><div class="ic">🔄</div><h3>سياسة الإلغاء والتعديل</h3></div>
+        <ul>
+          <li><b>✓</b> الإلغاء قبل السفر بـ <b style="color:var(--terra)">7 أيام</b> أو أكتر: بيرجعلك العربون بالكامل، أو تأجّل لميعاد تاني من غير أي رسوم.</li>
+          <li><b>✓</b> الإلغاء خلال أقل من 7 أيام: بنحاول نأجّلك لميعاد تاني بدل ما تخسر، قدر الإمكان.</li>
+          <li><b>✓</b> تعديل الفندق أو الميعاد: متاح حسب التوافر من غير رسوم زيادة — بس كلمنا بدري.</li>
+          <li><b>✓</b> إحنا بشر وبنفهم إن الظروف بتحصل — دايماً بنحاول نطلعلك أحسن حل.</li>
+        </ul>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--mu);margin-top:1.5rem;line-height:1.7">تحتفظ Cabana Egypt بحق التعديل على برنامج الرحلة في حالات القوة القاهرة (أحوال جوية، ظروف طارئة) مع إبلاغ العملاء فوراً وتقديم بدائل مناسبة.</p>
+    <div class="pol-note rev">ملاحظة: الأسعار وفئات الإقامة قابلة للتغيّر حسب الموسم والتوافر. بنأكدلك السعر النهائي وكل التفاصيل على واتساب قبل ما تدفع أي حاجة.</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="con">
+    <div class="rev">
+      <span class="ey">FAQ</span>
+      <h2 class="sh">أسئلة بتتسألنا كتير. <span class="lt en">straight answers.</span></h2>
+      <p class="ss">جمعنالك أكتر حاجات الناس بتسأل عنها قبل ما تحجز. لو سؤالك مش هنا، كلمنا على واتساب.</p>
+    </div>
+    <div class="faqs" id="faqs"></div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="fcta">
-  <div class="con">
-    <h2 class="fctah rev">متضيعش<br><em>الصيف ده.</em></h2>
-    <p class="fctasub rev">الأماكن بتتملى بسرعة والصيف ما بيستناش. 50% عربون بس بيحجزلك مكانك دلوقتي.</p>
-    <div class="fctabtns rev">
-      <a href="https://wa.me/201005744083" class="btnm" target="_blank">📱 احجز على واتساب دلوقتي</a>
-      <a href="https://www.instagram.com/cabana.egypt" class="btng" target="_blank">📸 شوف رحلاتنا</a>
+  <div class="con rev">
+    <h2>متضيعش الصيف ده ☀️</h2>
+    <p>الأماكن بتتملى بسرعة والصيف ما بيستناش. 50% عربون بس بيحجزلك مكانك دلوقتي.</p>
+    <div class="hbtns">
+      <a href="https://wa.me/201005744083" target="_blank" class="btn btn-p">📱 احجز على واتساب</a>
+      <a href="https://www.instagram.com/cabana.egypt" target="_blank" class="btn btn-g" style="color:var(--terra);border-color:var(--line2);background:var(--bg2)">📸 شوف رحلاتنا</a>
     </div>
-    <p class="fctanote rev">✦ instapay · vodafone cash · acash · visa ✦</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="con">
-    <div class="rev">
-      <span class="ey">FAQ</span>
-      <h2 class="sh">أسئلة بتتسألنا كتير.<span class="en">straight answers, no fluff.</span></h2>
-      <p class="ss">جمعنالك أكتر حاجات الناس بتسأل عنها قبل ما تحجز. لو سؤالك مش هنا، كلمنا على واتساب وهنرد عليك في دقايق.</p>
-    </div>
-    <div class="faqs">
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلة بتتحرك منين؟ ومتاحة من محافظتي؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>التحرك كل أحد وخميس من القاهرة والإسكندرية وكذا محافظة تانية، والهاي إس متاح بشكل يومي من أغلب المحافظات. قولنا إنت منين وإحنا نظبطلك أقرب نقطة تحرك ليك.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>السعر شامل إيه بالظبط؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>السعر شامل الإقامة، الانتقالات ذهاب وعودة، والتور ليدر اللي معاك طول الرحلة. الرحلات الداخلية زي السفاري واليخت والغواصة بتتحسب لوحدها بأسعار مميزة، وبنوضحلك كل تفصيلة قبل ما تأكد عشان متبقاش فيه أي مفاجآت.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلات الداخلية بكام؟ وليه مش مكتوبة على الموقع؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>سعرها بيختلف حسب البرنامج وعدد الأفراد، وعشان كده بنحب نظبطها معاك على واتساب علشان تطلعلك بأنسب سعر. قولنا عايز تعمل إيه بالظبط وإحنا نقولك الرقم النهائي على طول من غير لف ودوران.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>أنا رايح لوحدي — الموضوع هيبقى محرج؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>خالص. أغلب اللي بييجي معانا بييجي solo، ومن أول يوم الجروب بيبقى زي صحاب قُدام. التور ليدر بيكسر التلج بسرعة، وإنت حر تشارك في اللي تحبه وترتاح وقت ما تحب.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>بأحجز إزاي؟ ولازم أدفع كام مقدم؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>تكلمنا على واتساب، نظبط معاك الفندق والميعاد، وبتأكد حجزك بعربون 50% بس. الباقي بتدفعه قبل السفر بأسبوع. بنقبل إنستاباي، فودافون كاش، aCash، فيزا، وتحويل بنكي.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>ممكن أغير الفندق أو الميعاد بعد ما أحجز؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>أيوه، حسب التوافر. كلمنا بدري وإحنا بنعدّلهالك من غير أي رسوم زيادة طول ما فيه أماكن. والإلغاء قبل 7 أيام من السفر بيرجعلك العربون كامل أو تأجّل لميعاد تاني.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>الأكل والفطار داخل في السعر؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>بيختلف من فندق لفندق. فيه فنادق بفطار شامل أو بوفيه أو Half Board، وفيه فنادق (زي موخيتو) الفطار فيها اختياري بتكلفة بسيطة. كل ده مكتوب تحت كل فندق في قسم الباقات، ولو محتار كلمنا ونوضحلك.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>في حمامات سباحة؟ ومستوى الفنادق إيه؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>عندنا 4 فئات تختار منها: Budget (كامبات وفنادق اقتصادية)، Standard (فنادق حديثة وبعضها بحمام سباحة)، Premium (فنادق 4 و5 نجوم وسي فيو مباشر)، وLagoon (ريزورتات بشواطئ رملية وبوفيهات). اختار الفئة من فوق في قسم الباقات وهتشوف كل فندق وتفاصيله وسعره.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>الرحلة مناسبة للعائلات والأطفال؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>أكيد. عندنا برامج هادية وفنادق بحمامات سباحة وشقق وشاليهات خاصة مناسبة جداً للعائلات. قولنا إنتوا كام فرد وفيه أطفال ولا لأ، وإحنا نرشحلك أنسب فندق وأنسب برنامج ليكوا.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>بتعملوا تعاقدات للشركات والمدارس والجامعات؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>أيوه. عندنا تعاقدات وعروض خاصة للهيئات والشركات والمدارس والجامعات والجروبات الكبيرة — بأسعار مميزة وخدمة وتنظيم على مستوى أعلى. كلمنا بعدد الأفراد والميعاد وإحنا نظبطلك عرض مخصص يناسبكوا.</p></div>
-      </div>
-      <div class="faqi rev">
-        <div class="faqq" onclick="toggleFaq(this)"><span>لو حصل ظرف طارئ وألغيت، الفلوس بترجع؟</span><span class="qx">＋</span></div>
-        <div class="faqa"><p>الإلغاء قبل 7 أيام من السفر بيرجعلك العربون بالكامل، أو تأجّل لميعاد تاني يناسبك. لو الإلغاء خلال أقل من 7 أيام بنحاول نأجّلك بدل ما تخسر، قدر الإمكان. إحنا بشر وبنفهم إن الظروف بتحصل.</p></div>
-      </div>
-    </div>
+    <div class="pay">✦ instapay · vodafone cash · acash · visa ✦</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
   <div class="con">
-    <div class="ftgrid">
+    <div class="fcols">
       <div>
-        <div class="ftname">CABANA <span>EGYPT</span></div>
-        <p class="ftdesc">رحلات منظمة لدهب وسيناء من كل محافظات مصر. بتور ليدر متخصص وخبرة +10 سنين — كل حاجة شاملة من أول لحظة.</p>
-        <div class="ftpays">
-          <span class="ftpay">InstaPay</span>
-          <span class="ftpay">Vodafone Cash</span>
-          <span class="ftpay">aCash</span>
-          <span class="ftpay">Visa</span>
-        </div>
+        <div class="logo"><span style="color:var(--terra)">CABANA</span><b style="color:var(--sea)">EGYPT</b></div>
+        <p>رحلات شاملة لدهب وسيناء — تور ليدر حقيقي معاك وتجربة بدوية مش هتنساها.</p>
       </div>
-      <div class="ftcol">
-        <h4>Quick Links</h4>
-        <a href="#packages">Packages</a>
-        <a href="#itinerary">The Program</a>
-        <a href="#honeymoon">Honeymoon</a>
-        <a href="#faq">الأسئلة الشائعة</a>
-        <a href="#contact">Book Now</a>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul><li><a href="#top">الرئيسية</a></li><li><a href="#packages">الباقات</a></li><li><a href="#program">البرنامج</a></li><li><a href="#custom">صمم رحلتك</a></li><li><a href="#honeymoon">Honeymoon</a></li><li><a href="#policy">الدفع والإلغاء</a></li><li><a href="#contact">احجز</a></li></ul>
       </div>
-      <div class="ftcol">
-        <h4>Follow Us</h4>
-        <a href="https://www.instagram.com/cabana.egypt" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@cabanaegypt" target="_blank">TikTok</a>
-        <a href="https://www.facebook.com/cabanaegypt" target="_blank">Facebook</a>
-        <a href="https://wa.me/201005744083" target="_blank">WhatsApp</a>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul><li><a href="https://wa.me/201005744083" target="_blank">📱 واتساب: 01005744083</a></li><li>كل أحد وخميس من القاهرة</li><li>هاي إس يومي من المحافظات</li><li>InstaPay · Vodafone · Visa</li></ul>
+      </div>
+      <div>
+        <h4>تابعونا</h4>
+        <ul><li><a href="https://www.instagram.com/cabana.egypt" target="_blank">Instagram · @cabana.egypt</a></li><li><a href="https://www.tiktok.com/@cabanaegypt" target="_blank">TikTok · @cabanaegypt</a></li><li><a href="https://www.facebook.com/cabanaegypt" target="_blank">Facebook · Cabana Egypt</a></li></ul>
       </div>
     </div>
-    <div class="ftbot">
-      <span>© 2026 CABANA EGYPT · All rights reserved</span>
-      <div class="ftsoc">
-        <a href="https://www.instagram.com/cabana.egypt" class="ftsl" target="_blank">INSTAGRAM</a>
-        <a href="https://www.tiktok.com/@cabanaegypt" class="ftsl" target="_blank">TIKTOK</a>
-        <a href="https://www.facebook.com/cabanaegypt" class="ftsl" target="_blank">FACEBOOK</a>
-      </div>
-    </div>
+    <div class="fbot">© 2026 Cabana Egypt · دهب · سيناء · مصر</div>
   </div>
 </footer>
 
-<!-- BOTTOM MARQUEE -->
-<div class="mq-wrap" style="border-top:1px solid rgba(200,149,108,.12);border-bottom:none">
-  <div class="mq-track" style="animation-direction:reverse;animation-duration:32s">
-    <span class="mqi">"دهب مش مكان — دهب حالة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">The sea is calling. And you must go. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"بعد دهب مش بتبقى نفس الشخص" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Collect moments, not things. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"وقت الغروب في دهب ملوش شبيه" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Life is better at the beach. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب علمتني إن أحلى اللحظات هي اللحظات البسيطة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Go where the wifi is weak and the vibes are strong. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب مش مكان — دهب حالة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">The sea is calling. And you must go. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"بعد دهب مش بتبقى نفس الشخص" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Collect moments, not things. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"وقت الغروب في دهب ملوش شبيه" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Life is better at the beach. ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">"دهب علمتني إن أحلى اللحظات هي اللحظات البسيطة" ♥</span><span class="mqi mqd">✦</span>
-    <span class="mqi">Go where the wifi is weak and the vibes are strong. ♥</span><span class="mqi mqd">✦</span>
-  </div>
-</div>
-
-<!-- WA FLOAT -->
-<a href="https://wa.me/201005744083" class="wa" target="_blank" title="احجز على واتساب">💬</a>
-
 <script>
-// ✏️ ضع هنا رابط الـ Apps Script بعد ما تعمل الـ deploy
+const WA = "201005744083";
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeCSRtwjcAMPkVfY1oM3ZPHfagnHXcZx7fSQHOoggKUhRJlOI6whXfTmhdaly3vUhN/exec";
+
+/* ===== HOTELS (الأسعار والتفاصيل) ===== */
+const HOTELS = [
+ {t:"budget",ic:"🏕️",bd:"Budget",n:"Torino Camp",loc:"الممشى السياحي · صف تاني · اللايت هاوس",f:["أجواء كامب مميزة وبشرية — المكان المثالي للسوشيال vibes","خطوات من البحر وكل كافيهات اللايت هاوس","غرف مريحة ونظيفة بديكور بدوي أصيل"],p4:"2,650",p5:"3,200",k:"Torino Camp"},
+ {t:"budget",ic:"🏊",bd:"Budget · Pool 🏊",n:"Antika Hotel",loc:"دهب · حمام سباحة · طابع أنتيكا مميز",f:["حمام سباحة جوه الفندق — تسبح وترتاح من غير ما تتحرك","أجواء أنتيكا بديكور فريد وروح سيناء الأصيلة","المكان اللي بيخلي الناس ترجعله تاني وتالت"],p4:"3,300",p5:"4,100",k:"Antika Hotel"},
+ {t:"budget",ic:"🌴",bd:"Budget · First Row 🌊",n:"Mojito Palm",loc:"الممشى السياحي · صف أول على البحر",f:["مباشرة على البحر — الكافيه والإفطار بيطل على المياه","الفطار اختياري بتكلفة إضافية في كافيه موخيتو","جنب الكوبري الخشبي — أكتر spot فيه صور في دهب"],p4:"2,650",p5:"3,200",k:"Mojito Palm"},
+ {t:"standard",ic:"🏨",bd:"Standard",n:"Mojito Hotel",loc:"اللايت هاوس · صف أول بحر",f:["غرف فندقية حديثة — مش كامب — بأعلى مستوى","كافيه موخيتو الشهير مباشرة على البحر","الفطار اختياري بتكلفة إضافية على البحر"],p4:"3,100",p5:"3,750",k:"Mojito Hotel Standard"},
+ {t:"standard",ic:"🏊",bd:"Standard · Pool",n:"Delta Dahab",loc:"قلب الممشى السياحي · Swimming Pool",f:["Swimming Pool في قلب الممشى السياحي","فطار ومشروبات شاملة طول اليوم","موقع مركزي — ثواني من كل حاجة"],p4:"3,450",p5:"4,250",k:"Delta Dahab"},
+ {t:"standard",ic:"🏜️",bd:"Standard · Desert Vibes 🏜️",n:"Desert Hotel",loc:"دهب · طابع بدوي · قريب من البحر",f:["طابع بدوي أصيل وروح سيناء الحقيقية","هدوء وخصوصية — بعيد عن الصخب قريب من كل حاجة","تجربة مختلفة ما بين صحراء دهب وشواطئها"],p4:"3,500",p5:"4,400",k:"Desert Hotel"},
+ {t:"standard",ic:"🏠",bd:"Standard · Privacy 🏠",n:"Cabana House",loc:"العسلة (Assala) · شقق خاصة · سي فيو",f:["شقق خاصة بالكامل — مطبخ، صالة، وprivacy تامة","منطقة العسلة الهادية — بعيد عن الازدحام","إطلالة على البحر الأحمر — الفرد الثالث والرابع بـ 50%"],p4:"3,300",p5:"4,000",k:"Cabana House"},
+ {t:"standard",ic:"🌇",bd:"Standard · B&B · Sunset 🌇",n:"Sunset Luxury Hotel",loc:"الممشى السياحي · إطلالة الغروب",f:["فطار يومي شامل — تبدأ يومك على راحتك","غرف فندقية راقية في قلب الممشى السياحي","أحلى إطلالة غروب في دهب — الاسم مش صدفة"],p4:"4,100",p5:"5,000",k:"Sunset Luxury Hotel"},
+ {t:"premium",ic:"🌅",bd:"Premium · Panorama 🌅",n:"Mojito Panorama",loc:"اللايت هاوس · Panorama Sea View",f:["Panoramic Sea View مباشر من الغرفة","من أكتر الغرف طلباً في دهب — حجز مبكر ضروري","الفطار اختياري بتكلفة إضافية مع إطلالة لا توصف"],p4:"4,350",p5:"5,550",k:"Mojito Panorama Sea View"},
+ {t:"premium",ic:"🏖️",bd:"Premium · Terrace 🏖️",n:"Mojito Terrace",loc:"اللايت هاوس · تراس خاص على البحر",f:["تراس خاص بيطل مباشرة على البحر الأحمر","أعلى مستوى في موخيتو — مميز جداً للعرسان","الفطار اختياري بتكلفة إضافية مع sunrise على البحر"],p4:"4,600",p5:"5,900",k:"Mojito Terrace Sea View"},
+ {t:"premium",ic:"⭐",bd:"Premium · Dive Hub ⭐",n:"Nesima Hotel",loc:"الممشى السياحي · صف أول · Swimming Pool",f:["4 نجوم راسخة — أشهر فنادق دهب وأكترها ثقة","Swimming Pool + مطعم على البحر مباشرة","مركز غوص Nesima الشهير — للمهتمين بالـ Diving"],p4:"4,800",p5:"6,000",k:"Nesima Hotel"},
+ {t:"premium",ic:"🌊",bd:"Premium · Sea View 🌊",n:"Assala Sea View",loc:"العسلة (Assala) · Studios · Chalets · Apartments",f:["Studios وشاليهات وأبارتمنتات مباشرة على البحر","العسلة الهادية — أبعد عن الضوضاء، أقرب للـ vibes","الفرد الثالث والرابع بـ 50% — مثالي للجروب والعرسان"],p4:"5,600",p5:"6,600",k:"Assala Sea View"},
+ {t:"lagoon",ic:"🏝️",bd:"Lagoon · B&B 🏝️",n:"Canyon / Nubia Island",loc:"اللاجونا · شاطئ رملي · بوفيه فطار",f:["شاطئ رملي طبيعي في منطقة اللاجونا الخلابة","بوفيه فطار أوبن — متنوع ومريح","هدوء تام وطبيعة مختلفة عن الممشى"],p4:"4,200",p5:"5,200",k:"Canyon Nubia Island"},
+ {t:"lagoon",ic:"🐼",bd:"Lagoon · B&B",n:"Panda Dahab Resort",loc:"اللاجونا · شاطئ رملي · فطار شامل",f:["Resort feel على شاطئ رملي في اللاجونا","فطار شامل يومياً في الريزورت","مناسب للعائلات والجروبات — هادي ومريح"],p4:"4,800",p5:"6,000",k:"Panda Dahab Resort"},
+ {t:"lagoon",ic:"🌴",bd:"Lagoon · First Row",n:"Ganet Sinai Resort",loc:"اللاجونا · صف أول · بوفيه أوبن",f:["صف أول في اللاجونا — مباشر على الشاطئ الرملي","بوفيه فطار أوبن يومياً — واسع ومتنوع","Deluxe Sea View متاح بسعر إضافي"],p4:"5,200",p5:"6,600",k:"Ganet Sinai Resort"},
+ {t:"lagoon",ic:"👑",bd:"Lagoon · Half Board 👑",n:"Ecotel Bay View",loc:"الثري بولز · صف أول · Half Board",f:["4 نجوم في منطقة الثري بولز — من أجمل بقاع دهب","Half Board يومياً — فطار وعشاء في الريزورت","شاطئ بحري مباشر مع بحر الثري بولز الشهير"],p4:"9,100",p5:"11,800",k:"Ecotel Bay View Resort"},
+ {t:"lagoon",ic:"👑",bd:"Lagoon · Luxury 👑👑",n:"Retac Qunay",loc:"بين الثري بولز واللاجونا · Half Board",f:["5 نجوم في أفضل موقع — بين الثري بولز واللاجونا","Half Board يومياً في مطعم ريزورت متميز","غرف Deluxe وSea View بإضافة بسيطة"],p4:"9,600",p5:"12,400",k:"Retac Qunay Resort"},
+ {t:"lagoon",ic:"👑",bd:"Lagoon · Ultra Luxury 👑",n:"Dahab Lagoon Resort",loc:"اللاجونا · 5 نجوم · الأرقى في دهب",f:["الأفخم والأرقى في دهب على الإطلاق — لا مقارنة","Half Board في مطعم مستوى عالمي على البحر","شاطئ رملي خاص على لاجونا دهب الساحرة"],p4:"12,100",p5:"15,800",k:"Dahab Lagoon Resort"}
+];
 
 /* ════════════════════════════════════════════════════════════════
    📸 روابط صور الفنادق (جوجل درايف)
-   - فندق بلينك واحد: "https://drive.google.com/..."
    - "request" → الزرار يكتب (by request) ويفتح واتساب
-   - "" فاضي → الزرار يفتح واتساب يطلب الصور
-   - فندق بأكتر من فولدر: {"اسم":"لينك","اسم":"لينك"}
-   مهم: خلي الفولدرات Share = "أي حد معاه الرابط" علشان الناس تقدر تفتحها.
+   - فندق بأكتر من فولدر: {"اسم":"لينك", ...}
+   مهم: خلي الفولدرات Share = "أي حد معاه الرابط".
    ════════════════════════════════════════════════════════════════ */
 const MOJITO = "https://drive.google.com/drive/folders/19_FuvrfT1j7FnPQFHMVjNFM7JC_fenL9?usp=drive_link";
 const HOTEL_PHOTOS = {
-  "Torino Camp": "https://drive.google.com/drive/folders/16vw-NdapzrqeAm13ZukoSl3hy-SluZ4r?usp=drive_link",
-  "Antika Hotel": "https://drive.google.com/drive/folders/1KXborX0dI6ges54pZXSOvVMRH7nYAyk2?usp=drive_link",
-  // كل فنادق موخيتو نفس الفولدر
-  "Mojito Palm": MOJITO,
-  "Mojito Hotel Standard": MOJITO,
-  "Mojito Panorama Sea View": MOJITO,
-  "Mojito Terrace Sea View": MOJITO,
-  "Delta Dahab": "https://drive.google.com/drive/folders/1E_71CsCQkp65RH3LVqqTcktOVE0mfyhg?usp=drive_link",
-  "Desert Hotel": "https://drive.google.com/drive/folders/1e4GXgtsOBJAv-ISFvilRByWYWAEBKtWN?usp=drive_link",
-  "Cabana House": "https://drive.google.com/drive/folders/1Wn7sD1N9fg0HP9UIbbtGy-QFroBaGHe-?usp=drive_link",
-  "Sunset Luxury Hotel": "https://drive.google.com/drive/folders/1I2qywR4gB-vbV311_qpbH-yrty8Q2oUx?usp=drive_link",
-  "Nesima Hotel": "https://drive.google.com/drive/folders/1OPrBD2CMuKdko5ZcvJWtD11_5y8DhaQN?usp=drive_link",
-  "Assala Sea View": "request",   // الصور بـ by request
-  // كانيون ونوبيا أيلاند — فولدرين منفصلين
-  "Canyon Nubia Island": { "Canyon": "https://drive.google.com/drive/folders/1-6DOJzPkhVpXHRW2LfgeqKhHdnm_0R1C?usp=drive_link", "Nubia Island": "https://drive.google.com/drive/folders/1yt5QjHC2omz6hfHQdYc01uIYKO7EHsZ0?usp=drive_link" },
-  "Panda Dahab Resort": "https://drive.google.com/drive/folders/1uuSPxaNIfC19kkMJ-hW9guMvVKjFZ3rK?usp=drive_link",
-  "Ganet Sinai Resort": "https://drive.google.com/drive/folders/1B6sQhRD_aYdTaY-ayITyDOF6Z5glVR6m?usp=drive_link",
-  "Ecotel Bay View Resort": "https://drive.google.com/drive/folders/17zKnfqh_-_mDnWO-DxNeEkBvywDqFg8y?usp=drive_link",
-  "Retac Qunay Resort": "https://drive.google.com/drive/folders/10Xr9eiB7v9F2AYWASvV8alEAIHcvkDb_?usp=drive_link",
-  "Dahab Lagoon Resort": "https://drive.google.com/drive/folders/1AUKERvrUwqoyCC0KzrnAgMG5wpWKX0WR?usp=drive_link"
+  "Torino Camp":"https://drive.google.com/drive/folders/16vw-NdapzrqeAm13ZukoSl3hy-SluZ4r?usp=drive_link",
+  "Antika Hotel":"https://drive.google.com/drive/folders/1KXborX0dI6ges54pZXSOvVMRH7nYAyk2?usp=drive_link",
+  "Mojito Palm":MOJITO,"Mojito Hotel Standard":MOJITO,"Mojito Panorama Sea View":MOJITO,"Mojito Terrace Sea View":MOJITO,
+  "Delta Dahab":"https://drive.google.com/drive/folders/1E_71CsCQkp65RH3LVqqTcktOVE0mfyhg?usp=drive_link",
+  "Desert Hotel":"https://drive.google.com/drive/folders/1e4GXgtsOBJAv-ISFvilRByWYWAEBKtWN?usp=drive_link",
+  "Cabana House":"https://drive.google.com/drive/folders/1Wn7sD1N9fg0HP9UIbbtGy-QFroBaGHe-?usp=drive_link",
+  "Sunset Luxury Hotel":"https://drive.google.com/drive/folders/1I2qywR4gB-vbV311_qpbH-yrty8Q2oUx?usp=drive_link",
+  "Nesima Hotel":"https://drive.google.com/drive/folders/1OPrBD2CMuKdko5ZcvJWtD11_5y8DhaQN?usp=drive_link",
+  "Assala Sea View":"request",
+  "Canyon Nubia Island":{"Canyon":"https://drive.google.com/drive/folders/1-6DOJzPkhVpXHRW2LfgeqKhHdnm_0R1C?usp=drive_link","Nubia Island":"https://drive.google.com/drive/folders/1yt5QjHC2omz6hfHQdYc01uIYKO7EHsZ0?usp=drive_link"},
+  "Panda Dahab Resort":"https://drive.google.com/drive/folders/1uuSPxaNIfC19kkMJ-hW9guMvVKjFZ3rK?usp=drive_link",
+  "Ganet Sinai Resort":"https://drive.google.com/drive/folders/1B6sQhRD_aYdTaY-ayITyDOF6Z5glVR6m?usp=drive_link",
+  "Ecotel Bay View Resort":"https://drive.google.com/drive/folders/17zKnfqh_-_mDnWO-DxNeEkBvywDqFg8y?usp=drive_link",
+  "Retac Qunay Resort":"https://drive.google.com/drive/folders/10Xr9eiB7v9F2AYWASvV8alEAIHcvkDb_?usp=drive_link",
+  "Dahab Lagoon Resort":"https://drive.google.com/drive/folders/1AUKERvrUwqoyCC0KzrnAgMG5wpWKX0WR?usp=drive_link"
 };
 
-// Build the "صور الفندق" button(s) next to each hotel's booking button
-const waPhotos = label => "https://wa.me/201005744083?text=" + encodeURIComponent("ممكن أشوف صور " + label + "؟");
-function makePhotoBtn(text, href){
-  const a = document.createElement("a");
-  a.className = "pcta pcta-ghost";
-  a.target = "_blank"; a.rel = "noopener";
-  a.textContent = text; a.href = href;
-  return a;
-}
-document.querySelectorAll(".pc .pcta").forEach(cta => {
-  let key = "";
-  try { key = decodeURIComponent((cta.getAttribute("href").split("text=")[1] || "")).replace("عايز احجز", "").trim(); } catch(e) {}
-  const card = cta.closest(".pc");
-  const name = card ? (card.querySelector(".pname")?.textContent.trim() || key) : key;
-  const val = HOTEL_PHOTOS[key];
-
-  const row = document.createElement("div");
-  row.className = "pcta-row";
-  cta.parentNode.insertBefore(row, cta);
-  row.appendChild(cta);
-
-  if (val && typeof val === "object") {
-    Object.keys(val).forEach(lbl => row.appendChild(makePhotoBtn("📸 " + lbl, val[lbl] || waPhotos(lbl))));
-  } else if (val === "request") {
-    row.appendChild(makePhotoBtn("📸 الصور (by request)", waPhotos(name)));
-  } else if (val) {
-    row.appendChild(makePhotoBtn("📸 صور الفندق", val));
-  } else {
-    row.appendChild(makePhotoBtn("📸 صور الفندق", waPhotos(name)));
-  }
-});
-
-// Cursor glow
-const cg = document.getElementById("cglow");
-document.addEventListener("mousemove", e => {
-  cg.style.left = e.clientX + "px";
-  cg.style.top = e.clientY + "px";
-});
-
-// Nav scroll + progress bar
-const nav = document.getElementById("nav");
-const prog = document.getElementById("progress");
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("sc", window.scrollY > 60);
-  if (prog) {
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + "%";
-  }
-}, {passive:true});
-
-// Scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add("on"); obs.unobserve(e.target); }});
-}, {threshold:.1});
-document.querySelectorAll(".rev,.revl,.revr").forEach(el => obs.observe(el));
-
-// Counter animation
-const counters = document.querySelectorAll("[data-count]");
-const cObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if(e.isIntersecting){
-      const target = parseInt(e.target.dataset.count);
-      let current = 0;
-      const step = target/40;
-      const timer = setInterval(() => {
-        current += step;
-        if(current >= target){ current = target; clearInterval(timer); }
-        e.target.textContent = Math.floor(current) + "+";
-      }, 40);
-      cObs.unobserve(e.target);
-    }
-  });
-}, {threshold:.5});
-counters.forEach(c => cObs.observe(c));
-
-// Package filter
-let curTier = "budget", curDays = 4;
-
-function setDays(d, btn) {
-  curDays = d;
-  document.querySelectorAll(".tgb").forEach(b => b.classList.remove("a"));
-  btn.classList.add("a");
-}
-
-// Tier descriptions (shown under the tabs so the 4 categories are obvious)
 const TIER_INFO = {
-  budget:   {ic:"💸", h:"Budget — أوفر سعر وأحلى vibes", p:"كامبات وفنادق اقتصادية على الممشى السياحي. أنضف، أبسط، وأقرب للبحر والكافيهات.", price:"يبدأ من 2,650 ج / فرد"},
-  standard: {ic:"🏨", h:"Standard — غرف فندقية وراحة أعلى", p:"فنادق حديثة (مش كامب) بموقع ممتاز، بعضها بحمام سباحة وفطار. راحة أكتر بسعر معقول.", price:"يبدأ من 3,100 ج / فرد"},
-  premium:  {ic:"✨", h:"Premium — فخامة وسي فيو مباشر", p:"فنادق 4 و5 نجوم، غرف Sea View وبانوراما، وأشهر فنادق دهب. تجربة فاخرة بمعنى الكلمة.", price:"يبدأ من 4,350 ج / فرد"},
-  lagoon:   {ic:"🌊", h:"Lagoon — ريزورتات وشواطئ رملية", p:"ريزورتات اللاجونا والثري بولز بشواطئ رملية وبوفيهات Half/Full Board. هدوء وطبيعة مختلفة.", price:"يبدأ من 4,200 ج / فرد"}
+  budget:{ic:"💸",h:"Budget — أوفر سعر وأحلى vibes",p:"كامبات وفنادق اقتصادية على الممشى السياحي. أنضف، أبسط، وأقرب للبحر والكافيهات.",price:"يبدأ من 2,650 ج / فرد"},
+  standard:{ic:"🏨",h:"Standard — غرف فندقية وراحة أعلى",p:"فنادق حديثة (مش كامب) بموقع ممتاز، بعضها بحمام سباحة وفطار. راحة أكتر بسعر معقول.",price:"يبدأ من 3,100 ج / فرد"},
+  premium:{ic:"✨",h:"Premium — فخامة وسي فيو مباشر",p:"فنادق 4 و5 نجوم، غرف Sea View وبانوراما، وأشهر فنادق دهب. تجربة فاخرة بمعنى الكلمة.",price:"يبدأ من 4,350 ج / فرد"},
+  lagoon:{ic:"🌊",h:"Lagoon — ريزورتات وشواطئ رملية",p:"ريزورتات اللاجونا والثري بولز بشواطئ رملية وبوفيهات Half/Full Board. هدوء وطبيعة مختلفة.",price:"يبدأ من 4,200 ج / فرد"}
 };
-function renderTierInfo(t){
-  const d = TIER_INFO[t], el = document.getElementById("tierInfo");
-  if(!el || !d) return;
-  el.innerHTML = `<div class="ti-ic">${d.ic}</div><div class="ti-txt"><h4>${d.h}</h4><p>${d.p}</p></div><div class="ti-price">${d.price}</div>`;
-}
 
-function setTier(t, btn) {
-  curTier = t;
-  document.querySelectorAll(".tt").forEach(b => b.classList.remove("a"));
-  btn.classList.add("a");
-  document.querySelectorAll(".pc").forEach(c => {
-    c.classList.toggle("sh2", c.dataset.tier === t);
+const ITINERARY = [
+ {t:"اليوم الأول — البداية اللي هتفرق",s:"وصول · اللاجونا مجاناً · ليلة بدوية في الجبل",d:"نستقبلك ونوصلك الفندق، وبعد ما ترتاح نبدأ برحلة مجانية للاجونا دهب وقت العصاري. وبالليل سهرة بدوية في الجبل — شاي، مزيكا، ونجوم سيناء اللي مش هتلاقيها في أي مكان."},
+ {t:"اليوم التاني — المغامرة الحقيقية",s:"Blue Hole · Abu Galum · Blue Lagoon · Stargazing أو Rave",d:"snorkeling في Blue Hole الأسطوري، ركوب جمال لأبو جالوم، وغداء سي فود على البحر. بعدها Blue Lagoon، وبالليل تختار: stargazing هادي ولا rave على البحر."},
+ {t:"اليوم التالت — أكتر يوم مليان",s:"Three Pools · سفاري · Yacht Sunset · Hidden Gem",d:"صباح في الثري بولز، سفاري بالجيب في الصحراء، ويخت وقت الغروب مع BBQ في نص البحر. ونقفل اليوم في Hidden Gem بانوراما خاص بـ Cabana ما حدش يعرفه."},
+ {t:"اليوم الرابع — Check-out أو يوم تاني جامد",s:"رحلة 4 أيام: عودة · رحلة 5 أيام: مغامرة جديدة",d:"لو رحلتك 4 أيام، نجمع ذكرياتنا ونتحرك للعودة. ولو 5 أيام، اليوم ده مغامرة جديدة — وادي وشواش ونويبع day-use، جبال بحرية وشلالات ومياه صافية."},
+ {t:"اليوم الخامس — توديع دهب (رحلة 5 أيام)",s:"Gathering الشروق · Hidden Gem خاص بـ Cabana · وداع على البحر",d:"نصحى بدري ونطلع نستنى الشروق سوا في Hidden Gem من أماكن Cabana السرية. قهوة، سكون، وآخر مشوار على البحر قبل ما نرجع. مش بنقول مع السلامة — بنقول لحد ما نرجع."}
+];
+
+const FAQ = [
+ ["الرحلة بتتحرك منين؟ ومتاحة من محافظتي؟","التحرك كل أحد وخميس من القاهرة والإسكندرية وكذا محافظة تانية، والهاي إس متاح بشكل يومي من أغلب المحافظات. قولنا إنت منين وإحنا نظبطلك أقرب نقطة تحرك ليك."],
+ ["السعر شامل إيه بالظبط؟","السعر شامل الإقامة، الانتقالات ذهاب وعودة، والتور ليدر اللي معاك طول الرحلة. الرحلات الداخلية زي السفاري واليخت والغواصة بتتحسب لوحدها بأسعار مميزة، وبنوضحلك كل تفصيلة قبل ما تأكد."],
+ ["الرحلات الداخلية بكام؟ وليه مش مكتوبة؟","سعرها بيختلف حسب البرنامج وعدد الأفراد، وعشان كده بنحب نظبطها معاك على واتساب علشان تطلعلك بأنسب سعر. كلمنا وقولنا عايز تعمل إيه وإحنا نقولك الرقم النهائي على طول."],
+ ["أنا رايح لوحدي — الموضوع هيبقى محرج؟","خالص. أغلب اللي بييجي معانا بييجي solo، ومن أول يوم الجروب بيبقى زي صحاب قُدام. التور ليدر بيكسر التلج بسرعة، وإنت حر تشارك في اللي تحبه وترتاح وقت ما تحب."],
+ ["بأحجز إزاي؟ ولازم أدفع كام مقدم؟","تكلمنا على واتساب، نظبط معاك الفندق والميعاد، وبتأكد حجزك بعربون 50% بس. الباقي بتدفعه قبل السفر بأسبوع. بنقبل إنستاباي، فودافون كاش، aCash، فيزا، وتحويل بنكي."],
+ ["ممكن أغير الفندق أو الميعاد بعد ما أحجز؟","أيوه، حسب التوافر. كلمنا بدري وإحنا بنعدّلهالك من غير أي رسوم زيادة طول ما فيه أماكن. والإلغاء قبل 7 أيام من السفر بيرجعلك العربون كامل أو تأجّل لميعاد تاني."],
+ ["الأكل والفطار داخل في السعر؟","بيختلف من فندق لفندق. فيه فنادق بفطار شامل أو بوفيه أو Half Board، وفيه فنادق (زي موخيتو) الفطار فيها اختياري بتكلفة بسيطة. كل ده مكتوب تحت كل فندق."],
+ ["في حمامات سباحة؟ ومستوى الفنادق إيه؟","عندنا 4 فئات: Budget (كامبات وفنادق اقتصادية)، Standard (فنادق حديثة وبعضها بحمام سباحة)، Premium (4 و5 نجوم وسي فيو)، وLagoon (ريزورتات بشواطئ رملية). اختار الفئة من فوق وشوف كل فندق."],
+ ["الرحلة مناسبة للعائلات والأطفال؟","أكيد. عندنا برامج هادية وفنادق بحمامات سباحة وشقق وشاليهات خاصة مناسبة جداً للعائلات. قولنا إنتوا كام فرد وفيه أطفال ولا لأ، وإحنا نرشحلك أنسب فندق وأنسب برنامج."],
+ ["بتعملوا تعاقدات للشركات والمدارس والجامعات؟","أيوه. عندنا تعاقدات وعروض خاصة للهيئات والشركات والمدارس والجامعات والجروبات الكبيرة — بأسعار مميزة وخدمة وتنظيم على مستوى أعلى. كلمنا بعدد الأفراد والميعاد وإحنا نظبطلك عرض مخصص."],
+ ["لو حصل ظرف طارئ وألغيت، الفلوس بترجع؟","الإلغاء قبل 7 أيام من السفر بيرجعلك العربون بالكامل، أو تأجّل لميعاد تاني. لو الإلغاء خلال أقل من 7 أيام بنحاول نأجّلك بدل ما تخسر، قدر الإمكان. إحنا بشر وبنفهم إن الظروف بتحصل."]
+];
+
+/* ===== render cards ===== */
+const waPhotos = label => "https://wa.me/"+WA+"?text="+encodeURIComponent("ممكن أشوف صور "+label+"؟");
+function cardHTML(h){
+  const feats = h.f.map(x=>'<li><b>✓</b> '+x+'</li>').join('');
+  return '<div class="pc" data-tier="'+h.t+'">'
+    +'<div class="pctop"><div class="picon">'+h.ic+'</div><span class="pbdg bd-'+h.t+'">'+h.bd+'</span><div class="pname">'+h.n+'</div><div class="ploc">'+h.loc+'</div></div>'
+    +'<div class="pbody"><ul class="pfeat">'+feats+'</ul>'
+    +'<div class="pincl">✓ انتقالات ذهاب وعودة &nbsp;·&nbsp; ✓ تور ليدر &nbsp;·&nbsp; ✓ رحلات داخلية بأسعار مميزة</div>'
+    +'<div class="pprices"><div class="pp"><div class="ppl">4 أيام</div><div class="pn en">'+h.p4+'</div><div class="ppu">جنيه / فرد</div></div>'
+    +'<div class="pp"><div class="ppl">5 أيام</div><div class="pn en">'+h.p5+'</div><div class="ppu">جنيه / فرد</div></div></div>'
+    +'<div class="pcta-row" data-k="'+h.k+'" data-n="'+h.n+'"><a class="pcta" target="_blank" href="https://wa.me/'+WA+'?text='+encodeURIComponent("عايز احجز "+h.k)+'">احجز 📱</a></div>'
+    +'</div></div>';
+}
+document.getElementById('cards').innerHTML = HOTELS.map(cardHTML).join('');
+
+// add photo buttons
+document.querySelectorAll('.pcta-row').forEach(row=>{
+  const key=row.dataset.k, name=row.dataset.n, val=HOTEL_PHOTOS[key];
+  const mk=(txt,href)=>{const a=document.createElement('a');a.className='pcta pcta-ghost';a.target='_blank';a.rel='noopener';a.textContent=txt;a.href=href;return a;};
+  if(val && typeof val==='object'){ Object.keys(val).forEach(l=>row.appendChild(mk('📸 '+l,val[l]||waPhotos(l)))); }
+  else if(val==='request'){ row.appendChild(mk('📸 الصور (by request)',waPhotos(name))); }
+  else if(val){ row.appendChild(mk('📸 صور الفندق',val)); }
+  else { row.appendChild(mk('📸 صور الفندق',waPhotos(name))); }
+});
+
+/* tier + days */
+function setTier(t,btn){
+  document.querySelectorAll('.tt').forEach(b=>b.classList.remove('a'));
+  btn.classList.add('a');
+  document.querySelectorAll('.pc').forEach(c=>c.classList.toggle('hide',c.dataset.tier!==t));
+  const d=TIER_INFO[t];
+  document.getElementById('tierInfo').innerHTML='<div class="ti-ic">'+d.ic+'</div><div class="ti-txt"><h4>'+d.h+'</h4><p>'+d.p+'</p></div><div class="ti-price">'+d.price+'</div>';
+}
+function setDays(n,btn){ document.querySelectorAll('.tgb').forEach(b=>b.classList.remove('a')); btn.classList.add('a'); }
+document.querySelectorAll('.pc').forEach(c=>c.classList.toggle('hide',c.dataset.tier!=='budget'));
+setTier('budget',document.querySelector('.tt[data-tier="budget"]'));
+
+/* itinerary */
+document.getElementById('idays').innerHTML = ITINERARY.map((d,i)=>
+ '<div class="iday rev"><div class="idayh" onclick="this.parentNode.classList.toggle(\'open\')">'
+ +'<div class="idaynum en">0'+(i+1)+'</div><div><div class="idaytitle">'+d.t+'</div><div class="idaysub">'+d.s+'</div></div>'
+ +'<div class="idayarr">▼</div></div><div class="idaybody"><p>'+d.d+'</p></div></div>').join('');
+
+/* faq */
+document.getElementById('faqs').innerHTML = FAQ.map(q=>
+ '<div class="faqi rev"><div class="faqq" onclick="this.parentNode.classList.toggle(\'open\')"><span>'+q[0]+'</span><span class="qx">＋</span></div><div class="faqa"><p>'+q[1]+'</p></div></div>').join('');
+
+/* marquee */
+const quotes=['"دهب مش مكان — دهب حالة"','The sea is calling. And you must go.','"بعد دهب مش بتبقى نفس الشخص"','Salt in the air. Sand in my hair.','"وقت الغروب في دهب ملوش شبيه"','Life is better with fins on.','"دهب علمتني إن أحلى اللحظات هي اللحظات البسيطة"','Not all who wander are lost — some are just in Dahab.'];
+const one = quotes.map(q=>'<span>'+q+'</span><span class="sep">✦</span>').join('');
+document.getElementById('marq').innerHTML = one+one;
+
+/* nav + progress */
+const nav=document.getElementById('nav'), prog=document.getElementById('prog');
+addEventListener('scroll',()=>{
+  nav.classList.toggle('sc',scrollY>60);
+  const h=document.documentElement.scrollHeight-innerHeight;
+  prog.style.width=(h>0?(scrollY/h)*100:0)+'%';
+},{passive:true});
+document.getElementById('burger').onclick=()=>document.getElementById('nlinks').classList.toggle('show');
+document.querySelectorAll('#nlinks a').forEach(a=>a.onclick=()=>document.getElementById('nlinks').classList.remove('show'));
+
+/* theme toggle */
+(function(){
+  const root=document.documentElement, btn=document.getElementById('themeBtn'), meta=document.querySelector('meta[name="theme-color"]');
+  const setIcon=()=>{ const dark=root.getAttribute('data-theme')==='dark'; btn.textContent=dark?'☀️':'🌙'; if(meta) meta.setAttribute('content',dark?'#15110C':'#FBF6EE'); };
+  setIcon();
+  btn.addEventListener('click',()=>{
+    const next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem('cabana-theme',next); }catch(e){}
+    setIcon();
   });
-  renderTierInfo(t);
-}
-renderTierInfo("budget");
+})();
 
-// FAQ accordion
-function toggleFaq(el){ el.closest(".faqi").classList.toggle("open"); }
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
 
-// Itinerary accordion
-function toggleDay(header) {
-  const day = header.closest(".iday");
-  day.classList.toggle("open");
-}
-
-// Form submission
-document.getElementById("cabana-form").addEventListener("submit", async function(e) {
+/* form */
+document.getElementById('cabana-form').addEventListener('submit', async function(e){
   e.preventDefault();
-  const btn = document.getElementById("fsubmit");
-  const msg = document.getElementById("fmsg");
-  btn.disabled = true;
-  btn.textContent = "جاري الإرسال...";
-  msg.className = "fmsg";
-  
-  const data = Object.fromEntries(new FormData(this).entries());
-  
-  if(APPS_SCRIPT_URL !== "YOUR_APPS_SCRIPT_URL_HERE") {
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        body: JSON.stringify(data),
-        mode: "no-cors"
-      });
-    } catch(err) { console.log("Sheet error:", err); }
-  }
-  
-  setTimeout(() => {
-    msg.textContent = "✅ تم استلام طلبك! هنتواصل معاك على واتساب في أقل من 15 دقيقة.";
-    msg.className = "fmsg ok";
-    btn.textContent = "تم الإرسال ✅";
-    
-    const wa = `مرحبا Cabana Egypt!%0Aاسمي: ${data.name || ""}%0Aالواتساب: ${data.phone || ""}%0Aموعد الرحلة: ${data.date || ""}%0Aالبرنامج: ${data.program || ""}%0Aعدد الأفراد: ${data.people || ""}%0Aالفندق: ${data.hotel || ""}%0Aنوع الرحلة: ${data.type || ""}%0Aملاحظات: ${data.notes || ""}`;
-    setTimeout(() => window.open("https://wa.me/201005744083?text=" + wa, "_blank"), 1000);
-  }, 1200);
+  const btn=document.getElementById('fsubmit'), msg=document.getElementById('fmsg');
+  btn.disabled=true; btn.textContent='جاري الإرسال...'; msg.className='fmsg';
+  const data=Object.fromEntries(new FormData(this).entries());
+  try{ await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(data),mode:'no-cors'}); }catch(err){}
+  setTimeout(()=>{
+    msg.textContent='✅ تم استلام طلبك! هنتواصل معاك على واتساب في أقل من 15 دقيقة.';
+    msg.className='fmsg ok'; btn.textContent='تم الإرسال ✅';
+    const wa='مرحبا Cabana Egypt!%0Aاسمي: '+(data.name||'')+'%0Aالواتساب: '+(data.phone||'')+'%0Aموعد الرحلة: '+(data.date||'')+'%0Aالبرنامج: '+(data.program||'')+'%0Aعدد الأفراد: '+(data.people||'')+'%0Aالفندق: '+(data.hotel||'')+'%0Aنوع الرحلة: '+(data.type||'')+'%0Aملاحظات: '+(data.notes||'');
+    setTimeout(()=>window.open('https://wa.me/'+WA+'?text='+wa,'_blank'),900);
+  },1100);
 });
 </script>
 </body>
