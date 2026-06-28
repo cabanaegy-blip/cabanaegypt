@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cabana Egypt — دهب مش مجرد رحلة، it's a whole mood</title>
-<meta name="description" content="رحلات مختلفة لدهب وسيناء — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها. باقات تبدأ من 2,650 جنيه.">
+<title>Cabana Egypt — رحلات دهب وسيناء | باقات شاملة وتور ليدر معاك</title>
+<meta name="description" content="رحلات جروب لدهب وسيناء، كل حاجة شاملة وتور ليدر معاك طول الرحلة. فنادق وريزورتات لكل ميزانية — باقات تبدأ من 2,650 جنيه.">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-96LWP0J1RV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-96LWP0J1RV');
+</script>
 
 <!-- Link preview (WhatsApp / Facebook). لصورة معاينة خاصة: ارفع og-image.jpg (1200×630) وغيّر الروابط تحت -->
 <link rel="canonical" href="https://cabanaegypt.com/">
@@ -12,14 +21,14 @@
 <meta property="og:site_name" content="Cabana Egypt">
 <meta property="og:locale" content="ar_EG">
 <meta property="og:url" content="https://cabanaegypt.com/">
-<meta property="og:title" content="Cabana Egypt — دهب مش مجرد رحلة">
-<meta property="og:description" content="رحلات شاملة لدهب وسيناء مع تور ليدر حقيقي. باقات تبدأ من 2,650 جنيه.">
+<meta property="og:title" content="Cabana Egypt — رحلات دهب وسيناء">
+<meta property="og:description" content="كل حاجة شاملة وتور ليدر معاك. فنادق وريزورتات لكل ميزانية، وباقات تبدأ من 2,650 جنيه.">
 <meta property="og:image" content="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cabana Egypt — دهب مش مجرد رحلة">
-<meta name="twitter:description" content="رحلات شاملة لدهب وسيناء مع تور ليدر حقيقي معاك.">
+<meta name="twitter:title" content="Cabana Egypt — رحلات دهب وسيناء">
+<meta name="twitter:description" content="كل حاجة شاملة وتور ليدر معاك. باقات تبدأ من 2,650 جنيه.">
 <meta name="twitter:image" content="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg">
 <meta name="theme-color" content="#FBF6EE">
 
@@ -97,7 +106,8 @@ nav.sc .burger{color:var(--ink)}
 /* hero */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:120px 22px 80px}
 .hero-bg{position:absolute;inset:0;background:#2a2118;z-index:-2}
-.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.92}
+.hero-bg img,.hero-bg svg{width:100%;height:100%;object-fit:cover;opacity:.96}
+.wa-ic{width:20px;height:20px;fill:currentColor;flex-shrink:0}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.45),rgba(20,14,8,.25) 40%,rgba(20,14,8,.7))}
 .hero-in{position:relative;max-width:860px;z-index:2}
 .hero .loc{font-family:"Space Grotesk",sans-serif;letter-spacing:4px;font-size:13px;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:20px}
@@ -208,9 +218,10 @@ nav.sc .burger{color:var(--ink)}
 
 /* dark image band */
 .band{position:relative;color:#fff;text-align:center;padding:90px 22px}
-.band-bg{position:absolute;inset:0;z-index:-2;background:#1a130c}
+.band-bg{position:absolute;inset:0;z-index:-2;background:#0a0f22}
 .band-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
-.band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.6),rgba(20,14,8,.75))}
+.band-bg svg{width:100%;height:100%;object-fit:cover;display:block}
+.band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,24,.42),rgba(8,10,24,.66))}
 .band h2{font-size:clamp(26px,4vw,40px);font-weight:900;margin-bottom:14px}
 .band p{font-size:16px;color:rgba(255,255,255,.9);max-width:600px;margin:0 auto 26px;line-height:1.85}
 
@@ -224,9 +235,16 @@ nav.sc .burger{color:var(--ink)}
 .idaysub{font-size:12.5px;color:var(--ink3);margin-top:2px}
 .idayarr{margin-right:auto;color:var(--terra);font-size:13px;transition:.3s}
 .iday.open .idayarr{transform:rotate(180deg)}
-.idaybody{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.iday.open .idaybody{max-height:460px}
-.idaybody p{padding:0 22px 20px 70px;font-size:14px;color:var(--ink2);line-height:1.85}
+.idaybody{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.iday.open .idaybody{max-height:1800px}
+.idaybody-in{padding:2px 22px 18px}
+.iblock{display:flex;gap:14px;align-items:flex-start;padding:15px 0;border-top:1px dashed var(--line)}
+.iblock:first-child{border-top:0;padding-top:6px}
+.iblock-time{flex:0 0 90px;font-size:12px;font-weight:700;color:var(--terra);letter-spacing:.2px;padding-top:5px;line-height:1.5}
+.iblock-ic{font-size:23px;line-height:1.3;flex-shrink:0}
+.iblock-txt{flex:1;min-width:0}
+.iblock-h{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:4px;line-height:1.5}
+.iblock-p{font-size:13.5px;color:var(--ink2);line-height:1.8}
 
 /* honeymoon */
 .hm{background:var(--hm-grad)}
@@ -350,7 +368,9 @@ nav.sc .tt-toggle:hover{border-color:var(--terra);color:var(--terra)}
   .fg2{grid-template-columns:1fr}
   .custom-list{grid-template-columns:1fr}
   section{padding:56px 0}
-  .idaybody p{padding-right:22px;padding-left:22px}
+  .idaybody-in{padding-right:16px;padding-left:16px}
+  .iblock-time{flex-basis:72px;font-size:11px}
+  .iblock{gap:10px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rev{opacity:1!important;transform:none!important}}
 </style>
@@ -389,16 +409,93 @@ nav.sc .tt-toggle:hover{border-color:var(--terra);color:var(--terra)}
 <!-- HERO -->
 <header class="hero" id="top">
   <div class="hero-bg">
-    <!-- IMG hero -->
-    <img src="https://cabana-brighten-upgrade.lovable.app/assets/hero-dahab-cmHhs8VD.jpg" alt="غروب الشمس على شاطئ دهب والبحر الأحمر">
+    <!-- IMG hero — رسمة sunset مدمجة جوه الصفحة (مش بتكسر زي اللينكات الخارجية).
+         لو حابب صورة فوتوغرافية حقيقية: ارفعها على الريبو باسم hero-dahab.jpg وبدّل الـ <svg> دي بـ:
+         <img src="hero-dahab.jpg" alt="غروب الشمس على بحر دهب من فوق الجبل"> -->
+    <svg class="hero-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="غروب الشمس على بحر دهب من فوق الجبل">
+      <defs>
+        <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#241a3a"/>
+          <stop offset="22%" stop-color="#4a2348"/>
+          <stop offset="45%" stop-color="#93374a"/>
+          <stop offset="68%" stop-color="#d4563a"/>
+          <stop offset="86%" stop-color="#ef8a3e"/>
+          <stop offset="100%" stop-color="#ffc874"/>
+        </linearGradient>
+        <radialGradient id="hSun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff6e0"/>
+          <stop offset="45%" stop-color="#ffe6a8"/>
+          <stop offset="100%" stop-color="#ffcf78"/>
+        </radialGradient>
+        <radialGradient id="hSunGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#ffd98a" stop-opacity=".9"/>
+          <stop offset="35%" stop-color="#ffae5c" stop-opacity=".45"/>
+          <stop offset="100%" stop-color="#ffae5c" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="hSea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f0a85e"/>
+          <stop offset="12%" stop-color="#b96d54"/>
+          <stop offset="38%" stop-color="#5e4a5e"/>
+          <stop offset="72%" stop-color="#2b2842"/>
+          <stop offset="100%" stop-color="#171830"/>
+        </linearGradient>
+        <linearGradient id="hRefl" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ffe6ae" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- sky -->
+      <rect x="0" y="0" width="1440" height="560" fill="url(#hSky)"/>
+      <!-- stars -->
+      <g fill="#fff">
+        <circle cx="120" cy="70" r="1.6" opacity=".8"><animate attributeName="opacity" values=".2;.9;.2" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="300" cy="120" r="1.2" opacity=".6"><animate attributeName="opacity" values=".15;.7;.15" dur="5.5s" repeatCount="indefinite"/></circle>
+        <circle cx="500" cy="60" r="1.4" opacity=".7"><animate attributeName="opacity" values=".2;.85;.2" dur="6s" repeatCount="indefinite"/></circle>
+        <circle cx="980" cy="90" r="1.3" opacity=".7"><animate attributeName="opacity" values=".2;.8;.2" dur="4.8s" repeatCount="indefinite"/></circle>
+        <circle cx="1200" cy="140" r="1.5" opacity=".75"><animate attributeName="opacity" values=".2;.9;.2" dur="5.2s" repeatCount="indefinite"/></circle>
+        <circle cx="1330" cy="70" r="1.1" opacity=".6"><animate attributeName="opacity" values=".15;.7;.15" dur="6.4s" repeatCount="indefinite"/></circle>
+        <circle cx="760" cy="48" r="1.1" opacity=".55"><animate attributeName="opacity" values=".15;.65;.15" dur="5s" repeatCount="indefinite"/></circle>
+      </g>
+      <!-- sun glow + sun -->
+      <circle cx="772" cy="500" r="340" fill="url(#hSunGlow)"/>
+      <circle cx="772" cy="498" r="78" fill="url(#hSun)"/>
+      <!-- soft clouds -->
+      <g fill="#ffd9a8">
+        <ellipse cx="500" cy="360" rx="240" ry="14" opacity=".5"/>
+        <ellipse cx="1020" cy="300" rx="200" ry="11" opacity=".4"/>
+        <ellipse cx="300" cy="250" rx="150" ry="9" opacity=".32"/>
+      </g>
+      <!-- far shore mountains (behind the sea horizon) -->
+      <path d="M0,540 L0,500 L150,470 L320,505 L480,478 L640,508 L820,476 L1010,506 L1200,472 L1440,500 L1440,540 Z" fill="#3a2b48" opacity=".75"/>
+      <path d="M0,540 L0,515 L260,495 L520,518 L780,498 L1080,520 L1320,500 L1440,516 L1440,540 Z" fill="#2c2240" opacity=".85"/>
+      <!-- sea -->
+      <rect x="0" y="540" width="1440" height="360" fill="url(#hSea)"/>
+      <!-- sun reflection on water -->
+      <path d="M712,540 L832,540 L812,900 L732,900 Z" fill="url(#hRefl)" opacity=".75"/>
+      <g stroke="#ffe7b0" stroke-width="3" stroke-linecap="round">
+        <line x1="724" y1="575" x2="820" y2="575" opacity=".55"/>
+        <line x1="716" y1="620" x2="828" y2="620" opacity=".5"/>
+        <line x1="730" y1="668" x2="816" y2="668" opacity=".4"/>
+        <line x1="708" y1="720" x2="836" y2="720" opacity=".3"/>
+        <line x1="724" y1="780" x2="822" y2="780" opacity=".22"/>
+      </g>
+      <!-- foreground mountain ridges (we're standing on one) -->
+      <path d="M0,900 L0,560 C140,600 260,690 360,760 C470,835 560,860 720,880 L0,900 Z" fill="#161324"/>
+      <path d="M1440,900 L1440,600 C1300,640 1180,720 1070,790 C950,860 840,878 700,892 L1440,900 Z" fill="#100e1d"/>
+      <!-- tiny birds -->
+      <g stroke="#1a1626" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7">
+        <path d="M560,210 q12,-12 24,0 q12,-12 24,0"/>
+        <path d="M626,250 q9,-9 18,0 q9,-9 18,0"/>
+      </g>
+    </svg>
   </div>
   <div class="hero-in">
     <p class="loc">Dahab · Sinai · Egypt</p>
     <h1>دهب مش مجرد رحلة.<span class="moodline en">it's a whole mood.</span></h1>
-    <p>رحلات مختلفة لدهب وسيناء — كل حاجة شاملة، تور ليدر حقيقي معاك، وتجربة مش هتنساها.</p>
+    <p>رحلات مختلفة لدهب وسيناء — كل حاجة متظبطة، تور ليدر معاك، وانت مالكش دعوة بأي حاجة غير إنك تعيشها.</p>
     <div class="hbtns">
-      <a href="https://wa.me/201005744083" target="_blank" class="btn btn-p">📱 احجز على واتساب</a>
-      <a href="#packages" class="btn btn-g">🌊 شوف الباقات</a>
+      <a href="https://wa.me/201005744083" target="_blank" class="btn btn-p"><svg class="wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.359.1 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.454h.005c6.582 0 11.943-5.359 11.946-11.893a11.821 11.821 0 00-3.476-8.46"/></svg> Book on WhatsApp</a>
+      <a href="#packages" class="btn btn-g">🌊 Explore Packages</a>
     </div>
   </div>
   <a href="#why" class="scrolldn" aria-label="انزل">↓</a>
@@ -408,7 +505,7 @@ nav.sc .tt-toggle:hover{border-color:var(--terra);color:var(--terra)}
 <section class="stats">
   <div class="con">
     <div class="stat"><div class="n en">+10</div><div class="l">سنين خبرة الفريق</div></div>
-    <div class="stat"><div class="n en">2,650</div><div class="l">جنيه يبدأ منها</div></div>
+    <div class="stat"><div class="n en">2,650</div><div class="l">جنيه · أقل سعر للفرد</div></div>
     <div class="stat"><div class="n en">18</div><div class="l">فندق وريزورت</div></div>
     <div class="stat"><div class="n en">5★</div><div class="l">تقييمات حقيقية</div></div>
   </div>
@@ -525,7 +622,70 @@ nav.sc .tt-toggle:hover{border-color:var(--terra);color:var(--terra)}
 
 <!-- BEDOUIN BAND -->
 <section class="band">
-  <div class="band-bg"><!-- IMG bedouin --><img src="https://cabana-brighten-upgrade.lovable.app/assets/bedouin-night-RDNNPnjk.jpg" alt="ليلة بدوية في صحراء سيناء تحت النجوم"></div>
+  <div class="band-bg">
+    <!-- IMG bedouin — مشهد ليلي مدمج: جبال + قمر + نار مخيم (متحرك، مش بيكسر) -->
+    <svg class="band-svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ليلة في جبال سيناء تحت ضوء القمر">
+      <defs>
+        <linearGradient id="bSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#070b20"/>
+          <stop offset="45%" stop-color="#101633"/>
+          <stop offset="80%" stop-color="#1a2142"/>
+          <stop offset="100%" stop-color="#222a4d"/>
+        </linearGradient>
+        <radialGradient id="bMoon" cx="42%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#fffdf3"/>
+          <stop offset="70%" stop-color="#f1ecd6"/>
+          <stop offset="100%" stop-color="#d6cfb2"/>
+        </radialGradient>
+        <radialGradient id="bMoonGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#e9ecff" stop-opacity=".5"/>
+          <stop offset="45%" stop-color="#aab4e6" stop-opacity=".18"/>
+          <stop offset="100%" stop-color="#aab4e6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="bFire" cx="50%" cy="100%" r="70%">
+          <stop offset="0%" stop-color="#ffb347" stop-opacity=".8"/>
+          <stop offset="40%" stop-color="#ff7a2e" stop-opacity=".32"/>
+          <stop offset="100%" stop-color="#ff7a2e" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="1440" height="600" fill="url(#bSky)"/>
+      <!-- stars -->
+      <g fill="#fff">
+        <circle cx="120" cy="80" r="1.6" opacity=".8"><animate attributeName="opacity" values=".2;.95;.2" dur="4s" repeatCount="indefinite"/></circle>
+        <circle cx="240" cy="150" r="1.2" opacity=".6"><animate attributeName="opacity" values=".15;.7;.15" dur="5.4s" repeatCount="indefinite"/></circle>
+        <circle cx="360" cy="60" r="1.4" opacity=".7"><animate attributeName="opacity" values=".2;.9;.2" dur="6.1s" repeatCount="indefinite"/></circle>
+        <circle cx="460" cy="180" r="1.1" opacity=".55"><animate attributeName="opacity" values=".15;.7;.15" dur="4.6s" repeatCount="indefinite"/></circle>
+        <circle cx="560" cy="100" r="1.5" opacity=".75"><animate attributeName="opacity" values=".2;.95;.2" dur="5.8s" repeatCount="indefinite"/></circle>
+        <circle cx="680" cy="200" r="1.2" opacity=".6"><animate attributeName="opacity" values=".15;.75;.15" dur="6.6s" repeatCount="indefinite"/></circle>
+        <circle cx="720" cy="70" r="1.3" opacity=".65"><animate attributeName="opacity" values=".2;.85;.2" dur="5s" repeatCount="indefinite"/></circle>
+        <circle cx="840" cy="150" r="1.1" opacity=".55"><animate attributeName="opacity" values=".15;.7;.15" dur="4.9s" repeatCount="indefinite"/></circle>
+        <circle cx="300" cy="240" r="1.3" opacity=".6"><animate attributeName="opacity" values=".15;.8;.15" dur="6.2s" repeatCount="indefinite"/></circle>
+        <circle cx="160" cy="200" r="1.2" opacity=".55"><animate attributeName="opacity" values=".15;.7;.15" dur="5.6s" repeatCount="indefinite"/></circle>
+        <circle cx="1280" cy="90" r="1.4" opacity=".7"><animate attributeName="opacity" values=".2;.9;.2" dur="5.1s" repeatCount="indefinite"/></circle>
+        <circle cx="1360" cy="180" r="1.2" opacity=".55"><animate attributeName="opacity" values=".15;.7;.15" dur="6s" repeatCount="indefinite"/></circle>
+        <circle cx="1190" cy="240" r="1.1" opacity=".5"><animate attributeName="opacity" values=".15;.65;.15" dur="4.7s" repeatCount="indefinite"/></circle>
+      </g>
+      <!-- moon -->
+      <circle cx="1080" cy="150" r="190" fill="url(#bMoonGlow)"><animate attributeName="r" values="180;202;180" dur="7s" repeatCount="indefinite"/></circle>
+      <circle cx="1080" cy="150" r="56" fill="url(#bMoon)"/>
+      <g fill="#cfc8ab" opacity=".45">
+        <circle cx="1066" cy="138" r="9"/>
+        <circle cx="1099" cy="161" r="6"/>
+        <circle cx="1088" cy="132" r="4"/>
+        <circle cx="1072" cy="166" r="5"/>
+      </g>
+      <ellipse cx="1080" cy="226" rx="170" ry="7" fill="#cfd6f0" opacity=".16"/>
+      <!-- mountain layers -->
+      <path d="M0,600 L0,430 L180,360 L380,420 L560,340 L760,420 L980,330 L1180,410 L1440,350 L1440,600 Z" fill="#1b2342" opacity=".9"/>
+      <path d="M0,600 L0,470 L240,400 L470,470 L700,390 L940,470 L1180,400 L1440,460 L1440,600 Z" fill="#121931"/>
+      <path d="M0,600 L0,520 L300,470 L600,530 L900,475 L1220,535 L1440,500 L1440,600 Z" fill="#0a0f22"/>
+      <!-- campfire glow + tent + flame -->
+      <ellipse cx="430" cy="600" rx="220" ry="130" fill="url(#bFire)"><animate attributeName="opacity" values=".7;1;.78;1;.7" dur="3.5s" repeatCount="indefinite"/></ellipse>
+      <path d="M356,600 L430,516 L504,600 Z" fill="#070a18"/>
+      <path d="M430,516 L474,540 L548,600 L504,600 Z" fill="#05060f"/>
+      <path d="M427,600 C418,578 432,574 430,560 C441,570 448,584 441,600 Z" fill="#ffcf6b"><animate attributeName="opacity" values=".85;1;.7;1" dur="1.2s" repeatCount="indefinite"/></path>
+    </svg>
+  </div>
   <div class="rev">
     <span class="ey" style="color:#f0b89e">ليلة لا تتكرر</span>
     <h2>ليلة جبل الطويلات</h2>
@@ -748,17 +908,17 @@ const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxeCSRtwjcAMPkV
 
 /* ===== HOTELS (الأسعار والتفاصيل) ===== */
 const HOTELS = [
- {t:"budget",ic:"🏕️",bd:"Budget",n:"Torino Camp",loc:"الممشى السياحي · صف تاني · اللايت هاوس",f:["أجواء كامب مميزة وبشرية — المكان المثالي للسوشيال vibes","خطوات من البحر وكل كافيهات اللايت هاوس","غرف مريحة ونظيفة بديكور بدوي أصيل"],p4:"2,650",p5:"3,200",k:"Torino Camp"},
- {t:"budget",ic:"🏊",bd:"Budget · Pool 🏊",n:"Antika Hotel",loc:"دهب · حمام سباحة · طابع أنتيكا مميز",f:["حمام سباحة جوه الفندق — تسبح وترتاح من غير ما تتحرك","أجواء أنتيكا بديكور فريد وروح سيناء الأصيلة","المكان اللي بيخلي الناس ترجعله تاني وتالت"],p4:"3,300",p5:"4,100",k:"Antika Hotel"},
+ {t:"budget",ic:"🏕️",bd:"Budget",n:"Torino Camp",loc:"الممشى السياحي · صف تاني · اللايت هاوس",f:["كامب cozy وهادي في قلب الممشى — المكان المثالي للسوشيال vibes","خطوات من البحر وكل كافيهات اللايت هاوس","غرف مريحة ونظيفة بديكور boho modern chic"],p4:"2,650",p5:"3,200",k:"Torino Camp"},
+ {t:"budget",ic:"🏊",bd:"Budget · Pool 🏊",n:"Antika Hotel",loc:"الممشى السياحي · صف تاني · جنب الـ Go Bus",f:["حمام سباحة جوه الفندق — تسبح وتاخد شمس على مزاجك","قعدات بدوية مريحة بروح دهب الأصيلة","صف تاني على الممشى جنب الـ Go Bus — مناسب جداً لجروب الصحاب"],p4:"3,300",p5:"4,100",k:"Antika Hotel"},
  {t:"budget",ic:"🌴",bd:"Budget · First Row 🌊",n:"Mojito Palm",loc:"الممشى السياحي · صف أول على البحر",f:["مباشرة على البحر — الكافيه والإفطار بيطل على المياه","الفطار اختياري بتكلفة إضافية في كافيه موخيتو","جنب الكوبري الخشبي — أكتر spot فيه صور في دهب"],p4:"2,650",p5:"3,200",k:"Mojito Palm"},
- {t:"standard",ic:"🏨",bd:"Standard",n:"Mojito Hotel",loc:"اللايت هاوس · صف أول بحر",f:["غرف فندقية حديثة — مش كامب — بأعلى مستوى","كافيه موخيتو الشهير مباشرة على البحر","الفطار اختياري بتكلفة إضافية على البحر"],p4:"3,100",p5:"3,750",k:"Mojito Hotel Standard"},
+ {t:"standard",ic:"🏨",bd:"Standard",n:"Mojito Hotel",loc:"اللايت هاوس · صف أول بحر",f:["غرف فندقية حديثة بأعلى مستوى","كافيه موخيتو الشهير مباشرة على البحر","الفطار اختياري بتكلفة إضافية على البحر"],p4:"3,100",p5:"3,750",k:"Mojito Hotel Standard"},
  {t:"standard",ic:"🏊",bd:"Standard · Pool",n:"Delta Dahab",loc:"قلب الممشى السياحي · Swimming Pool",f:["Swimming Pool في قلب الممشى السياحي","فطار ومشروبات شاملة طول اليوم","موقع مركزي — ثواني من كل حاجة"],p4:"3,450",p5:"4,250",k:"Delta Dahab"},
  {t:"standard",ic:"🏜️",bd:"Standard · Desert Vibes 🏜️",n:"Desert Hotel",loc:"دهب · طابع بدوي · قريب من البحر",f:["طابع بدوي أصيل وروح سيناء الحقيقية","هدوء وخصوصية — بعيد عن الصخب قريب من كل حاجة","تجربة مختلفة ما بين صحراء دهب وشواطئها"],p4:"3,500",p5:"4,400",k:"Desert Hotel"},
- {t:"standard",ic:"🏠",bd:"Standard · Privacy 🏠",n:"Cabana House",loc:"العسلة (Assala) · شقق خاصة · سي فيو",f:["شقق خاصة بالكامل — مطبخ، صالة، وprivacy تامة","منطقة العسلة الهادية — بعيد عن الازدحام","إطلالة على البحر الأحمر — الفرد الثالث والرابع بـ 50%"],p4:"3,300",p5:"4,000",k:"Cabana House"},
+ {t:"standard",ic:"🏠",bd:"Standard · Privacy 🏠",n:"Cabana House",loc:"العسلة (Assala) · شقق خاصة · 5 دقائق على البحر",f:["شقق خاصة بالكامل — مطبخ، صالة، وprivacy تامة","في قلب العسلة الهادية — 5 دقايق مشي وانت على البحر","الفرد التالت والرابع بـ 50% — مثالي للجروب والعائلات"],p4:"3,300",p5:"4,100",k:"Cabana House"},
  {t:"standard",ic:"🌇",bd:"Standard · B&B · Sunset 🌇",n:"Sunset Luxury Hotel",loc:"الممشى السياحي · إطلالة الغروب",f:["فطار يومي شامل — تبدأ يومك على راحتك","غرف فندقية راقية في قلب الممشى السياحي","أحلى إطلالة غروب في دهب — الاسم مش صدفة"],p4:"4,100",p5:"5,000",k:"Sunset Luxury Hotel"},
  {t:"premium",ic:"🌅",bd:"Premium · Panorama 🌅",n:"Mojito Panorama",loc:"اللايت هاوس · Panorama Sea View",f:["Panoramic Sea View مباشر من الغرفة","من أكتر الغرف طلباً في دهب — حجز مبكر ضروري","الفطار اختياري بتكلفة إضافية مع إطلالة لا توصف"],p4:"4,350",p5:"5,550",k:"Mojito Panorama Sea View"},
  {t:"premium",ic:"🏖️",bd:"Premium · Terrace 🏖️",n:"Mojito Terrace",loc:"اللايت هاوس · تراس خاص على البحر",f:["تراس خاص بيطل مباشرة على البحر الأحمر","أعلى مستوى في موخيتو — مميز جداً للعرسان","الفطار اختياري بتكلفة إضافية مع sunrise على البحر"],p4:"4,600",p5:"5,900",k:"Mojito Terrace Sea View"},
- {t:"premium",ic:"⭐",bd:"Premium · Dive Hub ⭐",n:"Nesima Hotel",loc:"الممشى السياحي · صف أول · Swimming Pool",f:["4 نجوم راسخة — أشهر فنادق دهب وأكترها ثقة","Swimming Pool + مطعم على البحر مباشرة","مركز غوص Nesima الشهير — للمهتمين بالـ Diving"],p4:"4,800",p5:"6,000",k:"Nesima Hotel"},
+ {t:"premium",ic:"⭐",bd:"Premium · Dive Hub ⭐",n:"Nesima Hotel",loc:"الممشى السياحي · صف أول · Swimming Pool",f:["4 نجوم — من أشهر فنادق دهب وأكترها ثقة","Swimming Pool + مطعم على البحر مباشرة","مركز غوص Nesima الشهير — للمهتمين بالـ Diving"],p4:"4,800",p5:"6,000",k:"Nesima Hotel"},
  {t:"premium",ic:"🌊",bd:"Premium · Sea View 🌊",n:"Assala Sea View",loc:"العسلة (Assala) · Studios · Chalets · Apartments",f:["Studios وشاليهات وأبارتمنتات مباشرة على البحر","العسلة الهادية — أبعد عن الضوضاء، أقرب للـ vibes","الفرد الثالث والرابع بـ 50% — مثالي للجروب والعرسان"],p4:"5,600",p5:"6,600",k:"Assala Sea View"},
  {t:"lagoon",ic:"🏝️",bd:"Lagoon · B&B 🏝️",n:"Canyon / Nubia Island",loc:"اللاجونا · شاطئ رملي · بوفيه فطار",f:["شاطئ رملي طبيعي في منطقة اللاجونا الخلابة","بوفيه فطار أوبن — متنوع ومريح","هدوء تام وطبيعة مختلفة عن الممشى"],p4:"4,200",p5:"5,200",k:"Canyon Nubia Island"},
  {t:"lagoon",ic:"🐼",bd:"Lagoon · B&B",n:"Panda Dahab Resort",loc:"اللاجونا · شاطئ رملي · فطار شامل",f:["Resort feel على شاطئ رملي في اللاجونا","فطار شامل يومياً في الريزورت","مناسب للعائلات والجروبات — هادي ومريح"],p4:"4,800",p5:"6,000",k:"Panda Dahab Resort"},
@@ -795,17 +955,36 @@ const HOTEL_PHOTOS = {
 
 const TIER_INFO = {
   budget:{ic:"💸",h:"Budget — أوفر سعر وأحلى vibes",p:"كامبات وفنادق اقتصادية على الممشى السياحي. أنضف، أبسط، وأقرب للبحر والكافيهات.",price:"يبدأ من 2,650 ج / فرد"},
-  standard:{ic:"🏨",h:"Standard — غرف فندقية وراحة أعلى",p:"فنادق حديثة (مش كامب) بموقع ممتاز، بعضها بحمام سباحة وفطار. راحة أكتر بسعر معقول.",price:"يبدأ من 3,100 ج / فرد"},
+  standard:{ic:"🏨",h:"Standard — غرف فندقية وراحة أعلى",p:"فنادق حديثة بموقع ممتاز، بعضها بحمام سباحة وفطار. راحة أكتر بسعر معقول.",price:"يبدأ من 3,100 ج / فرد"},
   premium:{ic:"✨",h:"Premium — فخامة وسي فيو مباشر",p:"فنادق 4 و5 نجوم، غرف Sea View وبانوراما، وأشهر فنادق دهب. تجربة فاخرة بمعنى الكلمة.",price:"يبدأ من 4,350 ج / فرد"},
   lagoon:{ic:"🌊",h:"Lagoon — ريزورتات وشواطئ رملية",p:"ريزورتات اللاجونا والثري بولز بشواطئ رملية وبوفيهات Half/Full Board. هدوء وطبيعة مختلفة.",price:"يبدأ من 4,200 ج / فرد"}
 };
 
 const ITINERARY = [
- {t:"اليوم الأول — البداية اللي هتفرق",s:"وصول · اللاجونا مجاناً · ليلة بدوية في الجبل",d:"نستقبلك ونوصلك الفندق، وبعد ما ترتاح نبدأ برحلة مجانية للاجونا دهب وقت العصاري. وبالليل سهرة بدوية في الجبل — شاي، مزيكا، ونجوم سيناء اللي مش هتلاقيها في أي مكان."},
- {t:"اليوم التاني — المغامرة الحقيقية",s:"Blue Hole · Abu Galum · Blue Lagoon · Stargazing أو Rave",d:"snorkeling في Blue Hole الأسطوري، ركوب جمال لأبو جالوم، وغداء سي فود على البحر. بعدها Blue Lagoon، وبالليل تختار: stargazing هادي ولا rave على البحر."},
- {t:"اليوم التالت — أكتر يوم مليان",s:"Three Pools · سفاري · Yacht Sunset · Hidden Gem",d:"صباح في الثري بولز، سفاري بالجيب في الصحراء، ويخت وقت الغروب مع BBQ في نص البحر. ونقفل اليوم في Hidden Gem بانوراما خاص بـ Cabana ما حدش يعرفه."},
- {t:"اليوم الرابع — Check-out أو يوم تاني جامد",s:"رحلة 4 أيام: عودة · رحلة 5 أيام: مغامرة جديدة",d:"لو رحلتك 4 أيام، نجمع ذكرياتنا ونتحرك للعودة. ولو 5 أيام، اليوم ده مغامرة جديدة — وادي وشواش ونويبع day-use، جبال بحرية وشلالات ومياه صافية."},
- {t:"اليوم الخامس — توديع دهب (رحلة 5 أيام)",s:"Gathering الشروق · Hidden Gem خاص بـ Cabana · وداع على البحر",d:"نصحى بدري ونطلع نستنى الشروق سوا في Hidden Gem من أماكن Cabana السرية. قهوة، سكون، وآخر مشوار على البحر قبل ما نرجع. مش بنقول مع السلامة — بنقول لحد ما نرجع."}
+ {t:"اليوم الأول — البداية اللي هتفرق", s:"وصول · اللاجونا · ليلة جبل", blocks:[
+   {time:"وصول", ic:"🏨", h:"أول نفس هواء دهب", p:"نوصل، نستلم الغرف — وحتلاقي إن دهب مش محتاجة وقت عشان تعمل حاجة فيك. البحر قريب، والهواء مختلف."},
+   {time:"بعد الظهر", ic:"🌊", h:"لاجونا دهب — رحلة مجانية أول يوم", p:"البداية الحقيقية. نجمع الجروب، وأنشطة وصور على خلفية مياه اللاجونا الفيروزية وغروب ما يتكررش — وده مجاناً من Cabana."},
+   {time:"8:30 م", ic:"🔥", h:"جبل الطويلات — الليلة دي بتستاهل الرحلة كلها", p:"تنورة وfire show، مزيكا حية، شاي بدوي، وسماء نجوم سيناء فوق دماغك. خمس مزاجات في ليلة واحدة."}
+ ]},
+ {t:"اليوم التاني — المغامرة الحقيقية", s:"Blue Hole · Abu Galum · Blue Lagoon · Stargazing أو Rave", blocks:[
+   {time:"الصبح", ic:"🐠", h:"Blue Hole وأبو جالوم", p:"Snorkeling في واحد من أشهر أماكن الغوص في العالم. بعدها وقت حر على شاطئ أبو جالوم — طبيعة بكر، هدوء، ومياه صافية."},
+   {time:"بعد الظهر", ic:"💙", h:"Blue Lagoon", p:"المياه الفيروزية دي مش فيلتر — في الواقع أجمل بكتير. أكتر spot بيخلي الناس تعوم وتنسى إن في حاجة اسمها وقت."},
+   {time:"الليل", ic:"⭐", h:"إنت بتاختار مودك الليلة", p:"Star Gazing في وادي ستارز — صحرا، سكون، ونجوم ما لها نهاية. أو Rave في نص الجبل لو المود كده. اثنين مش هتلاقيهم في أي مكان تاني."}
+ ]},
+ {t:"اليوم التالت — أكتر يوم مليان", s:"Three Pools · سفاري · Yacht Sunset · Hidden Gem", blocks:[
+   {time:"الصبح", ic:"🏝️", h:"Three Pools وسفاري وادي قني", p:"Snorkeling في أجمل spots، قعدة على البحر في كافيه على المية، وبعدين Beach Buggy في الصحرا. طبيعتين ضدين في يوم واحد."},
+   {time:"4 م — غروب", ic:"🚤", h:"Yacht في البحر الأحمر", p:"اليخت يتحرك والشمس بتغرب. نزلة في البحر، Snorkeling، موسيقى على الديك، وعشاء BBQ وانتوا فوق المياه. اللحظة دي مش بتتنسى."},
+   {time:"الليل", ic:"🌄", h:"Hidden Gem — خاص بـ Cabana", p:"أعلى نقطة سرية تشوف منها دهب كلها بانوراما. بحر وجبل وصحرا في لقطة واحدة. ده المكان اللي بنوديه بس لناسنا."}
+ ]},
+ {t:"اليوم الرابع — Check-out أو يوم تاني جامد", s:"4 أيام: عودة · 5 أيام: مغامرة جديدة", blocks:[
+   {time:"رحلة 4 أيام", ic:"🧳", h:"Check-out والعودة بحكاية", p:"آخر نظرة على البحر، آخر قهوة على الكورنيش، وبعدين الطريق للبيت وانت بتحسب امتى ترجع. التشيك أوت من دهب مش من الرحلة."},
+   {time:"رحلة 5 أيام", ic:"🏜️", h:"وادي الوشواش ونويبع — Day Use", p:"جبال بحرية وشلالات ومياه صافية في واد مختلف خالص. تجربة تانية قبل رجوعك — وخاتمة تليق بالرحلة."}
+ ]},
+ {t:"اليوم الخامس — توديع دهب (رحلة 5 أيام)", s:"Gathering الشروق · Hidden Gem · وداع على البحر", blocks:[
+   {time:"قبل الشروق", ic:"🌅", h:"Gathering الشروق — كلنا مع بعض", p:"نصحى بدري ونروح Hidden Gem من أماكن Cabana السرية — ونستنى الشمس تطلع على دهب سوا. قهوة وسكون."},
+   {time:"الصبح", ic:"🤍", h:"توديع دهب", p:"آخر مشوار على البحر وصور الجروب. مش بنقول مع السلامة — بنقول لحد ما نرجع."},
+   {time:"الظهر", ic:"🧳", h:"Check-out والعودة", p:"بترجع بنسخة أهدى وأحلى."}
+ ]}
 ];
 
 const FAQ = [
@@ -860,10 +1039,17 @@ document.querySelectorAll('.pc').forEach(c=>c.classList.toggle('hide',c.dataset.
 setTier('budget',document.querySelector('.tt[data-tier="budget"]'));
 
 /* itinerary */
-document.getElementById('idays').innerHTML = ITINERARY.map((d,i)=>
- '<div class="iday rev"><div class="idayh" onclick="this.parentNode.classList.toggle(\'open\')">'
- +'<div class="idaynum en">0'+(i+1)+'</div><div><div class="idaytitle">'+d.t+'</div><div class="idaysub">'+d.s+'</div></div>'
- +'<div class="idayarr">▼</div></div><div class="idaybody"><p>'+d.d+'</p></div></div>').join('');
+document.getElementById('idays').innerHTML = ITINERARY.map((d,i)=>{
+  const blocks = d.blocks.map(b=>
+    '<div class="iblock"><div class="iblock-time">'+b.time+'</div>'
+    +'<div class="iblock-ic">'+b.ic+'</div>'
+    +'<div class="iblock-txt"><div class="iblock-h">'+b.h+'</div><p class="iblock-p">'+b.p+'</p></div></div>'
+  ).join('');
+  return '<div class="iday rev"><div class="idayh" onclick="this.parentNode.classList.toggle(\'open\')">'
+    +'<div class="idaynum en">0'+(i+1)+'</div><div><div class="idaytitle">'+d.t+'</div><div class="idaysub">'+d.s+'</div></div>'
+    +'<div class="idayarr">▼</div></div>'
+    +'<div class="idaybody"><div class="idaybody-in">'+blocks+'</div></div></div>';
+}).join('');
 
 /* faq */
 document.getElementById('faqs').innerHTML = FAQ.map(q=>
